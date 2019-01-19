@@ -1,0 +1,383 @@
+C:\Users\surajmane\documents\visual studio 2013\Projects\ReceptionProcam\ReceptionProcam\bin\ReceptionProcam.dll.config
+C:\Users\surajmane\documents\visual studio 2013\Projects\ReceptionProcam\ReceptionProcam\bin\ReceptionProcam.dll
+C:\Users\surajmane\documents\visual studio 2013\Projects\ReceptionProcam\ReceptionProcam\bin\ReceptionProcam.pdb
+C:\Users\surajmane\documents\visual studio 2013\Projects\ReceptionProcam\ReceptionProcam\bin\Antlr3.Runtime.dll
+C:\Users\surajmane\documents\visual studio 2013\Projects\ReceptionProcam\ReceptionProcam\bin\EntityFramework.dll
+C:\Users\surajmane\documents\visual studio 2013\Projects\ReceptionProcam\ReceptionProcam\bin\EntityFramework.SqlServer.dll
+C:\Users\surajmane\documents\visual studio 2013\Projects\ReceptionProcam\ReceptionProcam\bin\Microsoft.AspNet.Identity.Core.dll
+C:\Users\surajmane\documents\visual studio 2013\Projects\ReceptionProcam\ReceptionProcam\bin\Microsoft.AspNet.Identity.EntityFramework.dll
+C:\Users\surajmane\documents\visual studio 2013\Projects\ReceptionProcam\ReceptionProcam\bin\Microsoft.AspNet.Identity.Owin.dll
+C:\Users\surajmane\documents\visual studio 2013\Projects\ReceptionProcam\ReceptionProcam\bin\Microsoft.Owin.dll
+C:\Users\surajmane\documents\visual studio 2013\Projects\ReceptionProcam\ReceptionProcam\bin\Microsoft.Owin.Host.SystemWeb.dll
+C:\Users\surajmane\documents\visual studio 2013\Projects\ReceptionProcam\ReceptionProcam\bin\Microsoft.Owin.Security.Cookies.dll
+C:\Users\surajmane\documents\visual studio 2013\Projects\ReceptionProcam\ReceptionProcam\bin\Microsoft.Owin.Security.dll
+C:\Users\surajmane\documents\visual studio 2013\Projects\ReceptionProcam\ReceptionProcam\bin\Microsoft.Owin.Security.Facebook.dll
+C:\Users\surajmane\documents\visual studio 2013\Projects\ReceptionProcam\ReceptionProcam\bin\Microsoft.Owin.Security.Google.dll
+C:\Users\surajmane\documents\visual studio 2013\Projects\ReceptionProcam\ReceptionProcam\bin\Microsoft.Owin.Security.MicrosoftAccount.dll
+C:\Users\surajmane\documents\visual studio 2013\Projects\ReceptionProcam\ReceptionProcam\bin\Microsoft.Owin.Security.OAuth.dll
+C:\Users\surajmane\documents\visual studio 2013\Projects\ReceptionProcam\ReceptionProcam\bin\Microsoft.Owin.Security.Twitter.dll
+C:\Users\surajmane\documents\visual studio 2013\Projects\ReceptionProcam\ReceptionProcam\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\surajmane\documents\visual studio 2013\Projects\ReceptionProcam\ReceptionProcam\bin\Newtonsoft.Json.dll
+C:\Users\surajmane\documents\visual studio 2013\Projects\ReceptionProcam\ReceptionProcam\bin\Owin.dll
+C:\Users\surajmane\documents\visual studio 2013\Projects\ReceptionProcam\ReceptionProcam\bin\System.Web.Helpers.dll
+C:\Users\surajmane\documents\visual studio 2013\Projects\ReceptionProcam\ReceptionProcam\bin\System.Web.Mvc.dll
+C:\Users\surajmane\documents\visual studio 2013\Projects\ReceptionProcam\ReceptionProcam\bin\System.Web.Optimization.dll
+C:\Users\surajmane\documents\visual studio 2013\Projects\ReceptionProcam\ReceptionProcam\bin\System.Web.Razor.dll
+C:\Users\surajmane\documents\visual studio 2013\Projects\ReceptionProcam\ReceptionProcam\bin\System.Web.WebPages.Deployment.dll
+C:\Users\surajmane\documents\visual studio 2013\Projects\ReceptionProcam\ReceptionProcam\bin\System.Web.WebPages.dll
+C:\Users\surajmane\documents\visual studio 2013\Projects\ReceptionProcam\ReceptionProcam\bin\System.Web.WebPages.Razor.dll
+C:\Users\surajmane\documents\visual studio 2013\Projects\ReceptionProcam\ReceptionProcam\bin\WebGrease.dll
+C:\Users\surajmane\documents\visual studio 2013\Projects\ReceptionProcam\ReceptionProcam\bin\System.Web.Helpers.xml
+C:\Users\surajmane\documents\visual studio 2013\Projects\ReceptionProcam\ReceptionProcam\bin\System.Web.Mvc.xml
+C:\Users\surajmane\documents\visual studio 2013\Projects\ReceptionProcam\ReceptionProcam\bin\System.Web.Optimization.xml
+C:\Users\surajmane\documents\visual studio 2013\Projects\ReceptionProcam\ReceptionProcam\bin\System.Web.Razor.xml
+C:\Users\surajmane\documents\visual studio 2013\Projects\ReceptionProcam\ReceptionProcam\bin\System.Web.WebPages.xml
+C:\Users\surajmane\documents\visual studio 2013\Projects\ReceptionProcam\ReceptionProcam\bin\System.Web.WebPages.Deployment.xml
+C:\Users\surajmane\documents\visual studio 2013\Projects\ReceptionProcam\ReceptionProcam\bin\System.Web.WebPages.Razor.xml
+C:\Users\surajmane\documents\visual studio 2013\Projects\ReceptionProcam\ReceptionProcam\bin\Antlr3.Runtime.pdb
+C:\Users\surajmane\documents\visual studio 2013\Projects\ReceptionProcam\ReceptionProcam\bin\Newtonsoft.Json.xml
+C:\Users\surajmane\documents\visual studio 2013\Projects\ReceptionProcam\ReceptionProcam\bin\EntityFramework.xml
+C:\Users\surajmane\documents\visual studio 2013\Projects\ReceptionProcam\ReceptionProcam\bin\EntityFramework.SqlServer.xml
+C:\Users\surajmane\documents\visual studio 2013\Projects\ReceptionProcam\ReceptionProcam\bin\Microsoft.AspNet.Identity.Core.xml
+C:\Users\surajmane\documents\visual studio 2013\Projects\ReceptionProcam\ReceptionProcam\bin\Microsoft.AspNet.Identity.Owin.xml
+C:\Users\surajmane\documents\visual studio 2013\Projects\ReceptionProcam\ReceptionProcam\bin\Microsoft.AspNet.Identity.EntityFramework.xml
+C:\Users\surajmane\documents\visual studio 2013\Projects\ReceptionProcam\ReceptionProcam\bin\Microsoft.Owin.xml
+C:\Users\surajmane\documents\visual studio 2013\Projects\ReceptionProcam\ReceptionProcam\bin\Microsoft.Owin.Host.SystemWeb.xml
+C:\Users\surajmane\documents\visual studio 2013\Projects\ReceptionProcam\ReceptionProcam\bin\Microsoft.Owin.Security.xml
+C:\Users\surajmane\documents\visual studio 2013\Projects\ReceptionProcam\ReceptionProcam\bin\Microsoft.Owin.Security.Facebook.xml
+C:\Users\surajmane\documents\visual studio 2013\Projects\ReceptionProcam\ReceptionProcam\bin\Microsoft.Owin.Security.Cookies.xml
+C:\Users\surajmane\documents\visual studio 2013\Projects\ReceptionProcam\ReceptionProcam\bin\Microsoft.Owin.Security.OAuth.xml
+C:\Users\surajmane\documents\visual studio 2013\Projects\ReceptionProcam\ReceptionProcam\bin\Microsoft.Owin.Security.Google.xml
+C:\Users\surajmane\documents\visual studio 2013\Projects\ReceptionProcam\ReceptionProcam\bin\Microsoft.Owin.Security.Twitter.xml
+C:\Users\surajmane\documents\visual studio 2013\Projects\ReceptionProcam\ReceptionProcam\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
+C:\Users\surajmane\documents\visual studio 2013\Projects\ReceptionProcam\ReceptionProcam\obj\Debug\ReceptionProcam.dll
+C:\Users\surajmane\documents\visual studio 2013\Projects\ReceptionProcam\ReceptionProcam\obj\Debug\ReceptionProcam.pdb
+C:\Users\surajmane\documents\visual studio 2013\Projects\ReceptionProcam\ReceptionProcam\obj\Debug\ReceptionProcam.csprojResolveAssemblyReference.cache
+C:\New folder\ReceptionProcam\ReceptionProcam\ReceptionProcam\bin\ReceptionProcam.dll.config
+C:\New folder\ReceptionProcam\ReceptionProcam\ReceptionProcam\bin\ReceptionProcam.dll
+C:\New folder\ReceptionProcam\ReceptionProcam\ReceptionProcam\bin\ReceptionProcam.pdb
+C:\New folder\ReceptionProcam\ReceptionProcam\ReceptionProcam\bin\Antlr3.Runtime.dll
+C:\New folder\ReceptionProcam\ReceptionProcam\ReceptionProcam\bin\EntityFramework.dll
+C:\New folder\ReceptionProcam\ReceptionProcam\ReceptionProcam\bin\EntityFramework.SqlServer.dll
+C:\New folder\ReceptionProcam\ReceptionProcam\ReceptionProcam\bin\Microsoft.AspNet.Identity.Core.dll
+C:\New folder\ReceptionProcam\ReceptionProcam\ReceptionProcam\bin\Microsoft.AspNet.Identity.EntityFramework.dll
+C:\New folder\ReceptionProcam\ReceptionProcam\ReceptionProcam\bin\Microsoft.AspNet.Identity.Owin.dll
+C:\New folder\ReceptionProcam\ReceptionProcam\ReceptionProcam\bin\Microsoft.Owin.dll
+C:\New folder\ReceptionProcam\ReceptionProcam\ReceptionProcam\bin\Microsoft.Owin.Host.SystemWeb.dll
+C:\New folder\ReceptionProcam\ReceptionProcam\ReceptionProcam\bin\Microsoft.Owin.Security.Cookies.dll
+C:\New folder\ReceptionProcam\ReceptionProcam\ReceptionProcam\bin\Microsoft.Owin.Security.dll
+C:\New folder\ReceptionProcam\ReceptionProcam\ReceptionProcam\bin\Microsoft.Owin.Security.Facebook.dll
+C:\New folder\ReceptionProcam\ReceptionProcam\ReceptionProcam\bin\Microsoft.Owin.Security.Google.dll
+C:\New folder\ReceptionProcam\ReceptionProcam\ReceptionProcam\bin\Microsoft.Owin.Security.MicrosoftAccount.dll
+C:\New folder\ReceptionProcam\ReceptionProcam\ReceptionProcam\bin\Microsoft.Owin.Security.OAuth.dll
+C:\New folder\ReceptionProcam\ReceptionProcam\ReceptionProcam\bin\Microsoft.Owin.Security.Twitter.dll
+C:\New folder\ReceptionProcam\ReceptionProcam\ReceptionProcam\bin\Microsoft.Web.Infrastructure.dll
+C:\New folder\ReceptionProcam\ReceptionProcam\ReceptionProcam\bin\Newtonsoft.Json.dll
+C:\New folder\ReceptionProcam\ReceptionProcam\ReceptionProcam\bin\Owin.dll
+C:\New folder\ReceptionProcam\ReceptionProcam\ReceptionProcam\bin\System.Web.Helpers.dll
+C:\New folder\ReceptionProcam\ReceptionProcam\ReceptionProcam\bin\System.Web.Mvc.dll
+C:\New folder\ReceptionProcam\ReceptionProcam\ReceptionProcam\bin\System.Web.Optimization.dll
+C:\New folder\ReceptionProcam\ReceptionProcam\ReceptionProcam\bin\System.Web.Razor.dll
+C:\New folder\ReceptionProcam\ReceptionProcam\ReceptionProcam\bin\System.Web.WebPages.Deployment.dll
+C:\New folder\ReceptionProcam\ReceptionProcam\ReceptionProcam\bin\System.Web.WebPages.dll
+C:\New folder\ReceptionProcam\ReceptionProcam\ReceptionProcam\bin\System.Web.WebPages.Razor.dll
+C:\New folder\ReceptionProcam\ReceptionProcam\ReceptionProcam\bin\WebGrease.dll
+C:\New folder\ReceptionProcam\ReceptionProcam\ReceptionProcam\bin\System.Web.Helpers.xml
+C:\New folder\ReceptionProcam\ReceptionProcam\ReceptionProcam\bin\System.Web.Mvc.xml
+C:\New folder\ReceptionProcam\ReceptionProcam\ReceptionProcam\bin\System.Web.Optimization.xml
+C:\New folder\ReceptionProcam\ReceptionProcam\ReceptionProcam\bin\System.Web.Razor.xml
+C:\New folder\ReceptionProcam\ReceptionProcam\ReceptionProcam\bin\System.Web.WebPages.xml
+C:\New folder\ReceptionProcam\ReceptionProcam\ReceptionProcam\bin\System.Web.WebPages.Deployment.xml
+C:\New folder\ReceptionProcam\ReceptionProcam\ReceptionProcam\bin\System.Web.WebPages.Razor.xml
+C:\New folder\ReceptionProcam\ReceptionProcam\ReceptionProcam\bin\Antlr3.Runtime.pdb
+C:\New folder\ReceptionProcam\ReceptionProcam\ReceptionProcam\bin\Newtonsoft.Json.xml
+C:\New folder\ReceptionProcam\ReceptionProcam\ReceptionProcam\bin\EntityFramework.xml
+C:\New folder\ReceptionProcam\ReceptionProcam\ReceptionProcam\bin\EntityFramework.SqlServer.xml
+C:\New folder\ReceptionProcam\ReceptionProcam\ReceptionProcam\bin\Microsoft.AspNet.Identity.Core.xml
+C:\New folder\ReceptionProcam\ReceptionProcam\ReceptionProcam\bin\Microsoft.AspNet.Identity.Owin.xml
+C:\New folder\ReceptionProcam\ReceptionProcam\ReceptionProcam\bin\Microsoft.AspNet.Identity.EntityFramework.xml
+C:\New folder\ReceptionProcam\ReceptionProcam\ReceptionProcam\bin\Microsoft.Owin.xml
+C:\New folder\ReceptionProcam\ReceptionProcam\ReceptionProcam\bin\Microsoft.Owin.Host.SystemWeb.xml
+C:\New folder\ReceptionProcam\ReceptionProcam\ReceptionProcam\bin\Microsoft.Owin.Security.xml
+C:\New folder\ReceptionProcam\ReceptionProcam\ReceptionProcam\bin\Microsoft.Owin.Security.Facebook.xml
+C:\New folder\ReceptionProcam\ReceptionProcam\ReceptionProcam\bin\Microsoft.Owin.Security.Cookies.xml
+C:\New folder\ReceptionProcam\ReceptionProcam\ReceptionProcam\bin\Microsoft.Owin.Security.OAuth.xml
+C:\New folder\ReceptionProcam\ReceptionProcam\ReceptionProcam\bin\Microsoft.Owin.Security.Google.xml
+C:\New folder\ReceptionProcam\ReceptionProcam\ReceptionProcam\bin\Microsoft.Owin.Security.Twitter.xml
+C:\New folder\ReceptionProcam\ReceptionProcam\ReceptionProcam\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
+C:\New folder\ReceptionProcam\ReceptionProcam\ReceptionProcam\obj\Debug\ReceptionProcam.csprojResolveAssemblyReference.cache
+C:\New folder\ReceptionProcam\ReceptionProcam\ReceptionProcam\obj\Debug\ReceptionProcam.dll
+C:\New folder\ReceptionProcam\ReceptionProcam\ReceptionProcam\obj\Debug\ReceptionProcam.pdb
+E:\NCSProCamGIT\NCS_Git\ReceptionProcam\ReceptionProcam\ReceptionProcam\bin\ReceptionProcam.dll.config
+E:\NCSProCamGIT\NCS_Git\ReceptionProcam\ReceptionProcam\ReceptionProcam\bin\ReceptionProcam.dll
+E:\NCSProCamGIT\NCS_Git\ReceptionProcam\ReceptionProcam\ReceptionProcam\bin\ReceptionProcam.pdb
+E:\NCSProCamGIT\NCS_Git\ReceptionProcam\ReceptionProcam\ReceptionProcam\bin\Antlr3.Runtime.dll
+E:\NCSProCamGIT\NCS_Git\ReceptionProcam\ReceptionProcam\ReceptionProcam\bin\EntityFramework.dll
+E:\NCSProCamGIT\NCS_Git\ReceptionProcam\ReceptionProcam\ReceptionProcam\bin\EntityFramework.SqlServer.dll
+E:\NCSProCamGIT\NCS_Git\ReceptionProcam\ReceptionProcam\ReceptionProcam\bin\Microsoft.AspNet.Identity.Core.dll
+E:\NCSProCamGIT\NCS_Git\ReceptionProcam\ReceptionProcam\ReceptionProcam\bin\Microsoft.AspNet.Identity.EntityFramework.dll
+E:\NCSProCamGIT\NCS_Git\ReceptionProcam\ReceptionProcam\ReceptionProcam\bin\Microsoft.AspNet.Identity.Owin.dll
+E:\NCSProCamGIT\NCS_Git\ReceptionProcam\ReceptionProcam\ReceptionProcam\bin\Microsoft.Owin.dll
+E:\NCSProCamGIT\NCS_Git\ReceptionProcam\ReceptionProcam\ReceptionProcam\bin\Microsoft.Owin.Host.SystemWeb.dll
+E:\NCSProCamGIT\NCS_Git\ReceptionProcam\ReceptionProcam\ReceptionProcam\bin\Microsoft.Owin.Security.Cookies.dll
+E:\NCSProCamGIT\NCS_Git\ReceptionProcam\ReceptionProcam\ReceptionProcam\bin\Microsoft.Owin.Security.dll
+E:\NCSProCamGIT\NCS_Git\ReceptionProcam\ReceptionProcam\ReceptionProcam\bin\Microsoft.Owin.Security.Facebook.dll
+E:\NCSProCamGIT\NCS_Git\ReceptionProcam\ReceptionProcam\ReceptionProcam\bin\Microsoft.Owin.Security.Google.dll
+E:\NCSProCamGIT\NCS_Git\ReceptionProcam\ReceptionProcam\ReceptionProcam\bin\Microsoft.Owin.Security.MicrosoftAccount.dll
+E:\NCSProCamGIT\NCS_Git\ReceptionProcam\ReceptionProcam\ReceptionProcam\bin\Microsoft.Owin.Security.OAuth.dll
+E:\NCSProCamGIT\NCS_Git\ReceptionProcam\ReceptionProcam\ReceptionProcam\bin\Microsoft.Owin.Security.Twitter.dll
+E:\NCSProCamGIT\NCS_Git\ReceptionProcam\ReceptionProcam\ReceptionProcam\bin\Microsoft.Web.Infrastructure.dll
+E:\NCSProCamGIT\NCS_Git\ReceptionProcam\ReceptionProcam\ReceptionProcam\bin\Newtonsoft.Json.dll
+E:\NCSProCamGIT\NCS_Git\ReceptionProcam\ReceptionProcam\ReceptionProcam\bin\Owin.dll
+E:\NCSProCamGIT\NCS_Git\ReceptionProcam\ReceptionProcam\ReceptionProcam\bin\System.Web.Helpers.dll
+E:\NCSProCamGIT\NCS_Git\ReceptionProcam\ReceptionProcam\ReceptionProcam\bin\System.Web.Mvc.dll
+E:\NCSProCamGIT\NCS_Git\ReceptionProcam\ReceptionProcam\ReceptionProcam\bin\System.Web.Optimization.dll
+E:\NCSProCamGIT\NCS_Git\ReceptionProcam\ReceptionProcam\ReceptionProcam\bin\System.Web.Razor.dll
+E:\NCSProCamGIT\NCS_Git\ReceptionProcam\ReceptionProcam\ReceptionProcam\bin\System.Web.WebPages.Deployment.dll
+E:\NCSProCamGIT\NCS_Git\ReceptionProcam\ReceptionProcam\ReceptionProcam\bin\System.Web.WebPages.dll
+E:\NCSProCamGIT\NCS_Git\ReceptionProcam\ReceptionProcam\ReceptionProcam\bin\System.Web.WebPages.Razor.dll
+E:\NCSProCamGIT\NCS_Git\ReceptionProcam\ReceptionProcam\ReceptionProcam\bin\WebGrease.dll
+E:\NCSProCamGIT\NCS_Git\ReceptionProcam\ReceptionProcam\ReceptionProcam\bin\System.Web.Helpers.xml
+E:\NCSProCamGIT\NCS_Git\ReceptionProcam\ReceptionProcam\ReceptionProcam\bin\System.Web.Mvc.xml
+E:\NCSProCamGIT\NCS_Git\ReceptionProcam\ReceptionProcam\ReceptionProcam\bin\System.Web.Optimization.xml
+E:\NCSProCamGIT\NCS_Git\ReceptionProcam\ReceptionProcam\ReceptionProcam\bin\System.Web.Razor.xml
+E:\NCSProCamGIT\NCS_Git\ReceptionProcam\ReceptionProcam\ReceptionProcam\bin\System.Web.WebPages.xml
+E:\NCSProCamGIT\NCS_Git\ReceptionProcam\ReceptionProcam\ReceptionProcam\bin\System.Web.WebPages.Deployment.xml
+E:\NCSProCamGIT\NCS_Git\ReceptionProcam\ReceptionProcam\ReceptionProcam\bin\System.Web.WebPages.Razor.xml
+E:\NCSProCamGIT\NCS_Git\ReceptionProcam\ReceptionProcam\ReceptionProcam\bin\Antlr3.Runtime.pdb
+E:\NCSProCamGIT\NCS_Git\ReceptionProcam\ReceptionProcam\ReceptionProcam\bin\Newtonsoft.Json.xml
+E:\NCSProCamGIT\NCS_Git\ReceptionProcam\ReceptionProcam\ReceptionProcam\bin\EntityFramework.xml
+E:\NCSProCamGIT\NCS_Git\ReceptionProcam\ReceptionProcam\ReceptionProcam\bin\EntityFramework.SqlServer.xml
+E:\NCSProCamGIT\NCS_Git\ReceptionProcam\ReceptionProcam\ReceptionProcam\bin\Microsoft.AspNet.Identity.Core.xml
+E:\NCSProCamGIT\NCS_Git\ReceptionProcam\ReceptionProcam\ReceptionProcam\bin\Microsoft.AspNet.Identity.Owin.xml
+E:\NCSProCamGIT\NCS_Git\ReceptionProcam\ReceptionProcam\ReceptionProcam\bin\Microsoft.AspNet.Identity.EntityFramework.xml
+E:\NCSProCamGIT\NCS_Git\ReceptionProcam\ReceptionProcam\ReceptionProcam\bin\Microsoft.Owin.xml
+E:\NCSProCamGIT\NCS_Git\ReceptionProcam\ReceptionProcam\ReceptionProcam\bin\Microsoft.Owin.Host.SystemWeb.xml
+E:\NCSProCamGIT\NCS_Git\ReceptionProcam\ReceptionProcam\ReceptionProcam\bin\Microsoft.Owin.Security.xml
+E:\NCSProCamGIT\NCS_Git\ReceptionProcam\ReceptionProcam\ReceptionProcam\bin\Microsoft.Owin.Security.Facebook.xml
+E:\NCSProCamGIT\NCS_Git\ReceptionProcam\ReceptionProcam\ReceptionProcam\bin\Microsoft.Owin.Security.Cookies.xml
+E:\NCSProCamGIT\NCS_Git\ReceptionProcam\ReceptionProcam\ReceptionProcam\bin\Microsoft.Owin.Security.OAuth.xml
+E:\NCSProCamGIT\NCS_Git\ReceptionProcam\ReceptionProcam\ReceptionProcam\bin\Microsoft.Owin.Security.Google.xml
+E:\NCSProCamGIT\NCS_Git\ReceptionProcam\ReceptionProcam\ReceptionProcam\bin\Microsoft.Owin.Security.Twitter.xml
+E:\NCSProCamGIT\NCS_Git\ReceptionProcam\ReceptionProcam\ReceptionProcam\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
+E:\NCSProCamGIT\NCS_Git\ReceptionProcam\ReceptionProcam\ReceptionProcam\obj\Debug\ReceptionProcam.dll
+E:\NCSProCamGIT\NCS_Git\ReceptionProcam\ReceptionProcam\ReceptionProcam\obj\Debug\ReceptionProcam.pdb
+E:\NCSProCamGIT\NCS_Git\ReceptionProcam\ReceptionProcam\ReceptionProcam\obj\Debug\ReceptionProcam.csprojResolveAssemblyReference.cache
+D:\Kavan\Project\ReceptionProcam\ReceptionProcam\ReceptionProcam\bin\ReceptionProcam.dll.config
+D:\Kavan\Project\ReceptionProcam\ReceptionProcam\ReceptionProcam\bin\ReceptionProcam.dll
+D:\Kavan\Project\ReceptionProcam\ReceptionProcam\ReceptionProcam\bin\ReceptionProcam.pdb
+D:\Kavan\Project\ReceptionProcam\ReceptionProcam\ReceptionProcam\bin\Antlr3.Runtime.dll
+D:\Kavan\Project\ReceptionProcam\ReceptionProcam\ReceptionProcam\bin\EntityFramework.dll
+D:\Kavan\Project\ReceptionProcam\ReceptionProcam\ReceptionProcam\bin\EntityFramework.SqlServer.dll
+D:\Kavan\Project\ReceptionProcam\ReceptionProcam\ReceptionProcam\bin\Microsoft.AspNet.Identity.Core.dll
+D:\Kavan\Project\ReceptionProcam\ReceptionProcam\ReceptionProcam\bin\Microsoft.AspNet.Identity.EntityFramework.dll
+D:\Kavan\Project\ReceptionProcam\ReceptionProcam\ReceptionProcam\bin\Microsoft.AspNet.Identity.Owin.dll
+D:\Kavan\Project\ReceptionProcam\ReceptionProcam\ReceptionProcam\bin\Microsoft.Owin.dll
+D:\Kavan\Project\ReceptionProcam\ReceptionProcam\ReceptionProcam\bin\Microsoft.Owin.Host.SystemWeb.dll
+D:\Kavan\Project\ReceptionProcam\ReceptionProcam\ReceptionProcam\bin\Microsoft.Owin.Security.Cookies.dll
+D:\Kavan\Project\ReceptionProcam\ReceptionProcam\ReceptionProcam\bin\Microsoft.Owin.Security.dll
+D:\Kavan\Project\ReceptionProcam\ReceptionProcam\ReceptionProcam\bin\Microsoft.Owin.Security.Facebook.dll
+D:\Kavan\Project\ReceptionProcam\ReceptionProcam\ReceptionProcam\bin\Microsoft.Owin.Security.Google.dll
+D:\Kavan\Project\ReceptionProcam\ReceptionProcam\ReceptionProcam\bin\Microsoft.Owin.Security.MicrosoftAccount.dll
+D:\Kavan\Project\ReceptionProcam\ReceptionProcam\ReceptionProcam\bin\Microsoft.Owin.Security.OAuth.dll
+D:\Kavan\Project\ReceptionProcam\ReceptionProcam\ReceptionProcam\bin\Microsoft.Owin.Security.Twitter.dll
+D:\Kavan\Project\ReceptionProcam\ReceptionProcam\ReceptionProcam\bin\Microsoft.Web.Infrastructure.dll
+D:\Kavan\Project\ReceptionProcam\ReceptionProcam\ReceptionProcam\bin\Newtonsoft.Json.dll
+D:\Kavan\Project\ReceptionProcam\ReceptionProcam\ReceptionProcam\bin\Owin.dll
+D:\Kavan\Project\ReceptionProcam\ReceptionProcam\ReceptionProcam\bin\System.Web.Helpers.dll
+D:\Kavan\Project\ReceptionProcam\ReceptionProcam\ReceptionProcam\bin\System.Web.Mvc.dll
+D:\Kavan\Project\ReceptionProcam\ReceptionProcam\ReceptionProcam\bin\System.Web.Optimization.dll
+D:\Kavan\Project\ReceptionProcam\ReceptionProcam\ReceptionProcam\bin\System.Web.Razor.dll
+D:\Kavan\Project\ReceptionProcam\ReceptionProcam\ReceptionProcam\bin\System.Web.WebPages.Deployment.dll
+D:\Kavan\Project\ReceptionProcam\ReceptionProcam\ReceptionProcam\bin\System.Web.WebPages.dll
+D:\Kavan\Project\ReceptionProcam\ReceptionProcam\ReceptionProcam\bin\System.Web.WebPages.Razor.dll
+D:\Kavan\Project\ReceptionProcam\ReceptionProcam\ReceptionProcam\bin\WebGrease.dll
+D:\Kavan\Project\ReceptionProcam\ReceptionProcam\ReceptionProcam\bin\System.Web.Helpers.xml
+D:\Kavan\Project\ReceptionProcam\ReceptionProcam\ReceptionProcam\bin\System.Web.Mvc.xml
+D:\Kavan\Project\ReceptionProcam\ReceptionProcam\ReceptionProcam\bin\System.Web.Optimization.xml
+D:\Kavan\Project\ReceptionProcam\ReceptionProcam\ReceptionProcam\bin\System.Web.Razor.xml
+D:\Kavan\Project\ReceptionProcam\ReceptionProcam\ReceptionProcam\bin\System.Web.WebPages.xml
+D:\Kavan\Project\ReceptionProcam\ReceptionProcam\ReceptionProcam\bin\System.Web.WebPages.Deployment.xml
+D:\Kavan\Project\ReceptionProcam\ReceptionProcam\ReceptionProcam\bin\System.Web.WebPages.Razor.xml
+D:\Kavan\Project\ReceptionProcam\ReceptionProcam\ReceptionProcam\bin\Antlr3.Runtime.pdb
+D:\Kavan\Project\ReceptionProcam\ReceptionProcam\ReceptionProcam\bin\Newtonsoft.Json.xml
+D:\Kavan\Project\ReceptionProcam\ReceptionProcam\ReceptionProcam\bin\EntityFramework.xml
+D:\Kavan\Project\ReceptionProcam\ReceptionProcam\ReceptionProcam\bin\EntityFramework.SqlServer.xml
+D:\Kavan\Project\ReceptionProcam\ReceptionProcam\ReceptionProcam\bin\Microsoft.AspNet.Identity.Core.xml
+D:\Kavan\Project\ReceptionProcam\ReceptionProcam\ReceptionProcam\bin\Microsoft.AspNet.Identity.Owin.xml
+D:\Kavan\Project\ReceptionProcam\ReceptionProcam\ReceptionProcam\bin\Microsoft.AspNet.Identity.EntityFramework.xml
+D:\Kavan\Project\ReceptionProcam\ReceptionProcam\ReceptionProcam\bin\Microsoft.Owin.xml
+D:\Kavan\Project\ReceptionProcam\ReceptionProcam\ReceptionProcam\bin\Microsoft.Owin.Host.SystemWeb.xml
+D:\Kavan\Project\ReceptionProcam\ReceptionProcam\ReceptionProcam\bin\Microsoft.Owin.Security.xml
+D:\Kavan\Project\ReceptionProcam\ReceptionProcam\ReceptionProcam\bin\Microsoft.Owin.Security.Facebook.xml
+D:\Kavan\Project\ReceptionProcam\ReceptionProcam\ReceptionProcam\bin\Microsoft.Owin.Security.Cookies.xml
+D:\Kavan\Project\ReceptionProcam\ReceptionProcam\ReceptionProcam\bin\Microsoft.Owin.Security.OAuth.xml
+D:\Kavan\Project\ReceptionProcam\ReceptionProcam\ReceptionProcam\bin\Microsoft.Owin.Security.Google.xml
+D:\Kavan\Project\ReceptionProcam\ReceptionProcam\ReceptionProcam\bin\Microsoft.Owin.Security.Twitter.xml
+D:\Kavan\Project\ReceptionProcam\ReceptionProcam\ReceptionProcam\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
+D:\Kavan\Project\ReceptionProcam\ReceptionProcam\ReceptionProcam\obj\Debug\ReceptionProcam.csprojResolveAssemblyReference.cache
+D:\Kavan\Project\ReceptionProcam\ReceptionProcam\ReceptionProcam\obj\Debug\ReceptionProcam.dll
+D:\Kavan\Project\ReceptionProcam\ReceptionProcam\ReceptionProcam\obj\Debug\ReceptionProcam.pdb
+E:\Kavan_Git\NCSCamPass\ReceptionProcam\ReceptionProcam\bin\ReceptionProcam.dll.config
+E:\Kavan_Git\NCSCamPass\ReceptionProcam\ReceptionProcam\bin\ReceptionProcam.dll
+E:\Kavan_Git\NCSCamPass\ReceptionProcam\ReceptionProcam\bin\ReceptionProcam.pdb
+E:\Kavan_Git\NCSCamPass\ReceptionProcam\ReceptionProcam\bin\Antlr3.Runtime.dll
+E:\Kavan_Git\NCSCamPass\ReceptionProcam\ReceptionProcam\bin\EntityFramework.dll
+E:\Kavan_Git\NCSCamPass\ReceptionProcam\ReceptionProcam\bin\EntityFramework.SqlServer.dll
+E:\Kavan_Git\NCSCamPass\ReceptionProcam\ReceptionProcam\bin\Microsoft.AspNet.Identity.Core.dll
+E:\Kavan_Git\NCSCamPass\ReceptionProcam\ReceptionProcam\bin\Microsoft.AspNet.Identity.EntityFramework.dll
+E:\Kavan_Git\NCSCamPass\ReceptionProcam\ReceptionProcam\bin\Microsoft.AspNet.Identity.Owin.dll
+E:\Kavan_Git\NCSCamPass\ReceptionProcam\ReceptionProcam\bin\Microsoft.Owin.dll
+E:\Kavan_Git\NCSCamPass\ReceptionProcam\ReceptionProcam\bin\Microsoft.Owin.Host.SystemWeb.dll
+E:\Kavan_Git\NCSCamPass\ReceptionProcam\ReceptionProcam\bin\Microsoft.Owin.Security.Cookies.dll
+E:\Kavan_Git\NCSCamPass\ReceptionProcam\ReceptionProcam\bin\Microsoft.Owin.Security.dll
+E:\Kavan_Git\NCSCamPass\ReceptionProcam\ReceptionProcam\bin\Microsoft.Owin.Security.Facebook.dll
+E:\Kavan_Git\NCSCamPass\ReceptionProcam\ReceptionProcam\bin\Microsoft.Owin.Security.Google.dll
+E:\Kavan_Git\NCSCamPass\ReceptionProcam\ReceptionProcam\bin\Microsoft.Owin.Security.MicrosoftAccount.dll
+E:\Kavan_Git\NCSCamPass\ReceptionProcam\ReceptionProcam\bin\Microsoft.Owin.Security.OAuth.dll
+E:\Kavan_Git\NCSCamPass\ReceptionProcam\ReceptionProcam\bin\Microsoft.Owin.Security.Twitter.dll
+E:\Kavan_Git\NCSCamPass\ReceptionProcam\ReceptionProcam\bin\Microsoft.Web.Infrastructure.dll
+E:\Kavan_Git\NCSCamPass\ReceptionProcam\ReceptionProcam\bin\Newtonsoft.Json.dll
+E:\Kavan_Git\NCSCamPass\ReceptionProcam\ReceptionProcam\bin\Owin.dll
+E:\Kavan_Git\NCSCamPass\ReceptionProcam\ReceptionProcam\bin\System.Web.Helpers.dll
+E:\Kavan_Git\NCSCamPass\ReceptionProcam\ReceptionProcam\bin\System.Web.Mvc.dll
+E:\Kavan_Git\NCSCamPass\ReceptionProcam\ReceptionProcam\bin\System.Web.Optimization.dll
+E:\Kavan_Git\NCSCamPass\ReceptionProcam\ReceptionProcam\bin\System.Web.Razor.dll
+E:\Kavan_Git\NCSCamPass\ReceptionProcam\ReceptionProcam\bin\System.Web.WebPages.Deployment.dll
+E:\Kavan_Git\NCSCamPass\ReceptionProcam\ReceptionProcam\bin\System.Web.WebPages.dll
+E:\Kavan_Git\NCSCamPass\ReceptionProcam\ReceptionProcam\bin\System.Web.WebPages.Razor.dll
+E:\Kavan_Git\NCSCamPass\ReceptionProcam\ReceptionProcam\bin\WebGrease.dll
+E:\Kavan_Git\NCSCamPass\ReceptionProcam\ReceptionProcam\bin\System.Web.Helpers.xml
+E:\Kavan_Git\NCSCamPass\ReceptionProcam\ReceptionProcam\bin\System.Web.Mvc.xml
+E:\Kavan_Git\NCSCamPass\ReceptionProcam\ReceptionProcam\bin\System.Web.Optimization.xml
+E:\Kavan_Git\NCSCamPass\ReceptionProcam\ReceptionProcam\bin\System.Web.Razor.xml
+E:\Kavan_Git\NCSCamPass\ReceptionProcam\ReceptionProcam\bin\System.Web.WebPages.xml
+E:\Kavan_Git\NCSCamPass\ReceptionProcam\ReceptionProcam\bin\System.Web.WebPages.Deployment.xml
+E:\Kavan_Git\NCSCamPass\ReceptionProcam\ReceptionProcam\bin\System.Web.WebPages.Razor.xml
+E:\Kavan_Git\NCSCamPass\ReceptionProcam\ReceptionProcam\bin\Antlr3.Runtime.pdb
+E:\Kavan_Git\NCSCamPass\ReceptionProcam\ReceptionProcam\bin\Newtonsoft.Json.xml
+E:\Kavan_Git\NCSCamPass\ReceptionProcam\ReceptionProcam\bin\EntityFramework.xml
+E:\Kavan_Git\NCSCamPass\ReceptionProcam\ReceptionProcam\bin\EntityFramework.SqlServer.xml
+E:\Kavan_Git\NCSCamPass\ReceptionProcam\ReceptionProcam\bin\Microsoft.AspNet.Identity.Core.xml
+E:\Kavan_Git\NCSCamPass\ReceptionProcam\ReceptionProcam\bin\Microsoft.AspNet.Identity.Owin.xml
+E:\Kavan_Git\NCSCamPass\ReceptionProcam\ReceptionProcam\bin\Microsoft.AspNet.Identity.EntityFramework.xml
+E:\Kavan_Git\NCSCamPass\ReceptionProcam\ReceptionProcam\bin\Microsoft.Owin.xml
+E:\Kavan_Git\NCSCamPass\ReceptionProcam\ReceptionProcam\bin\Microsoft.Owin.Host.SystemWeb.xml
+E:\Kavan_Git\NCSCamPass\ReceptionProcam\ReceptionProcam\bin\Microsoft.Owin.Security.xml
+E:\Kavan_Git\NCSCamPass\ReceptionProcam\ReceptionProcam\bin\Microsoft.Owin.Security.Facebook.xml
+E:\Kavan_Git\NCSCamPass\ReceptionProcam\ReceptionProcam\bin\Microsoft.Owin.Security.Cookies.xml
+E:\Kavan_Git\NCSCamPass\ReceptionProcam\ReceptionProcam\bin\Microsoft.Owin.Security.OAuth.xml
+E:\Kavan_Git\NCSCamPass\ReceptionProcam\ReceptionProcam\bin\Microsoft.Owin.Security.Google.xml
+E:\Kavan_Git\NCSCamPass\ReceptionProcam\ReceptionProcam\bin\Microsoft.Owin.Security.Twitter.xml
+E:\Kavan_Git\NCSCamPass\ReceptionProcam\ReceptionProcam\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
+E:\Kavan_Git\NCSCamPass\ReceptionProcam\ReceptionProcam\obj\Debug\ReceptionProcam.dll
+E:\Kavan_Git\NCSCamPass\ReceptionProcam\ReceptionProcam\obj\Debug\ReceptionProcam.pdb
+D:\Kavan\Project\NCSCamPass\NCSCamPass\ReceptionProcam\ReceptionProcam\bin\ReceptionProcam.dll.config
+D:\Kavan\Project\NCSCamPass\NCSCamPass\ReceptionProcam\ReceptionProcam\bin\ReceptionProcam.dll
+D:\Kavan\Project\NCSCamPass\NCSCamPass\ReceptionProcam\ReceptionProcam\bin\ReceptionProcam.pdb
+D:\Kavan\Project\NCSCamPass\NCSCamPass\ReceptionProcam\ReceptionProcam\bin\Antlr3.Runtime.dll
+D:\Kavan\Project\NCSCamPass\NCSCamPass\ReceptionProcam\ReceptionProcam\bin\EntityFramework.dll
+D:\Kavan\Project\NCSCamPass\NCSCamPass\ReceptionProcam\ReceptionProcam\bin\EntityFramework.SqlServer.dll
+D:\Kavan\Project\NCSCamPass\NCSCamPass\ReceptionProcam\ReceptionProcam\bin\Microsoft.AspNet.Identity.Core.dll
+D:\Kavan\Project\NCSCamPass\NCSCamPass\ReceptionProcam\ReceptionProcam\bin\Microsoft.AspNet.Identity.EntityFramework.dll
+D:\Kavan\Project\NCSCamPass\NCSCamPass\ReceptionProcam\ReceptionProcam\bin\Microsoft.AspNet.Identity.Owin.dll
+D:\Kavan\Project\NCSCamPass\NCSCamPass\ReceptionProcam\ReceptionProcam\bin\Microsoft.Owin.dll
+D:\Kavan\Project\NCSCamPass\NCSCamPass\ReceptionProcam\ReceptionProcam\bin\Microsoft.Owin.Host.SystemWeb.dll
+D:\Kavan\Project\NCSCamPass\NCSCamPass\ReceptionProcam\ReceptionProcam\bin\Microsoft.Owin.Security.Cookies.dll
+D:\Kavan\Project\NCSCamPass\NCSCamPass\ReceptionProcam\ReceptionProcam\bin\Microsoft.Owin.Security.dll
+D:\Kavan\Project\NCSCamPass\NCSCamPass\ReceptionProcam\ReceptionProcam\bin\Microsoft.Owin.Security.Facebook.dll
+D:\Kavan\Project\NCSCamPass\NCSCamPass\ReceptionProcam\ReceptionProcam\bin\Microsoft.Owin.Security.Google.dll
+D:\Kavan\Project\NCSCamPass\NCSCamPass\ReceptionProcam\ReceptionProcam\bin\Microsoft.Owin.Security.MicrosoftAccount.dll
+D:\Kavan\Project\NCSCamPass\NCSCamPass\ReceptionProcam\ReceptionProcam\bin\Microsoft.Owin.Security.OAuth.dll
+D:\Kavan\Project\NCSCamPass\NCSCamPass\ReceptionProcam\ReceptionProcam\bin\Microsoft.Owin.Security.Twitter.dll
+D:\Kavan\Project\NCSCamPass\NCSCamPass\ReceptionProcam\ReceptionProcam\bin\Microsoft.Web.Infrastructure.dll
+D:\Kavan\Project\NCSCamPass\NCSCamPass\ReceptionProcam\ReceptionProcam\bin\Newtonsoft.Json.dll
+D:\Kavan\Project\NCSCamPass\NCSCamPass\ReceptionProcam\ReceptionProcam\bin\Owin.dll
+D:\Kavan\Project\NCSCamPass\NCSCamPass\ReceptionProcam\ReceptionProcam\bin\System.Web.Helpers.dll
+D:\Kavan\Project\NCSCamPass\NCSCamPass\ReceptionProcam\ReceptionProcam\bin\System.Web.Mvc.dll
+D:\Kavan\Project\NCSCamPass\NCSCamPass\ReceptionProcam\ReceptionProcam\bin\System.Web.Optimization.dll
+D:\Kavan\Project\NCSCamPass\NCSCamPass\ReceptionProcam\ReceptionProcam\bin\System.Web.Razor.dll
+D:\Kavan\Project\NCSCamPass\NCSCamPass\ReceptionProcam\ReceptionProcam\bin\System.Web.WebPages.Deployment.dll
+D:\Kavan\Project\NCSCamPass\NCSCamPass\ReceptionProcam\ReceptionProcam\bin\System.Web.WebPages.dll
+D:\Kavan\Project\NCSCamPass\NCSCamPass\ReceptionProcam\ReceptionProcam\bin\System.Web.WebPages.Razor.dll
+D:\Kavan\Project\NCSCamPass\NCSCamPass\ReceptionProcam\ReceptionProcam\bin\WebGrease.dll
+D:\Kavan\Project\NCSCamPass\NCSCamPass\ReceptionProcam\ReceptionProcam\bin\System.Web.Helpers.xml
+D:\Kavan\Project\NCSCamPass\NCSCamPass\ReceptionProcam\ReceptionProcam\bin\System.Web.Mvc.xml
+D:\Kavan\Project\NCSCamPass\NCSCamPass\ReceptionProcam\ReceptionProcam\bin\System.Web.Optimization.xml
+D:\Kavan\Project\NCSCamPass\NCSCamPass\ReceptionProcam\ReceptionProcam\bin\System.Web.Razor.xml
+D:\Kavan\Project\NCSCamPass\NCSCamPass\ReceptionProcam\ReceptionProcam\bin\System.Web.WebPages.xml
+D:\Kavan\Project\NCSCamPass\NCSCamPass\ReceptionProcam\ReceptionProcam\bin\System.Web.WebPages.Deployment.xml
+D:\Kavan\Project\NCSCamPass\NCSCamPass\ReceptionProcam\ReceptionProcam\bin\System.Web.WebPages.Razor.xml
+D:\Kavan\Project\NCSCamPass\NCSCamPass\ReceptionProcam\ReceptionProcam\bin\Antlr3.Runtime.pdb
+D:\Kavan\Project\NCSCamPass\NCSCamPass\ReceptionProcam\ReceptionProcam\bin\Newtonsoft.Json.xml
+D:\Kavan\Project\NCSCamPass\NCSCamPass\ReceptionProcam\ReceptionProcam\bin\EntityFramework.xml
+D:\Kavan\Project\NCSCamPass\NCSCamPass\ReceptionProcam\ReceptionProcam\bin\EntityFramework.SqlServer.xml
+D:\Kavan\Project\NCSCamPass\NCSCamPass\ReceptionProcam\ReceptionProcam\bin\Microsoft.AspNet.Identity.Core.xml
+D:\Kavan\Project\NCSCamPass\NCSCamPass\ReceptionProcam\ReceptionProcam\bin\Microsoft.AspNet.Identity.Owin.xml
+D:\Kavan\Project\NCSCamPass\NCSCamPass\ReceptionProcam\ReceptionProcam\bin\Microsoft.AspNet.Identity.EntityFramework.xml
+D:\Kavan\Project\NCSCamPass\NCSCamPass\ReceptionProcam\ReceptionProcam\bin\Microsoft.Owin.xml
+D:\Kavan\Project\NCSCamPass\NCSCamPass\ReceptionProcam\ReceptionProcam\bin\Microsoft.Owin.Host.SystemWeb.xml
+D:\Kavan\Project\NCSCamPass\NCSCamPass\ReceptionProcam\ReceptionProcam\bin\Microsoft.Owin.Security.xml
+D:\Kavan\Project\NCSCamPass\NCSCamPass\ReceptionProcam\ReceptionProcam\bin\Microsoft.Owin.Security.Facebook.xml
+D:\Kavan\Project\NCSCamPass\NCSCamPass\ReceptionProcam\ReceptionProcam\bin\Microsoft.Owin.Security.Cookies.xml
+D:\Kavan\Project\NCSCamPass\NCSCamPass\ReceptionProcam\ReceptionProcam\bin\Microsoft.Owin.Security.OAuth.xml
+D:\Kavan\Project\NCSCamPass\NCSCamPass\ReceptionProcam\ReceptionProcam\bin\Microsoft.Owin.Security.Google.xml
+D:\Kavan\Project\NCSCamPass\NCSCamPass\ReceptionProcam\ReceptionProcam\bin\Microsoft.Owin.Security.Twitter.xml
+D:\Kavan\Project\NCSCamPass\NCSCamPass\ReceptionProcam\ReceptionProcam\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
+D:\Kavan\Project\NCSCamPass\NCSCamPass\ReceptionProcam\ReceptionProcam\obj\Debug\ReceptionProcam.dll
+D:\Kavan\Project\NCSCamPass\NCSCamPass\ReceptionProcam\ReceptionProcam\obj\Debug\ReceptionProcam.pdb
+D:\Kavan\Project\NCSCamPass\NCSCamPass\ReceptionProcam\ReceptionProcam\obj\Debug\ReceptionProcam.csprojResolveAssemblyReference.cache
+D:\Security project\Code\NCSCamPass\ReceptionProcam\ReceptionProcam\bin\ReceptionProcam.dll.config
+D:\Security project\Code\NCSCamPass\ReceptionProcam\ReceptionProcam\bin\ReceptionProcam.dll
+D:\Security project\Code\NCSCamPass\ReceptionProcam\ReceptionProcam\bin\ReceptionProcam.pdb
+D:\Security project\Code\NCSCamPass\ReceptionProcam\ReceptionProcam\bin\Antlr3.Runtime.dll
+D:\Security project\Code\NCSCamPass\ReceptionProcam\ReceptionProcam\bin\EntityFramework.dll
+D:\Security project\Code\NCSCamPass\ReceptionProcam\ReceptionProcam\bin\EntityFramework.SqlServer.dll
+D:\Security project\Code\NCSCamPass\ReceptionProcam\ReceptionProcam\bin\Microsoft.AspNet.Identity.Core.dll
+D:\Security project\Code\NCSCamPass\ReceptionProcam\ReceptionProcam\bin\Microsoft.AspNet.Identity.EntityFramework.dll
+D:\Security project\Code\NCSCamPass\ReceptionProcam\ReceptionProcam\bin\Microsoft.AspNet.Identity.Owin.dll
+D:\Security project\Code\NCSCamPass\ReceptionProcam\ReceptionProcam\bin\Microsoft.Owin.dll
+D:\Security project\Code\NCSCamPass\ReceptionProcam\ReceptionProcam\bin\Microsoft.Owin.Host.SystemWeb.dll
+D:\Security project\Code\NCSCamPass\ReceptionProcam\ReceptionProcam\bin\Microsoft.Owin.Security.Cookies.dll
+D:\Security project\Code\NCSCamPass\ReceptionProcam\ReceptionProcam\bin\Microsoft.Owin.Security.dll
+D:\Security project\Code\NCSCamPass\ReceptionProcam\ReceptionProcam\bin\Microsoft.Owin.Security.Facebook.dll
+D:\Security project\Code\NCSCamPass\ReceptionProcam\ReceptionProcam\bin\Microsoft.Owin.Security.Google.dll
+D:\Security project\Code\NCSCamPass\ReceptionProcam\ReceptionProcam\bin\Microsoft.Owin.Security.MicrosoftAccount.dll
+D:\Security project\Code\NCSCamPass\ReceptionProcam\ReceptionProcam\bin\Microsoft.Owin.Security.OAuth.dll
+D:\Security project\Code\NCSCamPass\ReceptionProcam\ReceptionProcam\bin\Microsoft.Owin.Security.Twitter.dll
+D:\Security project\Code\NCSCamPass\ReceptionProcam\ReceptionProcam\bin\Microsoft.Web.Infrastructure.dll
+D:\Security project\Code\NCSCamPass\ReceptionProcam\ReceptionProcam\bin\Newtonsoft.Json.dll
+D:\Security project\Code\NCSCamPass\ReceptionProcam\ReceptionProcam\bin\Owin.dll
+D:\Security project\Code\NCSCamPass\ReceptionProcam\ReceptionProcam\bin\System.Web.Helpers.dll
+D:\Security project\Code\NCSCamPass\ReceptionProcam\ReceptionProcam\bin\System.Web.Mvc.dll
+D:\Security project\Code\NCSCamPass\ReceptionProcam\ReceptionProcam\bin\System.Web.Optimization.dll
+D:\Security project\Code\NCSCamPass\ReceptionProcam\ReceptionProcam\bin\System.Web.Razor.dll
+D:\Security project\Code\NCSCamPass\ReceptionProcam\ReceptionProcam\bin\System.Web.WebPages.Deployment.dll
+D:\Security project\Code\NCSCamPass\ReceptionProcam\ReceptionProcam\bin\System.Web.WebPages.dll
+D:\Security project\Code\NCSCamPass\ReceptionProcam\ReceptionProcam\bin\System.Web.WebPages.Razor.dll
+D:\Security project\Code\NCSCamPass\ReceptionProcam\ReceptionProcam\bin\WebGrease.dll
+D:\Security project\Code\NCSCamPass\ReceptionProcam\ReceptionProcam\bin\System.Web.Helpers.xml
+D:\Security project\Code\NCSCamPass\ReceptionProcam\ReceptionProcam\bin\System.Web.Mvc.xml
+D:\Security project\Code\NCSCamPass\ReceptionProcam\ReceptionProcam\bin\System.Web.Optimization.xml
+D:\Security project\Code\NCSCamPass\ReceptionProcam\ReceptionProcam\bin\System.Web.Razor.xml
+D:\Security project\Code\NCSCamPass\ReceptionProcam\ReceptionProcam\bin\System.Web.WebPages.xml
+D:\Security project\Code\NCSCamPass\ReceptionProcam\ReceptionProcam\bin\System.Web.WebPages.Deployment.xml
+D:\Security project\Code\NCSCamPass\ReceptionProcam\ReceptionProcam\bin\System.Web.WebPages.Razor.xml
+D:\Security project\Code\NCSCamPass\ReceptionProcam\ReceptionProcam\bin\Antlr3.Runtime.pdb
+D:\Security project\Code\NCSCamPass\ReceptionProcam\ReceptionProcam\bin\Newtonsoft.Json.xml
+D:\Security project\Code\NCSCamPass\ReceptionProcam\ReceptionProcam\bin\EntityFramework.xml
+D:\Security project\Code\NCSCamPass\ReceptionProcam\ReceptionProcam\bin\EntityFramework.SqlServer.xml
+D:\Security project\Code\NCSCamPass\ReceptionProcam\ReceptionProcam\bin\Microsoft.AspNet.Identity.Core.xml
+D:\Security project\Code\NCSCamPass\ReceptionProcam\ReceptionProcam\bin\Microsoft.AspNet.Identity.Owin.xml
+D:\Security project\Code\NCSCamPass\ReceptionProcam\ReceptionProcam\bin\Microsoft.AspNet.Identity.EntityFramework.xml
+D:\Security project\Code\NCSCamPass\ReceptionProcam\ReceptionProcam\bin\Microsoft.Owin.xml
+D:\Security project\Code\NCSCamPass\ReceptionProcam\ReceptionProcam\bin\Microsoft.Owin.Host.SystemWeb.xml
+D:\Security project\Code\NCSCamPass\ReceptionProcam\ReceptionProcam\bin\Microsoft.Owin.Security.xml
+D:\Security project\Code\NCSCamPass\ReceptionProcam\ReceptionProcam\bin\Microsoft.Owin.Security.Facebook.xml
+D:\Security project\Code\NCSCamPass\ReceptionProcam\ReceptionProcam\bin\Microsoft.Owin.Security.Cookies.xml
+D:\Security project\Code\NCSCamPass\ReceptionProcam\ReceptionProcam\bin\Microsoft.Owin.Security.OAuth.xml
+D:\Security project\Code\NCSCamPass\ReceptionProcam\ReceptionProcam\bin\Microsoft.Owin.Security.Google.xml
+D:\Security project\Code\NCSCamPass\ReceptionProcam\ReceptionProcam\bin\Microsoft.Owin.Security.Twitter.xml
+D:\Security project\Code\NCSCamPass\ReceptionProcam\ReceptionProcam\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
+D:\Security project\Code\NCSCamPass\ReceptionProcam\ReceptionProcam\obj\Debug\ReceptionProcam.dll
+D:\Security project\Code\NCSCamPass\ReceptionProcam\ReceptionProcam\obj\Debug\ReceptionProcam.pdb

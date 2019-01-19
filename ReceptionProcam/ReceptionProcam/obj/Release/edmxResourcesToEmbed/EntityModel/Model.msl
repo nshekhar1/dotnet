@@ -1,0 +1,431 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="DBNCSVisitorModelStoreContainer" CdmEntityContainer="DBNCSVisitorEntities">
+    <EntitySetMapping Name="tblAssetCompanies">
+      <EntityTypeMapping TypeName="DBNCSVisitorModel.tblAssetCompany">
+        <MappingFragment StoreEntitySet="tblAssetCompany">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="AssetCompanyCode" ColumnName="AssetCompanyCode" />
+          <ScalarProperty Name="AssetCompanyName" ColumnName="AssetCompanyName" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblAssetDetails">
+      <EntityTypeMapping TypeName="DBNCSVisitorModel.tblAssetDetail">
+        <MappingFragment StoreEntitySet="tblAssetDetails">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="AssetModelName" ColumnName="AssetModelName" />
+          <ScalarProperty Name="AssetTypeID" ColumnName="AssetTypeID" />
+          <ScalarProperty Name="AssetCompanyID" ColumnName="AssetCompanyID" />
+          <ScalarProperty Name="ManufacturingDate" ColumnName="ManufacturingDate" />
+          <ScalarProperty Name="ExpiryDate" ColumnName="ExpiryDate" />
+          <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="ModifiedDate" ColumnName="ModifiedDate" />
+          <ScalarProperty Name="ModifiedBy" ColumnName="ModifiedBy" />
+          <ScalarProperty Name="IsIssued" ColumnName="IsIssued" />
+          <ScalarProperty Name="LicesenceNo" ColumnName="LicesenceNo" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblAssetIssueDetails">
+      <EntityTypeMapping TypeName="DBNCSVisitorModel.tblAssetIssueDetail">
+        <MappingFragment StoreEntitySet="tblAssetIssueDetails">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="EmpId" ColumnName="EmpId" />
+          <ScalarProperty Name="AssetId" ColumnName="AssetId" />
+          <ScalarProperty Name="AssetIssueDateTime" ColumnName="AssetIssueDateTime" />
+          <ScalarProperty Name="AssetSubmitDateTime" ColumnName="AssetSubmitDateTime" />
+          <ScalarProperty Name="IsSubmited" ColumnName="IsSubmited" />
+          <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="ModifiedDate" ColumnName="ModifiedDate" />
+          <ScalarProperty Name="ModifiedBy" ColumnName="ModifiedBy" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblAssetTypes">
+      <EntityTypeMapping TypeName="DBNCSVisitorModel.tblAssetType">
+        <MappingFragment StoreEntitySet="tblAssetType">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="AssetTypeCode" ColumnName="AssetTypeCode" />
+          <ScalarProperty Name="AssetTypeName" ColumnName="AssetTypeName" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblEmpDesignationMasters">
+      <EntityTypeMapping TypeName="DBNCSVisitorModel.tblEmpDesignationMaster">
+        <MappingFragment StoreEntitySet="tblEmpDesignationMaster">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="EmpDesignationCode" ColumnName="EmpDesignationCode" />
+          <ScalarProperty Name="EmpDesignationName" ColumnName="EmpDesignationName" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblEmployeeDetails">
+      <EntityTypeMapping TypeName="DBNCSVisitorModel.tblEmployeeDetail">
+        <MappingFragment StoreEntitySet="tblEmployeeDetails">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="EmpCode" ColumnName="EmpCode" />
+          <ScalarProperty Name="EmpName" ColumnName="EmpName" />
+          <ScalarProperty Name="EmpDesignationID" ColumnName="EmpDesignationID" />
+          <ScalarProperty Name="EmpDept" ColumnName="EmpDept" />
+          <ScalarProperty Name="PhoneNo" ColumnName="PhoneNo" />
+          <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+          <ScalarProperty Name="ModifiedDate" ColumnName="ModifiedDate" />
+          <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblGateMasters">
+      <EntityTypeMapping TypeName="DBNCSVisitorModel.tblGateMaster">
+        <MappingFragment StoreEntitySet="tblGateMaster">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="GateName" ColumnName="GateName" />
+          <ScalarProperty Name="GateCode" ColumnName="GateCode" />
+          <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+          <ScalarProperty Name="ModifiedDate" ColumnName="ModifiedDate" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblIdentityMasters">
+      <EntityTypeMapping TypeName="DBNCSVisitorModel.tblIdentityMaster">
+        <MappingFragment StoreEntitySet="tblIdentityMaster">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="ProofName" ColumnName="ProofName" />
+          <ScalarProperty Name="ProofCode" ColumnName="ProofCode" />
+          <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+          <ScalarProperty Name="ModifiedDate" ColumnName="ModifiedDate" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblPurposeMasters">
+      <EntityTypeMapping TypeName="DBNCSVisitorModel.tblPurposeMaster">
+        <MappingFragment StoreEntitySet="tblPurposeMaster">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="PurposeName" ColumnName="PurposeName" />
+          <ScalarProperty Name="PurposeCode" ColumnName="PurposeCode" />
+          <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+          <ScalarProperty Name="ModifiedDate" ColumnName="ModifiedDate" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblUserLogins">
+      <EntityTypeMapping TypeName="DBNCSVisitorModel.tblUserLogin">
+        <MappingFragment StoreEntitySet="tblUserLogin">
+          <ScalarProperty Name="UserID" ColumnName="UserID" />
+          <ScalarProperty Name="UserName" ColumnName="UserName" />
+          <ScalarProperty Name="Password" ColumnName="Password" />
+          <ScalarProperty Name="Role" ColumnName="Role" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblVisitors">
+      <EntityTypeMapping TypeName="DBNCSVisitorModel.tblVisitor">
+        <MappingFragment StoreEntitySet="tblVisitor">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="VisitorId" ColumnName="VisitorId" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="GovId" ColumnName="GovId" />
+          <ScalarProperty Name="MobileNo" ColumnName="MobileNo" />
+          <ScalarProperty Name="EmailId" ColumnName="EmailId" />
+          <ScalarProperty Name="AssetId" ColumnName="AssetId" />
+          <ScalarProperty Name="Form" ColumnName="Form" />
+          <ScalarProperty Name="ToMeet" ColumnName="ToMeet" />
+          <ScalarProperty Name="SubLocation" ColumnName="SubLocation" />
+          <ScalarProperty Name="Building" ColumnName="Building" />
+          <ScalarProperty Name="Gate" ColumnName="Gate" />
+          <ScalarProperty Name="Purpose" ColumnName="Purpose" />
+          <ScalarProperty Name="TimeIn" ColumnName="TimeIn" />
+          <ScalarProperty Name="ValidUpto" ColumnName="ValidUpto" />
+          <ScalarProperty Name="Remark" ColumnName="Remark" />
+          <ScalarProperty Name="ImagePath" ColumnName="ImagePath" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+          <ScalarProperty Name="ModifiedBy" ColumnName="ModifiedBy" />
+          <ScalarProperty Name="ModifiedDate" ColumnName="ModifiedDate" />
+          <ScalarProperty Name="DOB" ColumnName="DOB" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblVisitorPersonalDatas">
+      <EntityTypeMapping TypeName="DBNCSVisitorModel.tblVisitorPersonalData">
+        <MappingFragment StoreEntitySet="tblVisitorPersonalData">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="EmpId" ColumnName="EmpId" />
+          <ScalarProperty Name="GovIdNo" ColumnName="GovIdNo" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="DOB" ColumnName="DOB" />
+          <ScalarProperty Name="MobileNo" ColumnName="MobileNo" />
+          <ScalarProperty Name="EmailId" ColumnName="EmailId" />
+          <ScalarProperty Name="GovId" ColumnName="GovId" />
+          <ScalarProperty Name="ImagePath" ColumnName="ImagePath" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+          <ScalarProperty Name="ModifiedBy" ColumnName="ModifiedBy" />
+          <ScalarProperty Name="ModifiedDate" ColumnName="ModifiedDate" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblVisitorVisitDetails">
+      <EntityTypeMapping TypeName="DBNCSVisitorModel.tblVisitorVisitDetail">
+        <MappingFragment StoreEntitySet="tblVisitorVisitDetails">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="VisitorId" ColumnName="VisitorId" />
+          <ScalarProperty Name="GovIdNo" ColumnName="GovIdNo" />
+          <ScalarProperty Name="AssetId" ColumnName="AssetId" />
+          <ScalarProperty Name="Location" ColumnName="Location" />
+          <ScalarProperty Name="ToMeet" ColumnName="ToMeet" />
+          <ScalarProperty Name="SubLocation" ColumnName="SubLocation" />
+          <ScalarProperty Name="OfficeLocation" ColumnName="OfficeLocation" />
+          <ScalarProperty Name="Gate" ColumnName="Gate" />
+          <ScalarProperty Name="Purpose" ColumnName="Purpose" />
+          <ScalarProperty Name="TimeIn" ColumnName="TimeIn" />
+          <ScalarProperty Name="ValidUpto" ColumnName="ValidUpto" />
+          <ScalarProperty Name="Remark" ColumnName="Remark" />
+          <ScalarProperty Name="IsPassReturned" ColumnName="IsPassReturned" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+          <ScalarProperty Name="ModifiedBy" ColumnName="ModifiedBy" />
+          <ScalarProperty Name="ModifiedDate" ColumnName="ModifiedDate" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <FunctionImportMapping FunctionImportName="spInsertAssetIssueDetails" FunctionName="DBNCSVisitorModel.Store.spInsertAssetIssueDetails" />
+    <FunctionImportMapping FunctionImportName="uspGetAllActiveAssets" FunctionName="DBNCSVisitorModel.Store.uspGetAllActiveAssets">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="DBNCSVisitorModel.uspGetAllActiveAssets_Result">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="AssetModelName" ColumnName="AssetModelName" />
+          <ScalarProperty Name="AssetTypeID" ColumnName="AssetTypeID" />
+          <ScalarProperty Name="AssetCompanyID" ColumnName="AssetCompanyID" />
+          <ScalarProperty Name="ManufacturingDate" ColumnName="ManufacturingDate" />
+          <ScalarProperty Name="ExpiryDate" ColumnName="ExpiryDate" />
+          <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="ModifiedDate" ColumnName="ModifiedDate" />
+          <ScalarProperty Name="ModifiedBy" ColumnName="ModifiedBy" />
+          <ScalarProperty Name="IsIssued" ColumnName="IsIssued" />
+          <ScalarProperty Name="LicesenceNo" ColumnName="LicesenceNo" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="uspGetAllGate" FunctionName="DBNCSVisitorModel.Store.uspGetAllGate">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="DBNCSVisitorModel.uspGetAllGate_Result">
+          <ScalarProperty Name="GateName" ColumnName="GateName" />
+          <ScalarProperty Name="Gate" ColumnName="Gate" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="uspGetAllIdentity" FunctionName="DBNCSVisitorModel.Store.uspGetAllIdentity">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="DBNCSVisitorModel.uspGetAllIdentity_Result">
+          <ScalarProperty Name="ProofName" ColumnName="ProofName" />
+          <ScalarProperty Name="GovId" ColumnName="GovId" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="uspGetAllPurpose" FunctionName="DBNCSVisitorModel.Store.uspGetAllPurpose">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="DBNCSVisitorModel.uspGetAllPurpose_Result">
+          <ScalarProperty Name="PurposeText" ColumnName="PurposeText" />
+          <ScalarProperty Name="Purpose" ColumnName="Purpose" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="uspGetAssetDetails" FunctionName="DBNCSVisitorModel.Store.uspGetAssetDetails">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="DBNCSVisitorModel.uspGetAssetDetails_Result">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="AssetModelName" ColumnName="AssetModelName" />
+          <ScalarProperty Name="AssetCompanyID" ColumnName="AssetCompanyID" />
+          <ScalarProperty Name="AssetTypeID" ColumnName="AssetTypeID" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+          <ScalarProperty Name="ExpiryDate" ColumnName="ExpiryDate" />
+          <ScalarProperty Name="IsIssued" ColumnName="IsIssued" />
+          <ScalarProperty Name="LicesenceNo" ColumnName="LicesenceNo" />
+          <ScalarProperty Name="ManufacturingDate" ColumnName="ManufacturingDate" />
+          <ScalarProperty Name="ModifiedBy" ColumnName="ModifiedBy" />
+          <ScalarProperty Name="ModifiedDate" ColumnName="ModifiedDate" />
+          <ScalarProperty Name="AssetIssueDateTime" ColumnName="AssetIssueDateTime" />
+          <ScalarProperty Name="AssetSubmitDateTime" ColumnName="AssetSubmitDateTime" />
+          <ScalarProperty Name="IsSubmited" ColumnName="IsSubmited" />
+          <ScalarProperty Name="EmployeeName" ColumnName="EmployeeName" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="uspGetAssetList" FunctionName="DBNCSVisitorModel.Store.uspGetAssetList">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="DBNCSVisitorModel.uspGetAssetList_Result">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="AssetTypeName" ColumnName="AssetTypeName" />
+          <ScalarProperty Name="AssetCompanyName" ColumnName="AssetCompanyName" />
+          <ScalarProperty Name="AssestName" ColumnName="AssestName" />
+          <ScalarProperty Name="ManufacturingDate" ColumnName="ManufacturingDate" />
+          <ScalarProperty Name="ExpiryDate" ColumnName="ExpiryDate" />
+          <ScalarProperty Name="LicesenceNo" ColumnName="LicesenceNo" />
+          <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+          <ScalarProperty Name="ModifiedDate" ColumnName="ModifiedDate" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="uspGetEmployeeList" FunctionName="DBNCSVisitorModel.Store.uspGetEmployeeList">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="DBNCSVisitorModel.uspGetEmployeeList_Result">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="EmpCode" ColumnName="EmpCode" />
+          <ScalarProperty Name="EmpName" ColumnName="EmpName" />
+          <ScalarProperty Name="EmpDesignationID" ColumnName="EmpDesignationID" />
+          <ScalarProperty Name="EmpDept" ColumnName="EmpDept" />
+          <ScalarProperty Name="PhoneNo" ColumnName="PhoneNo" />
+          <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+          <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+          <ScalarProperty Name="ModifiedDate" ColumnName="ModifiedDate" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="uspGetVisitorDetails" FunctionName="DBNCSVisitorModel.Store.uspGetVisitorDetails">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="DBNCSVisitorModel.uspGetVisitorDetails_Result">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="EmpId" ColumnName="EmpId" />
+          <ScalarProperty Name="GovIdNo" ColumnName="GovIdNo" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="DOB" ColumnName="DOB" />
+          <ScalarProperty Name="MobileNo" ColumnName="MobileNo" />
+          <ScalarProperty Name="EmailId" ColumnName="EmailId" />
+          <ScalarProperty Name="GovId" ColumnName="GovId" />
+          <ScalarProperty Name="ImagePath" ColumnName="ImagePath" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+          <ScalarProperty Name="ModifiedBy" ColumnName="ModifiedBy" />
+          <ScalarProperty Name="ModifiedDate" ColumnName="ModifiedDate" />
+          <ScalarProperty Name="PId" ColumnName="PId" />
+          <ScalarProperty Name="VisitorId" ColumnName="VisitorId" />
+          <ScalarProperty Name="VGovId" ColumnName="VGovId" />
+          <ScalarProperty Name="AssetId" ColumnName="AssetId" />
+          <ScalarProperty Name="Location" ColumnName="Location" />
+          <ScalarProperty Name="ToMeet" ColumnName="ToMeet" />
+          <ScalarProperty Name="SubLocation" ColumnName="SubLocation" />
+          <ScalarProperty Name="OfficeLocation" ColumnName="OfficeLocation" />
+          <ScalarProperty Name="Gate" ColumnName="Gate" />
+          <ScalarProperty Name="Purpose" ColumnName="Purpose" />
+          <ScalarProperty Name="TimeIn" ColumnName="TimeIn" />
+          <ScalarProperty Name="ValidUpto" ColumnName="ValidUpto" />
+          <ScalarProperty Name="Remark" ColumnName="Remark" />
+          <ScalarProperty Name="VCreatedBy" ColumnName="VCreatedBy" />
+          <ScalarProperty Name="VCreatedDate" ColumnName="VCreatedDate" />
+          <ScalarProperty Name="VModifiedBy" ColumnName="VModifiedBy" />
+          <ScalarProperty Name="VModifiedDate" ColumnName="VModifiedDate" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="uspGetVisitorDetailsByGovId" FunctionName="DBNCSVisitorModel.Store.uspGetVisitorDetailsByGovId">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="DBNCSVisitorModel.uspGetVisitorDetailsByGovId_Result">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="GovIdNo" ColumnName="GovIdNo" />
+          <ScalarProperty Name="EmpId" ColumnName="EmpId" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="DOB" ColumnName="DOB" />
+          <ScalarProperty Name="MobileNo" ColumnName="MobileNo" />
+          <ScalarProperty Name="EmailId" ColumnName="EmailId" />
+          <ScalarProperty Name="GovId" ColumnName="GovId" />
+          <ScalarProperty Name="ImagePath" ColumnName="ImagePath" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+          <ScalarProperty Name="ModifiedBy" ColumnName="ModifiedBy" />
+          <ScalarProperty Name="ModifiedDate" ColumnName="ModifiedDate" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="uspGetVisitorDetailsById" FunctionName="DBNCSVisitorModel.Store.uspGetVisitorDetailsById">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="DBNCSVisitorModel.uspGetVisitorDetailsById_Result">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="EmpId" ColumnName="EmpId" />
+          <ScalarProperty Name="GovIdNo" ColumnName="GovIdNo" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="DOB" ColumnName="DOB" />
+          <ScalarProperty Name="MobileNo" ColumnName="MobileNo" />
+          <ScalarProperty Name="EmailId" ColumnName="EmailId" />
+          <ScalarProperty Name="GovId" ColumnName="GovId" />
+          <ScalarProperty Name="ImagePath" ColumnName="ImagePath" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+          <ScalarProperty Name="ModifiedBy" ColumnName="ModifiedBy" />
+          <ScalarProperty Name="ModifiedDate" ColumnName="ModifiedDate" />
+          <ScalarProperty Name="PId" ColumnName="PId" />
+          <ScalarProperty Name="VisitorId" ColumnName="VisitorId" />
+          <ScalarProperty Name="VGovId" ColumnName="VGovId" />
+          <ScalarProperty Name="AssetId" ColumnName="AssetId" />
+          <ScalarProperty Name="Location" ColumnName="Location" />
+          <ScalarProperty Name="ToMeet" ColumnName="ToMeet" />
+          <ScalarProperty Name="SubLocation" ColumnName="SubLocation" />
+          <ScalarProperty Name="OfficeLocation" ColumnName="OfficeLocation" />
+          <ScalarProperty Name="Gate" ColumnName="Gate" />
+          <ScalarProperty Name="Purpose" ColumnName="Purpose" />
+          <ScalarProperty Name="PurposeText" ColumnName="PurposeText" />
+          <ScalarProperty Name="TimeIn" ColumnName="TimeIn" />
+          <ScalarProperty Name="ValidUpto" ColumnName="ValidUpto" />
+          <ScalarProperty Name="Remark" ColumnName="Remark" />
+          <ScalarProperty Name="IsPassReturned" ColumnName="IsPassReturned" />
+          <ScalarProperty Name="VCreatedBy" ColumnName="VCreatedBy" />
+          <ScalarProperty Name="VCreatedDate" ColumnName="VCreatedDate" />
+          <ScalarProperty Name="VModifiedBy" ColumnName="VModifiedBy" />
+          <ScalarProperty Name="VModifiedDate" ColumnName="VModifiedDate" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="uspGetVisitorDetailsNew" FunctionName="DBNCSVisitorModel.Store.uspGetVisitorDetailsNew">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="DBNCSVisitorModel.uspGetVisitorDetailsNew_Result">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="EmpId" ColumnName="EmpId" />
+          <ScalarProperty Name="GovIdNo" ColumnName="GovIdNo" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="DOB" ColumnName="DOB" />
+          <ScalarProperty Name="MobileNo" ColumnName="MobileNo" />
+          <ScalarProperty Name="EmailId" ColumnName="EmailId" />
+          <ScalarProperty Name="GovId" ColumnName="GovId" />
+          <ScalarProperty Name="ImagePath" ColumnName="ImagePath" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+          <ScalarProperty Name="ModifiedBy" ColumnName="ModifiedBy" />
+          <ScalarProperty Name="ModifiedDate" ColumnName="ModifiedDate" />
+          <ScalarProperty Name="PId" ColumnName="PId" />
+          <ScalarProperty Name="VisitorId" ColumnName="VisitorId" />
+          <ScalarProperty Name="VGovId" ColumnName="VGovId" />
+          <ScalarProperty Name="AssetId" ColumnName="AssetId" />
+          <ScalarProperty Name="Location" ColumnName="Location" />
+          <ScalarProperty Name="ToMeet" ColumnName="ToMeet" />
+          <ScalarProperty Name="SubLocation" ColumnName="SubLocation" />
+          <ScalarProperty Name="OfficeLocation" ColumnName="OfficeLocation" />
+          <ScalarProperty Name="Gate" ColumnName="Gate" />
+          <ScalarProperty Name="Purpose" ColumnName="Purpose" />
+          <ScalarProperty Name="PurposeText" ColumnName="PurposeText" />
+          <ScalarProperty Name="TimeIn" ColumnName="TimeIn" />
+          <ScalarProperty Name="ValidUpto" ColumnName="ValidUpto" />
+          <ScalarProperty Name="Remark" ColumnName="Remark" />
+          <ScalarProperty Name="IsPassReturned" ColumnName="IsPassReturned" />
+          <ScalarProperty Name="VCreatedBy" ColumnName="VCreatedBy" />
+          <ScalarProperty Name="VCreatedDate" ColumnName="VCreatedDate" />
+          <ScalarProperty Name="VModifiedBy" ColumnName="VModifiedBy" />
+          <ScalarProperty Name="VModifiedDate" ColumnName="VModifiedDate" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="uspGetVisitorPerDayCount" FunctionName="DBNCSVisitorModel.Store.uspGetVisitorPerDayCount">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="DBNCSVisitorModel.uspGetVisitorPerDayCount_Result">
+          <ScalarProperty Name="VisDate" ColumnName="VisDate" />
+          <ScalarProperty Name="No_of_Visitor" ColumnName="No_of_Visitor" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="uspInsertVisitorDetails" FunctionName="DBNCSVisitorModel.Store.uspInsertVisitorDetails" />
+    <FunctionImportMapping FunctionImportName="uspUpdatePersonalandVisitorData" FunctionName="DBNCSVisitorModel.Store.uspUpdatePersonalandVisitorData" />
+  </EntityContainerMapping>
+</Mapping>

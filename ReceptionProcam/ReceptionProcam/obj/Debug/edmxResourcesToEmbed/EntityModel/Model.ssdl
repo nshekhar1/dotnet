@@ -1,0 +1,329 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="DBNCSVisitorModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="tblAssetCompany">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="AssetCompanyCode" Type="nvarchar" MaxLength="50" />
+    <Property Name="AssetCompanyName" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="tblAssetDetails">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="AssetModelName" Type="nvarchar" MaxLength="50" />
+    <Property Name="AssetTypeID" Type="int" />
+    <Property Name="AssetCompanyID" Type="int" />
+    <Property Name="ManufacturingDate" Type="datetime" />
+    <Property Name="ExpiryDate" Type="datetime" />
+    <Property Name="CreatedDate" Type="datetime" />
+    <Property Name="CreatedBy" Type="nvarchar" MaxLength="50" />
+    <Property Name="ModifiedDate" Type="datetime" />
+    <Property Name="ModifiedBy" Type="nvarchar" MaxLength="50" />
+    <Property Name="IsIssued" Type="bit" />
+    <Property Name="LicesenceNo" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="tblAssetIssueDetails">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="EmpId" Type="int" />
+    <Property Name="AssetId" Type="int" />
+    <Property Name="AssetIssueDateTime" Type="datetime" />
+    <Property Name="AssetSubmitDateTime" Type="datetime" />
+    <Property Name="IsSubmited" Type="bit" />
+    <Property Name="CreatedDate" Type="datetime" />
+    <Property Name="CreatedBy" Type="nvarchar" MaxLength="50" />
+    <Property Name="ModifiedDate" Type="datetime" />
+    <Property Name="ModifiedBy" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="tblAssetType">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="AssetTypeCode" Type="nvarchar" MaxLength="50" />
+    <Property Name="AssetTypeName" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="tblEmpDesignationMaster">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="EmpDesignationCode" Type="nvarchar" MaxLength="50" />
+    <Property Name="EmpDesignationName" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="tblEmployeeDetails">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="EmpCode" Type="nvarchar" MaxLength="50" />
+    <Property Name="EmpName" Type="nvarchar" MaxLength="50" />
+    <Property Name="EmpDesignationID" Type="int" />
+    <Property Name="EmpDept" Type="nvarchar" MaxLength="50" />
+    <Property Name="PhoneNo" Type="nvarchar" MaxLength="15" />
+    <Property Name="CreatedDate" Type="datetime" />
+    <Property Name="ModifiedDate" Type="datetime" />
+    <Property Name="IsActive" Type="bit" />
+  </EntityType>
+  <EntityType Name="tblGateMaster">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="GateName" Type="nvarchar" MaxLength="50" />
+    <Property Name="GateCode" Type="nvarchar" MaxLength="50" />
+    <Property Name="CreatedDate" Type="datetime" />
+    <Property Name="ModifiedDate" Type="datetime" />
+  </EntityType>
+  <EntityType Name="tblIdentityMaster">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ProofName" Type="nvarchar" MaxLength="50" />
+    <Property Name="ProofCode" Type="nvarchar" MaxLength="50" />
+    <Property Name="CreatedDate" Type="datetime" />
+    <Property Name="ModifiedDate" Type="datetime" />
+  </EntityType>
+  <EntityType Name="tblPurposeMaster">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="PurposeName" Type="nvarchar" MaxLength="50" />
+    <Property Name="PurposeCode" Type="nvarchar" MaxLength="50" />
+    <Property Name="CreatedDate" Type="datetime" />
+    <Property Name="ModifiedDate" Type="datetime" />
+  </EntityType>
+  <EntityType Name="tblUserLogin">
+    <Key>
+      <PropertyRef Name="UserID" />
+    </Key>
+    <Property Name="UserID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="UserName" Type="nvarchar" MaxLength="50" />
+    <Property Name="Password" Type="nvarchar" MaxLength="50" />
+    <Property Name="Role" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="tblVisitor">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="VisitorId" Type="nvarchar" MaxLength="20" />
+    <Property Name="Name" Type="nvarchar" MaxLength="500" />
+    <Property Name="GovId" Type="nvarchar" MaxLength="50" />
+    <Property Name="MobileNo" Type="nvarchar" MaxLength="15" />
+    <Property Name="EmailId" Type="nvarchar" MaxLength="50" />
+    <Property Name="AssetId" Type="nvarchar" MaxLength="50" />
+    <Property Name="Form" Type="nvarchar" MaxLength="50" />
+    <Property Name="ToMeet" Type="nvarchar" MaxLength="50" />
+    <Property Name="SubLocation" Type="nvarchar" MaxLength="50" />
+    <Property Name="Building" Type="nvarchar" MaxLength="50" />
+    <Property Name="Gate" Type="nvarchar" MaxLength="50" />
+    <Property Name="Purpose" Type="nvarchar" MaxLength="50" />
+    <Property Name="TimeIn" Type="nvarchar" MaxLength="50" />
+    <Property Name="ValidUpto" Type="nvarchar" MaxLength="50" />
+    <Property Name="Remark" Type="nvarchar" MaxLength="50" />
+    <Property Name="ImagePath" Type="nvarchar(max)" />
+    <Property Name="CreatedBy" Type="nvarchar" MaxLength="50" />
+    <Property Name="CreatedDate" Type="date" />
+    <Property Name="ModifiedBy" Type="nvarchar" MaxLength="50" />
+    <Property Name="ModifiedDate" Type="date" />
+    <Property Name="DOB" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="tblVisitorPersonalData">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="EmpId" Type="nvarchar" MaxLength="20" />
+    <Property Name="GovIdNo" Type="nvarchar" MaxLength="20" />
+    <Property Name="Name" Type="nvarchar" MaxLength="100" />
+    <Property Name="DOB" Type="nchar" MaxLength="10" />
+    <Property Name="MobileNo" Type="nvarchar" MaxLength="15" />
+    <Property Name="EmailId" Type="nvarchar" MaxLength="50" />
+    <Property Name="GovId" Type="int" />
+    <Property Name="ImagePath" Type="nvarchar" MaxLength="500" />
+    <Property Name="CreatedBy" Type="nvarchar" MaxLength="20" />
+    <Property Name="CreatedDate" Type="nvarchar" MaxLength="20" />
+    <Property Name="ModifiedBy" Type="nvarchar" MaxLength="20" />
+    <Property Name="ModifiedDate" Type="nvarchar" MaxLength="20" />
+  </EntityType>
+  <EntityType Name="tblVisitorVisitDetails">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="VisitorId" Type="nvarchar" MaxLength="30" />
+    <Property Name="GovIdNo" Type="nvarchar" MaxLength="50" />
+    <Property Name="AssetId" Type="nvarchar" MaxLength="30" />
+    <Property Name="Location" Type="nvarchar" MaxLength="50" />
+    <Property Name="ToMeet" Type="nvarchar" MaxLength="50" />
+    <Property Name="SubLocation" Type="nvarchar" MaxLength="50" />
+    <Property Name="OfficeLocation" Type="nvarchar" MaxLength="50" />
+    <Property Name="Gate" Type="nvarchar" MaxLength="50" />
+    <Property Name="Purpose" Type="nvarchar" MaxLength="50" />
+    <Property Name="TimeIn" Type="nvarchar" MaxLength="50" />
+    <Property Name="ValidUpto" Type="nvarchar" MaxLength="50" />
+    <Property Name="Remark" Type="nvarchar" MaxLength="50" />
+    <Property Name="IsPassReturned" Type="bit" />
+    <Property Name="CreatedBy" Type="nvarchar" MaxLength="50" />
+    <Property Name="CreatedDate" Type="date" />
+    <Property Name="ModifiedBy" Type="nvarchar" MaxLength="50" />
+    <Property Name="ModifiedDate" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <Association Name="FK_tblAssetDetails_tblAssetCompany">
+    <End Role="tblAssetCompany" Type="Self.tblAssetCompany" Multiplicity="0..1" />
+    <End Role="tblAssetDetails" Type="Self.tblAssetDetails" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tblAssetCompany">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="tblAssetDetails">
+        <PropertyRef Name="AssetCompanyID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tblAssetDetails_tblAssetType">
+    <End Role="tblAssetType" Type="Self.tblAssetType" Multiplicity="0..1" />
+    <End Role="tblAssetDetails" Type="Self.tblAssetDetails" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tblAssetType">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="tblAssetDetails">
+        <PropertyRef Name="AssetTypeID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tblAssetIssueDetails_tblAssetIssueDetails">
+    <End Role="tblAssetDetails" Type="Self.tblAssetDetails" Multiplicity="0..1" />
+    <End Role="tblAssetIssueDetails" Type="Self.tblAssetIssueDetails" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tblAssetDetails">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="tblAssetIssueDetails">
+        <PropertyRef Name="AssetId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tblEmployeeDetails_tblEmpDesignationMaster">
+    <End Role="tblEmpDesignationMaster" Type="Self.tblEmpDesignationMaster" Multiplicity="0..1" />
+    <End Role="tblEmployeeDetails" Type="Self.tblEmployeeDetails" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tblEmpDesignationMaster">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="tblEmployeeDetails">
+        <PropertyRef Name="EmpDesignationID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Function Name="spInsertAssetIssueDetails" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="EmpId" Type="int" Mode="In" />
+    <Parameter Name="AssetId" Type="int" Mode="In" />
+    <Parameter Name="CreatedBy" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="uspGetAllActiveAssets" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="uspGetAllGate" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="uspGetAllIdentity" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="uspGetAllPurpose" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="uspGetAssetDetails" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="uspGetAssetList" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="uspGetEmployeeList" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="uspGetVisitorDetails" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="uspGetVisitorDetailsByGovId" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="VisType" Type="nvarchar" Mode="In" />
+    <Parameter Name="GovId" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="uspGetVisitorDetailsById" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="Id" Type="int" Mode="In" />
+  </Function>
+  <Function Name="uspGetVisitorDetailsNew" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="uspGetVisitorPerDayCount" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="uspInsertVisitorDetails" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="EmpId" Type="nvarchar" Mode="In" />
+    <Parameter Name="GovIdNo" Type="nvarchar" Mode="In" />
+    <Parameter Name="Name" Type="nvarchar" Mode="In" />
+    <Parameter Name="DOB" Type="nvarchar" Mode="In" />
+    <Parameter Name="MobileNo" Type="nvarchar" Mode="In" />
+    <Parameter Name="EmailId" Type="nvarchar" Mode="In" />
+    <Parameter Name="GovId" Type="nvarchar" Mode="In" />
+    <Parameter Name="ImagePath" Type="nvarchar" Mode="In" />
+    <Parameter Name="VisitorId" Type="nvarchar" Mode="In" />
+    <Parameter Name="AssetId" Type="nvarchar" Mode="In" />
+    <Parameter Name="Location" Type="nvarchar" Mode="In" />
+    <Parameter Name="ToMeet" Type="nvarchar" Mode="In" />
+    <Parameter Name="SubLocation" Type="nvarchar" Mode="In" />
+    <Parameter Name="OfficeLocation" Type="nvarchar" Mode="In" />
+    <Parameter Name="Gate" Type="nvarchar" Mode="In" />
+    <Parameter Name="Purpose" Type="nvarchar" Mode="In" />
+    <Parameter Name="TimeIn" Type="nvarchar" Mode="In" />
+    <Parameter Name="ValidUpto" Type="nvarchar" Mode="In" />
+    <Parameter Name="Remark" Type="nvarchar" Mode="In" />
+    <Parameter Name="CreatedBy" Type="nvarchar" Mode="In" />
+    <Parameter Name="CreatedDate" Type="nvarchar" Mode="In" />
+    <Parameter Name="Id" Type="int" Mode="InOut" />
+  </Function>
+  <Function Name="uspUpdatePersonalandVisitorData" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="EmpId" Type="nvarchar" Mode="In" />
+    <Parameter Name="GovIdNo" Type="nvarchar" Mode="In" />
+    <Parameter Name="Name" Type="nvarchar" Mode="In" />
+    <Parameter Name="DOB" Type="nvarchar" Mode="In" />
+    <Parameter Name="MobileNo" Type="nvarchar" Mode="In" />
+    <Parameter Name="EmailId" Type="nvarchar" Mode="In" />
+    <Parameter Name="GovId" Type="nvarchar" Mode="In" />
+    <Parameter Name="ImagePath" Type="nvarchar" Mode="In" />
+    <Parameter Name="Id" Type="int" Mode="In" />
+    <Parameter Name="VisitorId" Type="nvarchar" Mode="In" />
+    <Parameter Name="AssetId" Type="nvarchar" Mode="In" />
+    <Parameter Name="Location" Type="nvarchar" Mode="In" />
+    <Parameter Name="ToMeet" Type="nvarchar" Mode="In" />
+    <Parameter Name="SubLocation" Type="nvarchar" Mode="In" />
+    <Parameter Name="OfficeLocation" Type="nvarchar" Mode="In" />
+    <Parameter Name="Gate" Type="nvarchar" Mode="In" />
+    <Parameter Name="Purpose" Type="nvarchar" Mode="In" />
+    <Parameter Name="TimeIn" Type="nvarchar" Mode="In" />
+    <Parameter Name="ValidUpto" Type="nvarchar" Mode="In" />
+    <Parameter Name="Remark" Type="nvarchar" Mode="In" />
+    <Parameter Name="CreatedBy" Type="nvarchar" Mode="In" />
+    <Parameter Name="CreatedDate" Type="nvarchar" Mode="In" />
+  </Function>
+  <EntityContainer Name="DBNCSVisitorModelStoreContainer">
+    <EntitySet Name="tblAssetCompany" EntityType="Self.tblAssetCompany" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tblAssetDetails" EntityType="Self.tblAssetDetails" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tblAssetIssueDetails" EntityType="Self.tblAssetIssueDetails" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tblAssetType" EntityType="Self.tblAssetType" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tblEmpDesignationMaster" EntityType="Self.tblEmpDesignationMaster" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tblEmployeeDetails" EntityType="Self.tblEmployeeDetails" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tblGateMaster" EntityType="Self.tblGateMaster" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tblIdentityMaster" EntityType="Self.tblIdentityMaster" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tblPurposeMaster" EntityType="Self.tblPurposeMaster" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tblUserLogin" EntityType="Self.tblUserLogin" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tblVisitor" EntityType="Self.tblVisitor" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tblVisitorPersonalData" EntityType="Self.tblVisitorPersonalData" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tblVisitorVisitDetails" EntityType="Self.tblVisitorVisitDetails" Schema="dbo" store:Type="Tables" />
+    <AssociationSet Name="FK_tblAssetDetails_tblAssetCompany" Association="Self.FK_tblAssetDetails_tblAssetCompany">
+      <End Role="tblAssetCompany" EntitySet="tblAssetCompany" />
+      <End Role="tblAssetDetails" EntitySet="tblAssetDetails" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tblAssetDetails_tblAssetType" Association="Self.FK_tblAssetDetails_tblAssetType">
+      <End Role="tblAssetType" EntitySet="tblAssetType" />
+      <End Role="tblAssetDetails" EntitySet="tblAssetDetails" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tblAssetIssueDetails_tblAssetIssueDetails" Association="Self.FK_tblAssetIssueDetails_tblAssetIssueDetails">
+      <End Role="tblAssetDetails" EntitySet="tblAssetDetails" />
+      <End Role="tblAssetIssueDetails" EntitySet="tblAssetIssueDetails" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tblEmployeeDetails_tblEmpDesignationMaster" Association="Self.FK_tblEmployeeDetails_tblEmpDesignationMaster">
+      <End Role="tblEmpDesignationMaster" EntitySet="tblEmpDesignationMaster" />
+      <End Role="tblEmployeeDetails" EntitySet="tblEmployeeDetails" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

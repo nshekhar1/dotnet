@@ -1,0 +1,139 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+}
+<script>
+    window.onload = function () {
+
+        var dataPointsC = [];
+        var dataPointsLine = [];
+        var chart = new CanvasJS.Chart("chartContainer", {
+            animationEnabled: true,
+            title: {
+                text: "Total Visitors"
+            },
+            data: [{
+                type: "pie",
+                startAngle: 240,
+                //yValueFormatString: "##0.00\"%\"",
+                yValueFormatString: "##0\" Visitors\"",
+                legendText: "{label}",
+                indexLabel: "{label} ({y})",
+                dataPoints: dataPointsC,
+
+            }]
+        });
+
+
+        $.getJSON("http://localhost:15162/Visitor/Visitorperdaycount", function (data) {
+            $.each(data, function (key, value) {
+                var singledate = value.VisDate;
+                var changeddate = singledate.match(/\d+/g).map(function (s) { return new Date(+s); });
+                var date = new Date(changeddate);
+                var mnth = ("0" + (date.getMonth() + 1)).slice(-2);
+                var day = ("0" + date.getDate()).slice(-2);
+                var ddmmyyyFromateDate = [day, mnth, date.getFullYear()].join("-");
+                dataPointsC.push({ y: value.No_of_Visitor, label: ddmmyyyFromateDate });
+            });
+
+
+            chart.render();
+            $(".canvasjs-chart-credit").hide();
+        });
+
+
+
+        var chartLine = new CanvasJS.Chart("chartContainerLine", {
+            animationEnabled: true,
+            theme: "light2",
+            title: {
+                text: "Visitor Details"
+            },
+            axisY: {
+                includeZero: false
+            },
+            data: [{
+                type: "line",
+                dataPoints: dataPointsLine,
+                //[
+                //    { y: 450 ,label:"May"},
+                //    { y: 414 },
+                //    { y: 520, indexLabel: "highest", markerColor: "red", markerType: "triangle" },
+                //    { y: 460 },
+                //    { y: 450 },
+                //    { y: 500 },
+                //    { y: 480 },
+                //    { y: 480 },
+                //    { y: 410, indexLabel: "lowest", markerColor: "DarkSlateGrey", markerType: "cross" },
+                //    { y: 500 },
+                //    { y: 480 },
+                //    { y: 510 }
+                //]
+            }]
+        });
+
+
+        $.getJSON("http://localhost:15162/Visitor/Visitorperdaycount", function (data) {
+            $.each(data, function (key, value) {
+                debugger
+                var singledate = value.VisDate;
+                var changeddate = singledate.match(/\d+/g).map(function (s) { return new Date(+s); });
+                var date = new Date(changeddate);
+                var mnth = ("0" + (date.getMonth() + 1)).slice(-2);
+                var day = ("0" + date.getDate()).slice(-2);
+                var ddmmyyyFromateDate = [day, mnth, date.getFullYear()].join("-");
+                dataPointsLine.push({ y: value.No_of_Visitor, label: ddmmyyyFromateDate });
+
+            });
+            chartLine.render();
+            $(".canvasjs-chart-credit").hide();
+        });
+    }
+</script>
+<div class="m-grid__item m-grid__item--fluid m-wrapper">
+    <!-- BEGIN: Subheader -->
+    <div class="m-subheader ">
+        <div class="d-flex align-items-center">
+            <div class="mr-auto">
+                <h3 class="m-subheader__title ">
+                    Dashboard
+                </h3>
+            </div>
+            <div>
+                <span class="m-subheader__daterange" id="m_dashboard_daterangepicker">
+                    <span class="m-subheader__daterange-label">
+                        <span class="m-subheader__daterange-title"></span>
+                        <span class="m-subheader__daterange-date m--font-brand"></span>
+                    </span>
+                    @*<a href="#" class="btn btn-sm btn-brand m-btn m-btn--icon m-btn--icon-only m-btn--custom m-btn--pill">
+                        <i class="la la-angle-down"></i>
+                    </a>*@
+                </span>
+            </div>
+        </div>
+    </div>
+    <!-- END: Subheader -->
+    <div class="m-content">
+
+        <!--Begin::Section-->
+        <div class="m-portlet">
+            <div class="m-portlet__body  m-portlet__body--no-padding">
+                @*<div class="row m-row--no-padding m-row--col-separator-xl">
+                    <div class="col-xl-12">
+                        
+                        <div id="chartContainer" style="height: 300px; width: 100%;"></div>
+                    </div>
+                </div>*@
+                <div class="row m-row--no-padding m-row--col-separator-xl">
+                    <div class="col-xl-12">
+                        @*begin:: Widgets/Daily Sales*@
+                        <div id="chartContainerLine" style="height: 300px; width: 100%;"></div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+@*<script src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>*@
+
+<script src="~/Scripts/canvasjs.min.js"></script>

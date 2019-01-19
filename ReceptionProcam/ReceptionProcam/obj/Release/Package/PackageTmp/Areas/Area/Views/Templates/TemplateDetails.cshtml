@@ -1,0 +1,69 @@
+﻿@{
+    ViewBag.Title = "Template";
+    Layout = "~/Areas/Area/Views/Shared/_Layout.cshtml";
+}
+
+<script type="text/javascript">
+    $(document).ready(function () {
+        if ('@TempData["ErrorUpload"]' == "Please select a file") {
+            toastr.success('Please select a file');
+        }
+        if ('@TempData["ErrorUpload"]' == "Check file format") {
+            toastr.success('Check file format');
+        }
+
+    });
+</script>
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Upload Bulk Visitors</title>
+
+</head>
+<body>
+    @using (Html.BeginForm("TemplateDetails","Templates",FormMethod.Post))
+    {
+
+        <div class="row">
+            <div class="col-lg-6">
+                <!--begin::Portlet-->
+                <div class="m-portlet m-portlet--creative m-portlet--first m-portlet--bordered-semi">
+                    <div class="m-portlet__head">
+                        <div class="m-portlet__head-caption">
+                            <div class="m-portlet__head-title">
+                                <span class="m-portlet__head-icon m--hide">
+                                    <i class="flaticon-statistics"></i>
+                                </span>
+                                <h3 class="m-portlet__head-text">
+                                    Select Excel file to upload multiple visitors list
+                                </h3>
+
+                                <h2 class="m-portlet__head-label m-portlet__head-label--info">
+                                    <span>Upload Visitors List</span>
+                                </h2>
+                            </div>
+                            <div>
+
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="m-portlet__body">
+                        <input type="file" name="postedFile" />
+                        <input type="submit" value="Upload" name="upload" class="btn btn-primary" />
+                    </div>
+
+                </div>
+                <!--end::Portlet-->
+
+
+            </div>
+            <!--end::Portlet-->
+        </div>
+    }
+</body>
+</html>
+
+

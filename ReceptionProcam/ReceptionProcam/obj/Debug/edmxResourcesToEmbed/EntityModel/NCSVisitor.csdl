@@ -1,0 +1,189 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="DBNCSVisitorModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityContainer Name="DBNCSVisitorEntities" annotation:LazyLoadingEnabled="true">
+    <FunctionImport Name="uspGetVisitorPerDayCount" ReturnType="Collection(DBNCSVisitorModel.uspGetVisitorPerDayCount_Result)" />
+    <EntitySet Name="tblVisitors" EntityType="DBNCSVisitorModel.tblVisitor" />
+    <EntitySet Name="tblVisitorPersonalDatas" EntityType="DBNCSVisitorModel.tblVisitorPersonalData" />
+    <EntitySet Name="tblGateMasters" EntityType="DBNCSVisitorModel.tblGateMaster" />
+    <EntitySet Name="tblIdentityMasters" EntityType="DBNCSVisitorModel.tblIdentityMaster" />
+    <EntitySet Name="tblPurposeMasters" EntityType="DBNCSVisitorModel.tblPurposeMaster" />
+    <FunctionImport Name="uspInsertVisitorDetails">
+      <Parameter Name="EmpId" Mode="In" Type="String" />
+      <Parameter Name="GovIdNo" Mode="In" Type="String" />
+      <Parameter Name="Name" Mode="In" Type="String" />
+      <Parameter Name="DOB" Mode="In" Type="String" />
+      <Parameter Name="MobileNo" Mode="In" Type="String" />
+      <Parameter Name="EmailId" Mode="In" Type="String" />
+      <Parameter Name="GovId" Mode="In" Type="String" />
+      <Parameter Name="ImagePath" Mode="In" Type="String" />
+      <Parameter Name="VisitorId" Mode="In" Type="String" />
+      <Parameter Name="AssetId" Mode="In" Type="String" />
+      <Parameter Name="Form" Mode="In" Type="String" />
+      <Parameter Name="ToMeet" Mode="In" Type="String" />
+      <Parameter Name="SubLocation" Mode="In" Type="String" />
+      <Parameter Name="OfficeLocation" Mode="In" Type="String" />
+      <Parameter Name="Gate" Mode="In" Type="String" />
+      <Parameter Name="Purpose" Mode="In" Type="String" />
+      <Parameter Name="TimeIn" Mode="In" Type="String" />
+      <Parameter Name="ValidUpto" Mode="In" Type="String" />
+      <Parameter Name="Remark" Mode="In" Type="String" />
+      <Parameter Name="CreatedBy" Mode="In" Type="String" />
+      <Parameter Name="CreatedDate" Mode="In" Type="String" />
+    </FunctionImport>
+    <EntitySet Name="tblVisitorVisitDetails" EntityType="DBNCSVisitorModel.tblVisitorVisitDetail" />
+    <FunctionImport Name="uspGetVisitorDetailsByGovId" ReturnType="Collection(DBNCSVisitorModel.uspGetVisitorDetailsByGovId_Result)">
+      <Parameter Name="VisType" Mode="In" Type="String" />
+      <Parameter Name="GovId" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="uspGetVisitorDetails" ReturnType="Collection(DBNCSVisitorModel.uspGetVisitorDetails_Result)" />
+    <FunctionImport Name="uspGetVisitorDetailsNew" ReturnType="Collection(DBNCSVisitorModel.uspGetVisitorDetailsNew_Result)" />
+  </EntityContainer>
+  <ComplexType Name="uspGetVisitorPerDayCount_Result">
+    <Property Type="DateTime" Name="Date" Nullable="true" />
+    <Property Type="Int32" Name="No_of_Visitor" Nullable="true" />
+  </ComplexType>
+  <EntityType Name="tblVisitor">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="VisitorId" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="Name" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="GovId" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="MobileNo" Type="String" MaxLength="15" FixedLength="false" Unicode="true" />
+    <Property Name="EmailId" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="AssetId" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Form" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="ToMeet" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="SubLocation" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Building" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Gate" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Purpose" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="TimeIn" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="ValidUpto" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Remark" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="ImagePath" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="CreatedBy" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="CreatedDate" Type="DateTime" Precision="0" />
+    <Property Name="ModifiedBy" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="ModifiedDate" Type="DateTime" Precision="0" />
+    <Property Name="DOB" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="tblVisitorPersonalData">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="GovIdNo" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="Name" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="DOB" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+    <Property Name="MobileNo" Type="String" MaxLength="15" FixedLength="false" Unicode="true" />
+    <Property Name="EmailId" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="GovId" Type="Int32" />
+    <Property Name="CreatedBy" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="CreatedDate" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="ModifiedBy" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="ModifiedDate" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="EmpId" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="ImagePath" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="tblGateMaster">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="GateName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="GateCode" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="CreatedDate" Type="DateTime" Precision="3" />
+    <Property Name="ModifiedDate" Type="DateTime" Precision="3" />
+  </EntityType>
+  <EntityType Name="tblIdentityMaster">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="ProofName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="ProofCode" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="CreatedDate" Type="DateTime" Precision="3" />
+    <Property Name="ModifiedDate" Type="DateTime" Precision="3" />
+  </EntityType>
+  <EntityType Name="tblPurposeMaster">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="PurposeName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="PurposeCode" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="CreatedDate" Type="DateTime" Precision="3" />
+    <Property Name="ModifiedDate" Type="DateTime" Precision="3" />
+  </EntityType>
+  <EntityType Name="tblVisitorVisitDetail">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="VisitorId" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+    <Property Name="GovIdNo" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="AssetId" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+    <Property Name="Form" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="ToMeet" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="SubLocation" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="OfficeLocation" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Gate" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Purpose" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="TimeIn" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="ValidUpto" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Remark" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="CreatedBy" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="CreatedDate" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="ModifiedBy" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="ModifiedDate" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <ComplexType Name="uspGetVisitorDetailsByGovId_Result">
+    <Property Type="Int32" Name="Id" Nullable="false" />
+    <Property Type="String" Name="GovIdNo" Nullable="true" MaxLength="20" />
+    <Property Type="String" Name="EmpId" Nullable="true" MaxLength="20" />
+    <Property Type="String" Name="Name" Nullable="true" MaxLength="100" />
+    <Property Type="String" Name="DOB" Nullable="true" MaxLength="10" />
+    <Property Type="String" Name="MobileNo" Nullable="true" MaxLength="15" />
+    <Property Type="String" Name="EmailId" Nullable="true" MaxLength="50" />
+    <Property Type="Int32" Name="GovId" Nullable="true" />
+    <Property Type="String" Name="ImagePath" Nullable="true" MaxLength="500" />
+    <Property Type="String" Name="CreatedBy" Nullable="true" MaxLength="20" />
+    <Property Type="String" Name="CreatedDate" Nullable="true" MaxLength="20" />
+    <Property Type="String" Name="ModifiedBy" Nullable="true" MaxLength="20" />
+    <Property Type="String" Name="ModifiedDate" Nullable="true" MaxLength="20" />
+  </ComplexType>
+  <ComplexType Name="uspGetVisitorDetailsNew_Result">
+    <Property Type="Int32" Name="Id" Nullable="false" />
+    <Property Type="String" Name="EmpId" Nullable="true" MaxLength="20" />
+    <Property Type="String" Name="GovIdNo" Nullable="true" MaxLength="20" />
+    <Property Type="String" Name="Name" Nullable="true" MaxLength="100" />
+    <Property Type="String" Name="DOB" Nullable="true" MaxLength="10" />
+    <Property Type="String" Name="MobileNo" Nullable="true" MaxLength="15" />
+    <Property Type="String" Name="EmailId" Nullable="true" MaxLength="50" />
+    <Property Type="Int32" Name="GovId" Nullable="true" />
+    <Property Type="String" Name="ImagePath" Nullable="true" MaxLength="500" />
+    <Property Type="String" Name="CreatedBy" Nullable="true" MaxLength="20" />
+    <Property Type="String" Name="CreatedDate" Nullable="true" MaxLength="20" />
+    <Property Type="String" Name="ModifiedBy" Nullable="true" MaxLength="20" />
+    <Property Type="String" Name="ModifiedDate" Nullable="true" MaxLength="20" />
+    <Property Type="Int32" Name="PId" Nullable="false" />
+    <Property Type="String" Name="VisitorId" Nullable="true" MaxLength="30" />
+    <Property Type="String" Name="VGovId" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="AssetId" Nullable="true" MaxLength="30" />
+    <Property Type="String" Name="Form" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="ToMeet" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="SubLocation" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="OfficeLocation" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="Gate" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="Purpose" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="TimeIn" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="ValidUpto" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="Remark" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="VCreatedBy" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="VCreatedDate" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="VModifiedBy" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="VModifiedDate" Nullable="true" MaxLength="50" />
+  </ComplexType>
+</Schema>

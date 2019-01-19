@@ -1,0 +1,1313 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="DBNCSVisitorModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="tblAssetCompany">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="AssetCompanyCode" Type="nvarchar" MaxLength="50" />
+          <Property Name="AssetCompanyName" Type="nvarchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="tblAssetDetails">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="AssetModelName" Type="nvarchar" MaxLength="50" />
+          <Property Name="AssetTypeID" Type="int" />
+          <Property Name="AssetCompanyID" Type="int" />
+          <Property Name="ManufacturingDate" Type="datetime" />
+          <Property Name="ExpiryDate" Type="datetime" />
+          <Property Name="CreatedDate" Type="datetime" />
+          <Property Name="CreatedBy" Type="nvarchar" MaxLength="50" />
+          <Property Name="ModifiedDate" Type="datetime" />
+          <Property Name="ModifiedBy" Type="nvarchar" MaxLength="50" />
+          <Property Name="IsIssued" Type="bit" />
+          <Property Name="LicesenceNo" Type="nvarchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="tblAssetIssueDetails">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="EmpId" Type="int" />
+          <Property Name="AssetId" Type="int" />
+          <Property Name="AssetIssueDateTime" Type="datetime" />
+          <Property Name="AssetSubmitDateTime" Type="datetime" />
+          <Property Name="IsSubmited" Type="bit" />
+          <Property Name="CreatedDate" Type="datetime" />
+          <Property Name="CreatedBy" Type="nvarchar" MaxLength="50" />
+          <Property Name="ModifiedDate" Type="datetime" />
+          <Property Name="ModifiedBy" Type="nvarchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="tblAssetType">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="AssetTypeCode" Type="nvarchar" MaxLength="50" />
+          <Property Name="AssetTypeName" Type="nvarchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="tblEmpDesignationMaster">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="EmpDesignationCode" Type="nvarchar" MaxLength="50" />
+          <Property Name="EmpDesignationName" Type="nvarchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="tblEmployeeDetails">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="EmpCode" Type="nvarchar" MaxLength="50" />
+          <Property Name="EmpName" Type="nvarchar" MaxLength="50" />
+          <Property Name="EmpDesignationID" Type="int" />
+          <Property Name="EmpDept" Type="nvarchar" MaxLength="50" />
+          <Property Name="PhoneNo" Type="nvarchar" MaxLength="15" />
+          <Property Name="CreatedDate" Type="datetime" />
+          <Property Name="ModifiedDate" Type="datetime" />
+          <Property Name="IsActive" Type="bit" />
+        </EntityType>
+        <EntityType Name="tblGateMaster">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="GateName" Type="nvarchar" MaxLength="50" />
+          <Property Name="GateCode" Type="nvarchar" MaxLength="50" />
+          <Property Name="CreatedDate" Type="datetime" />
+          <Property Name="ModifiedDate" Type="datetime" />
+        </EntityType>
+        <EntityType Name="tblIdentityMaster">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="ProofName" Type="nvarchar" MaxLength="50" />
+          <Property Name="ProofCode" Type="nvarchar" MaxLength="50" />
+          <Property Name="CreatedDate" Type="datetime" />
+          <Property Name="ModifiedDate" Type="datetime" />
+        </EntityType>
+        <EntityType Name="tblPurposeMaster">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="PurposeName" Type="nvarchar" MaxLength="50" />
+          <Property Name="PurposeCode" Type="nvarchar" MaxLength="50" />
+          <Property Name="CreatedDate" Type="datetime" />
+          <Property Name="ModifiedDate" Type="datetime" />
+        </EntityType>
+        <EntityType Name="tblUserLogin">
+          <Key>
+            <PropertyRef Name="UserID" />
+          </Key>
+          <Property Name="UserID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="UserName" Type="nvarchar" MaxLength="50" />
+          <Property Name="Password" Type="nvarchar" MaxLength="50" />
+          <Property Name="Role" Type="nvarchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="tblVisitor">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="VisitorId" Type="nvarchar" MaxLength="20" />
+          <Property Name="Name" Type="nvarchar" MaxLength="500" />
+          <Property Name="GovId" Type="nvarchar" MaxLength="50" />
+          <Property Name="MobileNo" Type="nvarchar" MaxLength="15" />
+          <Property Name="EmailId" Type="nvarchar" MaxLength="50" />
+          <Property Name="AssetId" Type="nvarchar" MaxLength="50" />
+          <Property Name="Form" Type="nvarchar" MaxLength="50" />
+          <Property Name="ToMeet" Type="nvarchar" MaxLength="50" />
+          <Property Name="SubLocation" Type="nvarchar" MaxLength="50" />
+          <Property Name="Building" Type="nvarchar" MaxLength="50" />
+          <Property Name="Gate" Type="nvarchar" MaxLength="50" />
+          <Property Name="Purpose" Type="nvarchar" MaxLength="50" />
+          <Property Name="TimeIn" Type="nvarchar" MaxLength="50" />
+          <Property Name="ValidUpto" Type="nvarchar" MaxLength="50" />
+          <Property Name="Remark" Type="nvarchar" MaxLength="50" />
+          <Property Name="ImagePath" Type="nvarchar(max)" />
+          <Property Name="CreatedBy" Type="nvarchar" MaxLength="50" />
+          <Property Name="CreatedDate" Type="date" />
+          <Property Name="ModifiedBy" Type="nvarchar" MaxLength="50" />
+          <Property Name="ModifiedDate" Type="date" />
+          <Property Name="DOB" Type="nvarchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="tblVisitorPersonalData">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="EmpId" Type="nvarchar" MaxLength="20" />
+          <Property Name="GovIdNo" Type="nvarchar" MaxLength="20" />
+          <Property Name="Name" Type="nvarchar" MaxLength="100" />
+          <Property Name="DOB" Type="nchar" MaxLength="10" />
+          <Property Name="MobileNo" Type="nvarchar" MaxLength="15" />
+          <Property Name="EmailId" Type="nvarchar" MaxLength="50" />
+          <Property Name="GovId" Type="int" />
+          <Property Name="ImagePath" Type="nvarchar" MaxLength="500" />
+          <Property Name="CreatedBy" Type="nvarchar" MaxLength="20" />
+          <Property Name="CreatedDate" Type="nvarchar" MaxLength="20" />
+          <Property Name="ModifiedBy" Type="nvarchar" MaxLength="20" />
+          <Property Name="ModifiedDate" Type="nvarchar" MaxLength="20" />
+        </EntityType>
+        <EntityType Name="tblVisitorVisitDetails">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="VisitorId" Type="nvarchar" MaxLength="30" />
+          <Property Name="GovIdNo" Type="nvarchar" MaxLength="50" />
+          <Property Name="AssetId" Type="nvarchar" MaxLength="30" />
+          <Property Name="Location" Type="nvarchar" MaxLength="50" />
+          <Property Name="ToMeet" Type="nvarchar" MaxLength="50" />
+          <Property Name="SubLocation" Type="nvarchar" MaxLength="50" />
+          <Property Name="OfficeLocation" Type="nvarchar" MaxLength="50" />
+          <Property Name="Gate" Type="nvarchar" MaxLength="50" />
+          <Property Name="Purpose" Type="nvarchar" MaxLength="50" />
+          <Property Name="TimeIn" Type="nvarchar" MaxLength="50" />
+          <Property Name="ValidUpto" Type="nvarchar" MaxLength="50" />
+          <Property Name="Remark" Type="nvarchar" MaxLength="50" />
+          <Property Name="IsPassReturned" Type="bit" />
+          <Property Name="CreatedBy" Type="nvarchar" MaxLength="50" />
+          <Property Name="CreatedDate" Type="date" />
+          <Property Name="ModifiedBy" Type="nvarchar" MaxLength="50" />
+          <Property Name="ModifiedDate" Type="nvarchar" MaxLength="50" />
+        </EntityType>
+        <Association Name="FK_tblAssetDetails_tblAssetCompany">
+          <End Role="tblAssetCompany" Type="Self.tblAssetCompany" Multiplicity="0..1" />
+          <End Role="tblAssetDetails" Type="Self.tblAssetDetails" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tblAssetCompany">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="tblAssetDetails">
+              <PropertyRef Name="AssetCompanyID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_tblAssetDetails_tblAssetType">
+          <End Role="tblAssetType" Type="Self.tblAssetType" Multiplicity="0..1" />
+          <End Role="tblAssetDetails" Type="Self.tblAssetDetails" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tblAssetType">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="tblAssetDetails">
+              <PropertyRef Name="AssetTypeID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_tblAssetIssueDetails_tblAssetIssueDetails">
+          <End Role="tblAssetDetails" Type="Self.tblAssetDetails" Multiplicity="0..1" />
+          <End Role="tblAssetIssueDetails" Type="Self.tblAssetIssueDetails" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tblAssetDetails">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="tblAssetIssueDetails">
+              <PropertyRef Name="AssetId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_tblEmployeeDetails_tblEmpDesignationMaster">
+          <End Role="tblEmpDesignationMaster" Type="Self.tblEmpDesignationMaster" Multiplicity="0..1" />
+          <End Role="tblEmployeeDetails" Type="Self.tblEmployeeDetails" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tblEmpDesignationMaster">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="tblEmployeeDetails">
+              <PropertyRef Name="EmpDesignationID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Function Name="spInsertAssetIssueDetails" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="EmpId" Type="int" Mode="In" />
+          <Parameter Name="AssetId" Type="int" Mode="In" />
+          <Parameter Name="CreatedBy" Type="nvarchar" Mode="In" />
+        </Function>
+        <Function Name="uspGetAllActiveAssets" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+        <Function Name="uspGetAllGate" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+        <Function Name="uspGetAllIdentity" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+        <Function Name="uspGetAllPurpose" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+        <Function Name="uspGetAssetDetails" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+        <Function Name="uspGetAssetList" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+        <Function Name="uspGetEmployeeList" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+        <Function Name="uspGetVisitorDetails" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+        <Function Name="uspGetVisitorDetailsByGovId" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="VisType" Type="nvarchar" Mode="In" />
+          <Parameter Name="GovId" Type="nvarchar" Mode="In" />
+        </Function>
+        <Function Name="uspGetVisitorDetailsById" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="Id" Type="int" Mode="In" />
+        </Function>
+        <Function Name="uspGetVisitorDetailsNew" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+        <Function Name="uspGetVisitorPerDayCount" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+        <Function Name="uspInsertVisitorDetails" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="EmpId" Type="nvarchar" Mode="In" />
+          <Parameter Name="GovIdNo" Type="nvarchar" Mode="In" />
+          <Parameter Name="Name" Type="nvarchar" Mode="In" />
+          <Parameter Name="DOB" Type="nvarchar" Mode="In" />
+          <Parameter Name="MobileNo" Type="nvarchar" Mode="In" />
+          <Parameter Name="EmailId" Type="nvarchar" Mode="In" />
+          <Parameter Name="GovId" Type="nvarchar" Mode="In" />
+          <Parameter Name="ImagePath" Type="nvarchar" Mode="In" />
+          <Parameter Name="VisitorId" Type="nvarchar" Mode="In" />
+          <Parameter Name="AssetId" Type="nvarchar" Mode="In" />
+          <Parameter Name="Location" Type="nvarchar" Mode="In" />
+          <Parameter Name="ToMeet" Type="nvarchar" Mode="In" />
+          <Parameter Name="SubLocation" Type="nvarchar" Mode="In" />
+          <Parameter Name="OfficeLocation" Type="nvarchar" Mode="In" />
+          <Parameter Name="Gate" Type="nvarchar" Mode="In" />
+          <Parameter Name="Purpose" Type="nvarchar" Mode="In" />
+          <Parameter Name="TimeIn" Type="nvarchar" Mode="In" />
+          <Parameter Name="ValidUpto" Type="nvarchar" Mode="In" />
+          <Parameter Name="Remark" Type="nvarchar" Mode="In" />
+          <Parameter Name="CreatedBy" Type="nvarchar" Mode="In" />
+          <Parameter Name="CreatedDate" Type="nvarchar" Mode="In" />
+          <Parameter Name="Id" Type="int" Mode="InOut" />
+        </Function>
+        <Function Name="uspUpdatePersonalandVisitorData" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="EmpId" Type="nvarchar" Mode="In" />
+          <Parameter Name="GovIdNo" Type="nvarchar" Mode="In" />
+          <Parameter Name="Name" Type="nvarchar" Mode="In" />
+          <Parameter Name="DOB" Type="nvarchar" Mode="In" />
+          <Parameter Name="MobileNo" Type="nvarchar" Mode="In" />
+          <Parameter Name="EmailId" Type="nvarchar" Mode="In" />
+          <Parameter Name="GovId" Type="nvarchar" Mode="In" />
+          <Parameter Name="ImagePath" Type="nvarchar" Mode="In" />
+          <Parameter Name="Id" Type="int" Mode="In" />
+          <Parameter Name="VisitorId" Type="nvarchar" Mode="In" />
+          <Parameter Name="AssetId" Type="nvarchar" Mode="In" />
+          <Parameter Name="Location" Type="nvarchar" Mode="In" />
+          <Parameter Name="ToMeet" Type="nvarchar" Mode="In" />
+          <Parameter Name="SubLocation" Type="nvarchar" Mode="In" />
+          <Parameter Name="OfficeLocation" Type="nvarchar" Mode="In" />
+          <Parameter Name="Gate" Type="nvarchar" Mode="In" />
+          <Parameter Name="Purpose" Type="nvarchar" Mode="In" />
+          <Parameter Name="TimeIn" Type="nvarchar" Mode="In" />
+          <Parameter Name="ValidUpto" Type="nvarchar" Mode="In" />
+          <Parameter Name="Remark" Type="nvarchar" Mode="In" />
+          <Parameter Name="CreatedBy" Type="nvarchar" Mode="In" />
+          <Parameter Name="CreatedDate" Type="nvarchar" Mode="In" />
+        </Function>
+        <EntityContainer Name="DBNCSVisitorModelStoreContainer">
+          <EntitySet Name="tblAssetCompany" EntityType="Self.tblAssetCompany" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="tblAssetDetails" EntityType="Self.tblAssetDetails" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="tblAssetIssueDetails" EntityType="Self.tblAssetIssueDetails" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="tblAssetType" EntityType="Self.tblAssetType" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="tblEmpDesignationMaster" EntityType="Self.tblEmpDesignationMaster" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="tblEmployeeDetails" EntityType="Self.tblEmployeeDetails" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="tblGateMaster" EntityType="Self.tblGateMaster" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="tblIdentityMaster" EntityType="Self.tblIdentityMaster" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="tblPurposeMaster" EntityType="Self.tblPurposeMaster" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="tblUserLogin" EntityType="Self.tblUserLogin" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="tblVisitor" EntityType="Self.tblVisitor" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="tblVisitorPersonalData" EntityType="Self.tblVisitorPersonalData" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="tblVisitorVisitDetails" EntityType="Self.tblVisitorVisitDetails" Schema="dbo" store:Type="Tables" />
+          <AssociationSet Name="FK_tblAssetDetails_tblAssetCompany" Association="Self.FK_tblAssetDetails_tblAssetCompany">
+            <End Role="tblAssetCompany" EntitySet="tblAssetCompany" />
+            <End Role="tblAssetDetails" EntitySet="tblAssetDetails" />
+          </AssociationSet>
+          <AssociationSet Name="FK_tblAssetDetails_tblAssetType" Association="Self.FK_tblAssetDetails_tblAssetType">
+            <End Role="tblAssetType" EntitySet="tblAssetType" />
+            <End Role="tblAssetDetails" EntitySet="tblAssetDetails" />
+          </AssociationSet>
+          <AssociationSet Name="FK_tblAssetIssueDetails_tblAssetIssueDetails" Association="Self.FK_tblAssetIssueDetails_tblAssetIssueDetails">
+            <End Role="tblAssetDetails" EntitySet="tblAssetDetails" />
+            <End Role="tblAssetIssueDetails" EntitySet="tblAssetIssueDetails" />
+          </AssociationSet>
+          <AssociationSet Name="FK_tblEmployeeDetails_tblEmpDesignationMaster" Association="Self.FK_tblEmployeeDetails_tblEmpDesignationMaster">
+            <End Role="tblEmpDesignationMaster" EntitySet="tblEmpDesignationMaster" />
+            <End Role="tblEmployeeDetails" EntitySet="tblEmployeeDetails" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="DBNCSVisitorModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="tblAssetCompany">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="AssetCompanyCode" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="AssetCompanyName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="tblAssetDetails" Relationship="Self.FK_tblAssetDetails_tblAssetCompany" FromRole="tblAssetCompany" ToRole="tblAssetDetails" />
+        </EntityType>
+        <EntityType Name="tblAssetDetail">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="AssetModelName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="AssetTypeID" Type="Int32" />
+          <Property Name="AssetCompanyID" Type="Int32" />
+          <Property Name="ManufacturingDate" Type="DateTime" Precision="3" />
+          <Property Name="ExpiryDate" Type="DateTime" Precision="3" />
+          <Property Name="CreatedDate" Type="DateTime" Precision="3" />
+          <Property Name="CreatedBy" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="ModifiedDate" Type="DateTime" Precision="3" />
+          <Property Name="ModifiedBy" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="IsIssued" Type="Boolean" />
+          <Property Name="LicesenceNo" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="tblAssetCompany" Relationship="Self.FK_tblAssetDetails_tblAssetCompany" FromRole="tblAssetDetails" ToRole="tblAssetCompany" />
+          <NavigationProperty Name="tblAssetType" Relationship="Self.FK_tblAssetDetails_tblAssetType" FromRole="tblAssetDetails" ToRole="tblAssetType" />
+          <NavigationProperty Name="tblAssetIssueDetails" Relationship="Self.FK_tblAssetIssueDetails_tblAssetIssueDetails" FromRole="tblAssetDetails" ToRole="tblAssetIssueDetails" />
+        </EntityType>
+        <EntityType Name="tblAssetIssueDetail">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="EmpId" Type="Int32" />
+          <Property Name="AssetId" Type="Int32" />
+          <Property Name="AssetIssueDateTime" Type="DateTime" Precision="3" />
+          <Property Name="AssetSubmitDateTime" Type="DateTime" Precision="3" />
+          <Property Name="IsSubmited" Type="Boolean" />
+          <Property Name="CreatedDate" Type="DateTime" Precision="3" />
+          <Property Name="CreatedBy" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="ModifiedDate" Type="DateTime" Precision="3" />
+          <Property Name="ModifiedBy" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="tblAssetDetail" Relationship="Self.FK_tblAssetIssueDetails_tblAssetIssueDetails" FromRole="tblAssetIssueDetails" ToRole="tblAssetDetails" />
+        </EntityType>
+        <EntityType Name="tblAssetType">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="AssetTypeCode" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="AssetTypeName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="tblAssetDetails" Relationship="Self.FK_tblAssetDetails_tblAssetType" FromRole="tblAssetType" ToRole="tblAssetDetails" />
+        </EntityType>
+        <EntityType Name="tblEmpDesignationMaster">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="EmpDesignationCode" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="EmpDesignationName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="tblEmployeeDetails" Relationship="Self.FK_tblEmployeeDetails_tblEmpDesignationMaster" FromRole="tblEmpDesignationMaster" ToRole="tblEmployeeDetails" />
+        </EntityType>
+        <EntityType Name="tblEmployeeDetail">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="EmpCode" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="EmpName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="EmpDesignationID" Type="Int32" />
+          <Property Name="EmpDept" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="PhoneNo" Type="String" MaxLength="15" FixedLength="false" Unicode="true" />
+          <Property Name="CreatedDate" Type="DateTime" Precision="3" />
+          <Property Name="ModifiedDate" Type="DateTime" Precision="3" />
+          <Property Name="IsActive" Type="Boolean" />
+          <NavigationProperty Name="tblEmpDesignationMaster" Relationship="Self.FK_tblEmployeeDetails_tblEmpDesignationMaster" FromRole="tblEmployeeDetails" ToRole="tblEmpDesignationMaster" />
+        </EntityType>
+        <EntityType Name="tblGateMaster">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="GateName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="GateCode" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="CreatedDate" Type="DateTime" Precision="3" />
+          <Property Name="ModifiedDate" Type="DateTime" Precision="3" />
+        </EntityType>
+        <EntityType Name="tblIdentityMaster">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="ProofName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="ProofCode" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="CreatedDate" Type="DateTime" Precision="3" />
+          <Property Name="ModifiedDate" Type="DateTime" Precision="3" />
+        </EntityType>
+        <EntityType Name="tblPurposeMaster">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="PurposeName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="PurposeCode" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="CreatedDate" Type="DateTime" Precision="3" />
+          <Property Name="ModifiedDate" Type="DateTime" Precision="3" />
+        </EntityType>
+        <EntityType Name="tblUserLogin">
+          <Key>
+            <PropertyRef Name="UserID" />
+          </Key>
+          <Property Name="UserID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="UserName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Password" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Role" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="tblVisitor">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="VisitorId" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="Name" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="GovId" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="MobileNo" Type="String" MaxLength="15" FixedLength="false" Unicode="true" />
+          <Property Name="EmailId" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="AssetId" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Form" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="ToMeet" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="SubLocation" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Building" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Gate" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Purpose" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="TimeIn" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="ValidUpto" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Remark" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="ImagePath" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="CreatedBy" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="CreatedDate" Type="DateTime" Precision="0" />
+          <Property Name="ModifiedBy" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="ModifiedDate" Type="DateTime" Precision="0" />
+          <Property Name="DOB" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="tblVisitorPersonalData">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="EmpId" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="GovIdNo" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="Name" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="DOB" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+          <Property Name="MobileNo" Type="String" MaxLength="15" FixedLength="false" Unicode="true" />
+          <Property Name="EmailId" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="GovId" Type="Int32" />
+          <Property Name="ImagePath" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="CreatedBy" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="CreatedDate" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="ModifiedBy" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="ModifiedDate" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="tblVisitorVisitDetail">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="VisitorId" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+          <Property Name="GovIdNo" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="AssetId" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+          <Property Name="Location" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="ToMeet" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="SubLocation" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="OfficeLocation" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Gate" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Purpose" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="TimeIn" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="ValidUpto" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Remark" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="IsPassReturned" Type="Boolean" />
+          <Property Name="CreatedBy" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="CreatedDate" Type="DateTime" Precision="0" />
+          <Property Name="ModifiedBy" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="ModifiedDate" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <Association Name="FK_tblAssetDetails_tblAssetCompany">
+          <End Role="tblAssetCompany" Type="Self.tblAssetCompany" Multiplicity="0..1" />
+          <End Role="tblAssetDetails" Type="Self.tblAssetDetail" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tblAssetCompany">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="tblAssetDetails">
+              <PropertyRef Name="AssetCompanyID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_tblAssetDetails_tblAssetType">
+          <End Role="tblAssetType" Type="Self.tblAssetType" Multiplicity="0..1" />
+          <End Role="tblAssetDetails" Type="Self.tblAssetDetail" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tblAssetType">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="tblAssetDetails">
+              <PropertyRef Name="AssetTypeID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_tblAssetIssueDetails_tblAssetIssueDetails">
+          <End Role="tblAssetDetails" Type="Self.tblAssetDetail" Multiplicity="0..1" />
+          <End Role="tblAssetIssueDetails" Type="Self.tblAssetIssueDetail" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tblAssetDetails">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="tblAssetIssueDetails">
+              <PropertyRef Name="AssetId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_tblEmployeeDetails_tblEmpDesignationMaster">
+          <End Role="tblEmpDesignationMaster" Type="Self.tblEmpDesignationMaster" Multiplicity="0..1" />
+          <End Role="tblEmployeeDetails" Type="Self.tblEmployeeDetail" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tblEmpDesignationMaster">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="tblEmployeeDetails">
+              <PropertyRef Name="EmpDesignationID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="DBNCSVisitorEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="tblAssetCompanies" EntityType="Self.tblAssetCompany" />
+          <EntitySet Name="tblAssetDetails" EntityType="Self.tblAssetDetail" />
+          <EntitySet Name="tblAssetIssueDetails" EntityType="Self.tblAssetIssueDetail" />
+          <EntitySet Name="tblAssetTypes" EntityType="Self.tblAssetType" />
+          <EntitySet Name="tblEmpDesignationMasters" EntityType="Self.tblEmpDesignationMaster" />
+          <EntitySet Name="tblEmployeeDetails" EntityType="Self.tblEmployeeDetail" />
+          <EntitySet Name="tblGateMasters" EntityType="Self.tblGateMaster" />
+          <EntitySet Name="tblIdentityMasters" EntityType="Self.tblIdentityMaster" />
+          <EntitySet Name="tblPurposeMasters" EntityType="Self.tblPurposeMaster" />
+          <EntitySet Name="tblUserLogins" EntityType="Self.tblUserLogin" />
+          <EntitySet Name="tblVisitors" EntityType="Self.tblVisitor" />
+          <EntitySet Name="tblVisitorPersonalDatas" EntityType="Self.tblVisitorPersonalData" />
+          <EntitySet Name="tblVisitorVisitDetails" EntityType="Self.tblVisitorVisitDetail" />
+          <AssociationSet Name="FK_tblAssetDetails_tblAssetCompany" Association="Self.FK_tblAssetDetails_tblAssetCompany">
+            <End Role="tblAssetCompany" EntitySet="tblAssetCompanies" />
+            <End Role="tblAssetDetails" EntitySet="tblAssetDetails" />
+          </AssociationSet>
+          <AssociationSet Name="FK_tblAssetDetails_tblAssetType" Association="Self.FK_tblAssetDetails_tblAssetType">
+            <End Role="tblAssetType" EntitySet="tblAssetTypes" />
+            <End Role="tblAssetDetails" EntitySet="tblAssetDetails" />
+          </AssociationSet>
+          <AssociationSet Name="FK_tblAssetIssueDetails_tblAssetIssueDetails" Association="Self.FK_tblAssetIssueDetails_tblAssetIssueDetails">
+            <End Role="tblAssetDetails" EntitySet="tblAssetDetails" />
+            <End Role="tblAssetIssueDetails" EntitySet="tblAssetIssueDetails" />
+          </AssociationSet>
+          <AssociationSet Name="FK_tblEmployeeDetails_tblEmpDesignationMaster" Association="Self.FK_tblEmployeeDetails_tblEmpDesignationMaster">
+            <End Role="tblEmpDesignationMaster" EntitySet="tblEmpDesignationMasters" />
+            <End Role="tblEmployeeDetails" EntitySet="tblEmployeeDetails" />
+          </AssociationSet>
+          <FunctionImport Name="spInsertAssetIssueDetails">
+            <Parameter Name="EmpId" Mode="In" Type="Int32" />
+            <Parameter Name="AssetId" Mode="In" Type="Int32" />
+            <Parameter Name="CreatedBy" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="uspGetAllActiveAssets" ReturnType="Collection(DBNCSVisitorModel.uspGetAllActiveAssets_Result)" />
+          <FunctionImport Name="uspGetAllGate" ReturnType="Collection(DBNCSVisitorModel.uspGetAllGate_Result)" />
+          <FunctionImport Name="uspGetAllIdentity" ReturnType="Collection(DBNCSVisitorModel.uspGetAllIdentity_Result)" />
+          <FunctionImport Name="uspGetAllPurpose" ReturnType="Collection(DBNCSVisitorModel.uspGetAllPurpose_Result)" />
+          <FunctionImport Name="uspGetAssetDetails" ReturnType="Collection(DBNCSVisitorModel.uspGetAssetDetails_Result)" />
+          <FunctionImport Name="uspGetAssetList" ReturnType="Collection(DBNCSVisitorModel.uspGetAssetList_Result)" />
+          <FunctionImport Name="uspGetEmployeeList" ReturnType="Collection(DBNCSVisitorModel.uspGetEmployeeList_Result)" />
+          <FunctionImport Name="uspGetVisitorDetails" ReturnType="Collection(DBNCSVisitorModel.uspGetVisitorDetails_Result)" />
+          <FunctionImport Name="uspGetVisitorDetailsByGovId" ReturnType="Collection(DBNCSVisitorModel.uspGetVisitorDetailsByGovId_Result)">
+            <Parameter Name="VisType" Mode="In" Type="String" />
+            <Parameter Name="GovId" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="uspGetVisitorDetailsById" ReturnType="Collection(DBNCSVisitorModel.uspGetVisitorDetailsById_Result)">
+            <Parameter Name="Id" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="uspGetVisitorDetailsNew" ReturnType="Collection(DBNCSVisitorModel.uspGetVisitorDetailsNew_Result)" />
+          <FunctionImport Name="uspGetVisitorPerDayCount" ReturnType="Collection(DBNCSVisitorModel.uspGetVisitorPerDayCount_Result)" />
+          <FunctionImport Name="uspInsertVisitorDetails">
+            <Parameter Name="EmpId" Mode="In" Type="String" />
+            <Parameter Name="GovIdNo" Mode="In" Type="String" />
+            <Parameter Name="Name" Mode="In" Type="String" />
+            <Parameter Name="DOB" Mode="In" Type="String" />
+            <Parameter Name="MobileNo" Mode="In" Type="String" />
+            <Parameter Name="EmailId" Mode="In" Type="String" />
+            <Parameter Name="GovId" Mode="In" Type="String" />
+            <Parameter Name="ImagePath" Mode="In" Type="String" />
+            <Parameter Name="VisitorId" Mode="In" Type="String" />
+            <Parameter Name="AssetId" Mode="In" Type="String" />
+            <Parameter Name="Location" Mode="In" Type="String" />
+            <Parameter Name="ToMeet" Mode="In" Type="String" />
+            <Parameter Name="SubLocation" Mode="In" Type="String" />
+            <Parameter Name="OfficeLocation" Mode="In" Type="String" />
+            <Parameter Name="Gate" Mode="In" Type="String" />
+            <Parameter Name="Purpose" Mode="In" Type="String" />
+            <Parameter Name="TimeIn" Mode="In" Type="String" />
+            <Parameter Name="ValidUpto" Mode="In" Type="String" />
+            <Parameter Name="Remark" Mode="In" Type="String" />
+            <Parameter Name="CreatedBy" Mode="In" Type="String" />
+            <Parameter Name="CreatedDate" Mode="In" Type="String" />
+            <Parameter Name="Id" Mode="InOut" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="uspUpdatePersonalandVisitorData">
+            <Parameter Name="EmpId" Mode="In" Type="String" />
+            <Parameter Name="GovIdNo" Mode="In" Type="String" />
+            <Parameter Name="Name" Mode="In" Type="String" />
+            <Parameter Name="DOB" Mode="In" Type="String" />
+            <Parameter Name="MobileNo" Mode="In" Type="String" />
+            <Parameter Name="EmailId" Mode="In" Type="String" />
+            <Parameter Name="GovId" Mode="In" Type="String" />
+            <Parameter Name="ImagePath" Mode="In" Type="String" />
+            <Parameter Name="Id" Mode="In" Type="Int32" />
+            <Parameter Name="VisitorId" Mode="In" Type="String" />
+            <Parameter Name="AssetId" Mode="In" Type="String" />
+            <Parameter Name="Location" Mode="In" Type="String" />
+            <Parameter Name="ToMeet" Mode="In" Type="String" />
+            <Parameter Name="SubLocation" Mode="In" Type="String" />
+            <Parameter Name="OfficeLocation" Mode="In" Type="String" />
+            <Parameter Name="Gate" Mode="In" Type="String" />
+            <Parameter Name="Purpose" Mode="In" Type="String" />
+            <Parameter Name="TimeIn" Mode="In" Type="String" />
+            <Parameter Name="ValidUpto" Mode="In" Type="String" />
+            <Parameter Name="Remark" Mode="In" Type="String" />
+            <Parameter Name="CreatedBy" Mode="In" Type="String" />
+            <Parameter Name="CreatedDate" Mode="In" Type="String" />
+          </FunctionImport>
+        </EntityContainer>
+        <ComplexType Name="uspGetAllActiveAssets_Result">
+          <Property Type="Int32" Name="ID" Nullable="false" />
+          <Property Type="String" Name="AssetModelName" Nullable="true" MaxLength="50" />
+          <Property Type="Int32" Name="AssetTypeID" Nullable="true" />
+          <Property Type="Int32" Name="AssetCompanyID" Nullable="true" />
+          <Property Type="DateTime" Name="ManufacturingDate" Nullable="true" Precision="23" />
+          <Property Type="DateTime" Name="ExpiryDate" Nullable="true" Precision="23" />
+          <Property Type="DateTime" Name="CreatedDate" Nullable="true" Precision="23" />
+          <Property Type="String" Name="CreatedBy" Nullable="true" MaxLength="50" />
+          <Property Type="DateTime" Name="ModifiedDate" Nullable="true" Precision="23" />
+          <Property Type="String" Name="ModifiedBy" Nullable="true" MaxLength="50" />
+          <Property Type="Boolean" Name="IsIssued" Nullable="true" />
+          <Property Type="String" Name="LicesenceNo" Nullable="true" MaxLength="50" />
+        </ComplexType>
+        <ComplexType Name="uspGetAllGate_Result">
+          <Property Type="String" Name="GateName" Nullable="true" MaxLength="50" />
+          <Property Type="Int32" Name="Gate" Nullable="false" />
+        </ComplexType>
+        <ComplexType Name="uspGetAllIdentity_Result">
+          <Property Type="String" Name="ProofName" Nullable="true" MaxLength="50" />
+          <Property Type="Int32" Name="GovId" Nullable="false" />
+        </ComplexType>
+        <ComplexType Name="uspGetAllPurpose_Result">
+          <Property Type="String" Name="PurposeText" Nullable="true" MaxLength="50" />
+          <Property Type="Int32" Name="Purpose" Nullable="false" />
+        </ComplexType>
+        <ComplexType Name="uspGetAssetDetails_Result">
+          <Property Type="Int32" Name="Id" Nullable="false" />
+          <Property Type="String" Name="AssetModelName" Nullable="true" MaxLength="50" />
+          <Property Type="Int32" Name="AssetCompanyID" Nullable="true" />
+          <Property Type="Int32" Name="AssetTypeID" Nullable="true" />
+          <Property Type="String" Name="CreatedBy" Nullable="true" MaxLength="50" />
+          <Property Type="DateTime" Name="CreatedDate" Nullable="true" Precision="23" />
+          <Property Type="DateTime" Name="ExpiryDate" Nullable="true" Precision="23" />
+          <Property Type="Boolean" Name="IsIssued" Nullable="true" />
+          <Property Type="String" Name="LicesenceNo" Nullable="true" MaxLength="50" />
+          <Property Type="DateTime" Name="ManufacturingDate" Nullable="true" Precision="23" />
+          <Property Type="String" Name="ModifiedBy" Nullable="true" MaxLength="50" />
+          <Property Type="DateTime" Name="ModifiedDate" Nullable="true" Precision="23" />
+          <Property Type="DateTime" Name="AssetIssueDateTime" Nullable="true" Precision="23" />
+          <Property Type="DateTime" Name="AssetSubmitDateTime" Nullable="true" Precision="23" />
+          <Property Type="Boolean" Name="IsSubmited" Nullable="true" />
+          <Property Type="String" Name="EmployeeName" Nullable="true" MaxLength="50" />
+        </ComplexType>
+        <ComplexType Name="uspGetAssetList_Result">
+          <Property Type="Int32" Name="ID" Nullable="false" />
+          <Property Type="String" Name="AssetTypeName" Nullable="true" MaxLength="50" />
+          <Property Type="String" Name="AssetCompanyName" Nullable="true" MaxLength="50" />
+          <Property Type="String" Name="AssestName" Nullable="true" MaxLength="50" />
+          <Property Type="DateTime" Name="ManufacturingDate" Nullable="true" Precision="23" />
+          <Property Type="DateTime" Name="ExpiryDate" Nullable="true" Precision="23" />
+          <Property Type="String" Name="LicesenceNo" Nullable="true" MaxLength="50" />
+          <Property Type="DateTime" Name="CreatedDate" Nullable="true" Precision="23" />
+          <Property Type="DateTime" Name="ModifiedDate" Nullable="true" Precision="23" />
+        </ComplexType>
+        <ComplexType Name="uspGetEmployeeList_Result">
+          <Property Type="Int32" Name="ID" Nullable="false" />
+          <Property Type="String" Name="EmpCode" Nullable="true" MaxLength="50" />
+          <Property Type="String" Name="EmpName" Nullable="true" MaxLength="50" />
+          <Property Type="String" Name="EmpDesignationID" Nullable="true" MaxLength="50" />
+          <Property Type="String" Name="EmpDept" Nullable="true" MaxLength="50" />
+          <Property Type="String" Name="PhoneNo" Nullable="true" MaxLength="15" />
+          <Property Type="Boolean" Name="IsActive" Nullable="true" />
+          <Property Type="DateTime" Name="CreatedDate" Nullable="true" Precision="23" />
+          <Property Type="DateTime" Name="ModifiedDate" Nullable="true" Precision="23" />
+        </ComplexType>
+        <ComplexType Name="uspGetVisitorDetails_Result">
+          <Property Type="Int32" Name="Id" Nullable="false" />
+          <Property Type="String" Name="EmpId" Nullable="true" MaxLength="20" />
+          <Property Type="String" Name="GovIdNo" Nullable="true" MaxLength="20" />
+          <Property Type="String" Name="Name" Nullable="true" MaxLength="100" />
+          <Property Type="String" Name="DOB" Nullable="true" MaxLength="10" />
+          <Property Type="String" Name="MobileNo" Nullable="true" MaxLength="15" />
+          <Property Type="String" Name="EmailId" Nullable="true" MaxLength="50" />
+          <Property Type="Int32" Name="GovId" Nullable="true" />
+          <Property Type="String" Name="ImagePath" Nullable="true" MaxLength="500" />
+          <Property Type="String" Name="CreatedBy" Nullable="true" MaxLength="20" />
+          <Property Type="String" Name="CreatedDate" Nullable="true" MaxLength="20" />
+          <Property Type="String" Name="ModifiedBy" Nullable="true" MaxLength="20" />
+          <Property Type="String" Name="ModifiedDate" Nullable="true" MaxLength="20" />
+          <Property Type="Int32" Name="PId" Nullable="false" />
+          <Property Type="String" Name="VisitorId" Nullable="true" MaxLength="30" />
+          <Property Type="String" Name="VGovId" Nullable="true" MaxLength="50" />
+          <Property Type="String" Name="AssetId" Nullable="true" MaxLength="30" />
+          <Property Type="String" Name="Location" Nullable="true" MaxLength="50" />
+          <Property Type="String" Name="ToMeet" Nullable="true" MaxLength="50" />
+          <Property Type="String" Name="SubLocation" Nullable="true" MaxLength="50" />
+          <Property Type="String" Name="OfficeLocation" Nullable="true" MaxLength="50" />
+          <Property Type="String" Name="Gate" Nullable="true" MaxLength="50" />
+          <Property Type="String" Name="Purpose" Nullable="true" MaxLength="50" />
+          <Property Type="String" Name="TimeIn" Nullable="true" MaxLength="50" />
+          <Property Type="String" Name="ValidUpto" Nullable="true" MaxLength="50" />
+          <Property Type="String" Name="Remark" Nullable="true" MaxLength="50" />
+          <Property Type="String" Name="VCreatedBy" Nullable="true" MaxLength="50" />
+          <Property Type="DateTime" Name="VCreatedDate" Nullable="true" />
+          <Property Type="String" Name="VModifiedBy" Nullable="true" MaxLength="50" />
+          <Property Type="String" Name="VModifiedDate" Nullable="true" MaxLength="50" />
+        </ComplexType>
+        <ComplexType Name="uspGetVisitorDetailsByGovId_Result">
+          <Property Type="Int32" Name="Id" Nullable="false" />
+          <Property Type="String" Name="GovIdNo" Nullable="true" MaxLength="20" />
+          <Property Type="String" Name="EmpId" Nullable="true" MaxLength="20" />
+          <Property Type="String" Name="Name" Nullable="true" MaxLength="100" />
+          <Property Type="String" Name="DOB" Nullable="true" MaxLength="10" />
+          <Property Type="String" Name="MobileNo" Nullable="true" MaxLength="15" />
+          <Property Type="String" Name="EmailId" Nullable="true" MaxLength="50" />
+          <Property Type="Int32" Name="GovId" Nullable="true" />
+          <Property Type="String" Name="ImagePath" Nullable="true" MaxLength="500" />
+          <Property Type="String" Name="CreatedBy" Nullable="true" MaxLength="20" />
+          <Property Type="String" Name="CreatedDate" Nullable="true" MaxLength="20" />
+          <Property Type="String" Name="ModifiedBy" Nullable="true" MaxLength="20" />
+          <Property Type="String" Name="ModifiedDate" Nullable="true" MaxLength="20" />
+        </ComplexType>
+        <ComplexType Name="uspGetVisitorDetailsById_Result">
+          <Property Type="Int32" Name="Id" Nullable="false" />
+          <Property Type="String" Name="EmpId" Nullable="true" MaxLength="20" />
+          <Property Type="String" Name="GovIdNo" Nullable="true" MaxLength="20" />
+          <Property Type="String" Name="Name" Nullable="true" MaxLength="100" />
+          <Property Type="String" Name="DOB" Nullable="true" MaxLength="10" />
+          <Property Type="String" Name="MobileNo" Nullable="true" MaxLength="15" />
+          <Property Type="String" Name="EmailId" Nullable="true" MaxLength="50" />
+          <Property Type="Int32" Name="GovId" Nullable="true" />
+          <Property Type="String" Name="ImagePath" Nullable="true" MaxLength="500" />
+          <Property Type="String" Name="CreatedBy" Nullable="true" MaxLength="20" />
+          <Property Type="String" Name="CreatedDate" Nullable="true" MaxLength="20" />
+          <Property Type="String" Name="ModifiedBy" Nullable="true" MaxLength="20" />
+          <Property Type="String" Name="ModifiedDate" Nullable="true" MaxLength="20" />
+          <Property Type="Int32" Name="PId" Nullable="false" />
+          <Property Type="String" Name="VisitorId" Nullable="true" MaxLength="30" />
+          <Property Type="String" Name="VGovId" Nullable="true" MaxLength="50" />
+          <Property Type="String" Name="AssetId" Nullable="true" MaxLength="30" />
+          <Property Type="String" Name="Location" Nullable="true" MaxLength="50" />
+          <Property Type="String" Name="ToMeet" Nullable="true" MaxLength="50" />
+          <Property Type="String" Name="SubLocation" Nullable="true" MaxLength="50" />
+          <Property Type="String" Name="OfficeLocation" Nullable="true" MaxLength="50" />
+          <Property Type="String" Name="Gate" Nullable="true" MaxLength="50" />
+          <Property Type="String" Name="Purpose" Nullable="true" MaxLength="50" />
+          <Property Type="String" Name="PurposeText" Nullable="true" MaxLength="50" />
+          <Property Type="String" Name="TimeIn" Nullable="true" MaxLength="50" />
+          <Property Type="String" Name="ValidUpto" Nullable="true" MaxLength="50" />
+          <Property Type="String" Name="Remark" Nullable="true" MaxLength="50" />
+          <Property Type="Boolean" Name="IsPassReturned" Nullable="true" />
+          <Property Type="String" Name="VCreatedBy" Nullable="true" MaxLength="50" />
+          <Property Type="DateTime" Name="VCreatedDate" Nullable="true" />
+          <Property Type="String" Name="VModifiedBy" Nullable="true" MaxLength="50" />
+          <Property Type="String" Name="VModifiedDate" Nullable="true" MaxLength="50" />
+        </ComplexType>
+        <ComplexType Name="uspGetVisitorDetailsNew_Result">
+          <Property Type="Int32" Name="Id" Nullable="false" />
+          <Property Type="String" Name="EmpId" Nullable="true" MaxLength="20" />
+          <Property Type="String" Name="GovIdNo" Nullable="true" MaxLength="20" />
+          <Property Type="String" Name="Name" Nullable="true" MaxLength="100" />
+          <Property Type="String" Name="DOB" Nullable="true" MaxLength="10" />
+          <Property Type="String" Name="MobileNo" Nullable="true" MaxLength="15" />
+          <Property Type="String" Name="EmailId" Nullable="true" MaxLength="50" />
+          <Property Type="Int32" Name="GovId" Nullable="true" />
+          <Property Type="String" Name="ImagePath" Nullable="true" MaxLength="500" />
+          <Property Type="String" Name="CreatedBy" Nullable="true" MaxLength="50" />
+          <Property Type="DateTime" Name="CreatedDate" Nullable="true" />
+          <Property Type="String" Name="ModifiedBy" Nullable="true" MaxLength="50" />
+          <Property Type="String" Name="ModifiedDate" Nullable="true" MaxLength="50" />
+          <Property Type="Int32" Name="PId" Nullable="false" />
+          <Property Type="String" Name="VisitorId" Nullable="true" MaxLength="30" />
+          <Property Type="String" Name="VGovId" Nullable="true" MaxLength="50" />
+          <Property Type="String" Name="AssetId" Nullable="true" MaxLength="30" />
+          <Property Type="String" Name="Location" Nullable="true" MaxLength="50" />
+          <Property Type="String" Name="ToMeet" Nullable="true" MaxLength="50" />
+          <Property Type="String" Name="SubLocation" Nullable="true" MaxLength="50" />
+          <Property Type="String" Name="OfficeLocation" Nullable="true" MaxLength="50" />
+          <Property Type="String" Name="Gate" Nullable="true" MaxLength="50" />
+          <Property Type="String" Name="Purpose" Nullable="true" MaxLength="50" />
+          <Property Type="String" Name="PurposeText" Nullable="true" MaxLength="50" />
+          <Property Type="String" Name="TimeIn" Nullable="true" MaxLength="50" />
+          <Property Type="String" Name="ValidUpto" Nullable="true" MaxLength="50" />
+          <Property Type="String" Name="Remark" Nullable="true" MaxLength="50" />
+          <Property Type="Boolean" Name="IsPassReturned" Nullable="true" />
+          <Property Type="String" Name="VCreatedBy" Nullable="true" MaxLength="20" />
+          <Property Type="String" Name="VCreatedDate" Nullable="true" MaxLength="20" />
+          <Property Type="String" Name="VModifiedBy" Nullable="true" MaxLength="20" />
+          <Property Type="String" Name="VModifiedDate" Nullable="true" MaxLength="20" />
+        </ComplexType>
+        <ComplexType Name="uspGetVisitorPerDayCount_Result">
+          <Property Type="DateTime" Name="VisDate" Nullable="true" />
+          <Property Type="Int32" Name="No_of_Visitor" Nullable="true" />
+        </ComplexType>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="DBNCSVisitorModelStoreContainer" CdmEntityContainer="DBNCSVisitorEntities">
+          <EntitySetMapping Name="tblAssetCompanies">
+            <EntityTypeMapping TypeName="DBNCSVisitorModel.tblAssetCompany">
+              <MappingFragment StoreEntitySet="tblAssetCompany">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="AssetCompanyCode" ColumnName="AssetCompanyCode" />
+                <ScalarProperty Name="AssetCompanyName" ColumnName="AssetCompanyName" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tblAssetDetails">
+            <EntityTypeMapping TypeName="DBNCSVisitorModel.tblAssetDetail">
+              <MappingFragment StoreEntitySet="tblAssetDetails">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="AssetModelName" ColumnName="AssetModelName" />
+                <ScalarProperty Name="AssetTypeID" ColumnName="AssetTypeID" />
+                <ScalarProperty Name="AssetCompanyID" ColumnName="AssetCompanyID" />
+                <ScalarProperty Name="ManufacturingDate" ColumnName="ManufacturingDate" />
+                <ScalarProperty Name="ExpiryDate" ColumnName="ExpiryDate" />
+                <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+                <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+                <ScalarProperty Name="ModifiedDate" ColumnName="ModifiedDate" />
+                <ScalarProperty Name="ModifiedBy" ColumnName="ModifiedBy" />
+                <ScalarProperty Name="IsIssued" ColumnName="IsIssued" />
+                <ScalarProperty Name="LicesenceNo" ColumnName="LicesenceNo" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tblAssetIssueDetails">
+            <EntityTypeMapping TypeName="DBNCSVisitorModel.tblAssetIssueDetail">
+              <MappingFragment StoreEntitySet="tblAssetIssueDetails">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="EmpId" ColumnName="EmpId" />
+                <ScalarProperty Name="AssetId" ColumnName="AssetId" />
+                <ScalarProperty Name="AssetIssueDateTime" ColumnName="AssetIssueDateTime" />
+                <ScalarProperty Name="AssetSubmitDateTime" ColumnName="AssetSubmitDateTime" />
+                <ScalarProperty Name="IsSubmited" ColumnName="IsSubmited" />
+                <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+                <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+                <ScalarProperty Name="ModifiedDate" ColumnName="ModifiedDate" />
+                <ScalarProperty Name="ModifiedBy" ColumnName="ModifiedBy" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tblAssetTypes">
+            <EntityTypeMapping TypeName="DBNCSVisitorModel.tblAssetType">
+              <MappingFragment StoreEntitySet="tblAssetType">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="AssetTypeCode" ColumnName="AssetTypeCode" />
+                <ScalarProperty Name="AssetTypeName" ColumnName="AssetTypeName" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tblEmpDesignationMasters">
+            <EntityTypeMapping TypeName="DBNCSVisitorModel.tblEmpDesignationMaster">
+              <MappingFragment StoreEntitySet="tblEmpDesignationMaster">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="EmpDesignationCode" ColumnName="EmpDesignationCode" />
+                <ScalarProperty Name="EmpDesignationName" ColumnName="EmpDesignationName" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tblEmployeeDetails">
+            <EntityTypeMapping TypeName="DBNCSVisitorModel.tblEmployeeDetail">
+              <MappingFragment StoreEntitySet="tblEmployeeDetails">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="EmpCode" ColumnName="EmpCode" />
+                <ScalarProperty Name="EmpName" ColumnName="EmpName" />
+                <ScalarProperty Name="EmpDesignationID" ColumnName="EmpDesignationID" />
+                <ScalarProperty Name="EmpDept" ColumnName="EmpDept" />
+                <ScalarProperty Name="PhoneNo" ColumnName="PhoneNo" />
+                <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+                <ScalarProperty Name="ModifiedDate" ColumnName="ModifiedDate" />
+                <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tblGateMasters">
+            <EntityTypeMapping TypeName="DBNCSVisitorModel.tblGateMaster">
+              <MappingFragment StoreEntitySet="tblGateMaster">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="GateName" ColumnName="GateName" />
+                <ScalarProperty Name="GateCode" ColumnName="GateCode" />
+                <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+                <ScalarProperty Name="ModifiedDate" ColumnName="ModifiedDate" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tblIdentityMasters">
+            <EntityTypeMapping TypeName="DBNCSVisitorModel.tblIdentityMaster">
+              <MappingFragment StoreEntitySet="tblIdentityMaster">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="ProofName" ColumnName="ProofName" />
+                <ScalarProperty Name="ProofCode" ColumnName="ProofCode" />
+                <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+                <ScalarProperty Name="ModifiedDate" ColumnName="ModifiedDate" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tblPurposeMasters">
+            <EntityTypeMapping TypeName="DBNCSVisitorModel.tblPurposeMaster">
+              <MappingFragment StoreEntitySet="tblPurposeMaster">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="PurposeName" ColumnName="PurposeName" />
+                <ScalarProperty Name="PurposeCode" ColumnName="PurposeCode" />
+                <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+                <ScalarProperty Name="ModifiedDate" ColumnName="ModifiedDate" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tblUserLogins">
+            <EntityTypeMapping TypeName="DBNCSVisitorModel.tblUserLogin">
+              <MappingFragment StoreEntitySet="tblUserLogin">
+                <ScalarProperty Name="UserID" ColumnName="UserID" />
+                <ScalarProperty Name="UserName" ColumnName="UserName" />
+                <ScalarProperty Name="Password" ColumnName="Password" />
+                <ScalarProperty Name="Role" ColumnName="Role" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tblVisitors">
+            <EntityTypeMapping TypeName="DBNCSVisitorModel.tblVisitor">
+              <MappingFragment StoreEntitySet="tblVisitor">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="VisitorId" ColumnName="VisitorId" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="GovId" ColumnName="GovId" />
+                <ScalarProperty Name="MobileNo" ColumnName="MobileNo" />
+                <ScalarProperty Name="EmailId" ColumnName="EmailId" />
+                <ScalarProperty Name="AssetId" ColumnName="AssetId" />
+                <ScalarProperty Name="Form" ColumnName="Form" />
+                <ScalarProperty Name="ToMeet" ColumnName="ToMeet" />
+                <ScalarProperty Name="SubLocation" ColumnName="SubLocation" />
+                <ScalarProperty Name="Building" ColumnName="Building" />
+                <ScalarProperty Name="Gate" ColumnName="Gate" />
+                <ScalarProperty Name="Purpose" ColumnName="Purpose" />
+                <ScalarProperty Name="TimeIn" ColumnName="TimeIn" />
+                <ScalarProperty Name="ValidUpto" ColumnName="ValidUpto" />
+                <ScalarProperty Name="Remark" ColumnName="Remark" />
+                <ScalarProperty Name="ImagePath" ColumnName="ImagePath" />
+                <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+                <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+                <ScalarProperty Name="ModifiedBy" ColumnName="ModifiedBy" />
+                <ScalarProperty Name="ModifiedDate" ColumnName="ModifiedDate" />
+                <ScalarProperty Name="DOB" ColumnName="DOB" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tblVisitorPersonalDatas">
+            <EntityTypeMapping TypeName="DBNCSVisitorModel.tblVisitorPersonalData">
+              <MappingFragment StoreEntitySet="tblVisitorPersonalData">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="EmpId" ColumnName="EmpId" />
+                <ScalarProperty Name="GovIdNo" ColumnName="GovIdNo" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="DOB" ColumnName="DOB" />
+                <ScalarProperty Name="MobileNo" ColumnName="MobileNo" />
+                <ScalarProperty Name="EmailId" ColumnName="EmailId" />
+                <ScalarProperty Name="GovId" ColumnName="GovId" />
+                <ScalarProperty Name="ImagePath" ColumnName="ImagePath" />
+                <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+                <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+                <ScalarProperty Name="ModifiedBy" ColumnName="ModifiedBy" />
+                <ScalarProperty Name="ModifiedDate" ColumnName="ModifiedDate" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tblVisitorVisitDetails">
+            <EntityTypeMapping TypeName="DBNCSVisitorModel.tblVisitorVisitDetail">
+              <MappingFragment StoreEntitySet="tblVisitorVisitDetails">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="VisitorId" ColumnName="VisitorId" />
+                <ScalarProperty Name="GovIdNo" ColumnName="GovIdNo" />
+                <ScalarProperty Name="AssetId" ColumnName="AssetId" />
+                <ScalarProperty Name="Location" ColumnName="Location" />
+                <ScalarProperty Name="ToMeet" ColumnName="ToMeet" />
+                <ScalarProperty Name="SubLocation" ColumnName="SubLocation" />
+                <ScalarProperty Name="OfficeLocation" ColumnName="OfficeLocation" />
+                <ScalarProperty Name="Gate" ColumnName="Gate" />
+                <ScalarProperty Name="Purpose" ColumnName="Purpose" />
+                <ScalarProperty Name="TimeIn" ColumnName="TimeIn" />
+                <ScalarProperty Name="ValidUpto" ColumnName="ValidUpto" />
+                <ScalarProperty Name="Remark" ColumnName="Remark" />
+                <ScalarProperty Name="IsPassReturned" ColumnName="IsPassReturned" />
+                <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+                <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+                <ScalarProperty Name="ModifiedBy" ColumnName="ModifiedBy" />
+                <ScalarProperty Name="ModifiedDate" ColumnName="ModifiedDate" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <FunctionImportMapping FunctionImportName="spInsertAssetIssueDetails" FunctionName="DBNCSVisitorModel.Store.spInsertAssetIssueDetails" />
+          <FunctionImportMapping FunctionImportName="uspGetAllActiveAssets" FunctionName="DBNCSVisitorModel.Store.uspGetAllActiveAssets">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="DBNCSVisitorModel.uspGetAllActiveAssets_Result">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="AssetModelName" ColumnName="AssetModelName" />
+                <ScalarProperty Name="AssetTypeID" ColumnName="AssetTypeID" />
+                <ScalarProperty Name="AssetCompanyID" ColumnName="AssetCompanyID" />
+                <ScalarProperty Name="ManufacturingDate" ColumnName="ManufacturingDate" />
+                <ScalarProperty Name="ExpiryDate" ColumnName="ExpiryDate" />
+                <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+                <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+                <ScalarProperty Name="ModifiedDate" ColumnName="ModifiedDate" />
+                <ScalarProperty Name="ModifiedBy" ColumnName="ModifiedBy" />
+                <ScalarProperty Name="IsIssued" ColumnName="IsIssued" />
+                <ScalarProperty Name="LicesenceNo" ColumnName="LicesenceNo" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="uspGetAllGate" FunctionName="DBNCSVisitorModel.Store.uspGetAllGate">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="DBNCSVisitorModel.uspGetAllGate_Result">
+                <ScalarProperty Name="GateName" ColumnName="GateName" />
+                <ScalarProperty Name="Gate" ColumnName="Gate" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="uspGetAllIdentity" FunctionName="DBNCSVisitorModel.Store.uspGetAllIdentity">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="DBNCSVisitorModel.uspGetAllIdentity_Result">
+                <ScalarProperty Name="ProofName" ColumnName="ProofName" />
+                <ScalarProperty Name="GovId" ColumnName="GovId" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="uspGetAllPurpose" FunctionName="DBNCSVisitorModel.Store.uspGetAllPurpose">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="DBNCSVisitorModel.uspGetAllPurpose_Result">
+                <ScalarProperty Name="PurposeText" ColumnName="PurposeText" />
+                <ScalarProperty Name="Purpose" ColumnName="Purpose" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="uspGetAssetDetails" FunctionName="DBNCSVisitorModel.Store.uspGetAssetDetails">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="DBNCSVisitorModel.uspGetAssetDetails_Result">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="AssetModelName" ColumnName="AssetModelName" />
+                <ScalarProperty Name="AssetCompanyID" ColumnName="AssetCompanyID" />
+                <ScalarProperty Name="AssetTypeID" ColumnName="AssetTypeID" />
+                <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+                <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+                <ScalarProperty Name="ExpiryDate" ColumnName="ExpiryDate" />
+                <ScalarProperty Name="IsIssued" ColumnName="IsIssued" />
+                <ScalarProperty Name="LicesenceNo" ColumnName="LicesenceNo" />
+                <ScalarProperty Name="ManufacturingDate" ColumnName="ManufacturingDate" />
+                <ScalarProperty Name="ModifiedBy" ColumnName="ModifiedBy" />
+                <ScalarProperty Name="ModifiedDate" ColumnName="ModifiedDate" />
+                <ScalarProperty Name="AssetIssueDateTime" ColumnName="AssetIssueDateTime" />
+                <ScalarProperty Name="AssetSubmitDateTime" ColumnName="AssetSubmitDateTime" />
+                <ScalarProperty Name="IsSubmited" ColumnName="IsSubmited" />
+                <ScalarProperty Name="EmployeeName" ColumnName="EmployeeName" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="uspGetAssetList" FunctionName="DBNCSVisitorModel.Store.uspGetAssetList">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="DBNCSVisitorModel.uspGetAssetList_Result">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="AssetTypeName" ColumnName="AssetTypeName" />
+                <ScalarProperty Name="AssetCompanyName" ColumnName="AssetCompanyName" />
+                <ScalarProperty Name="AssestName" ColumnName="AssestName" />
+                <ScalarProperty Name="ManufacturingDate" ColumnName="ManufacturingDate" />
+                <ScalarProperty Name="ExpiryDate" ColumnName="ExpiryDate" />
+                <ScalarProperty Name="LicesenceNo" ColumnName="LicesenceNo" />
+                <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+                <ScalarProperty Name="ModifiedDate" ColumnName="ModifiedDate" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="uspGetEmployeeList" FunctionName="DBNCSVisitorModel.Store.uspGetEmployeeList">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="DBNCSVisitorModel.uspGetEmployeeList_Result">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="EmpCode" ColumnName="EmpCode" />
+                <ScalarProperty Name="EmpName" ColumnName="EmpName" />
+                <ScalarProperty Name="EmpDesignationID" ColumnName="EmpDesignationID" />
+                <ScalarProperty Name="EmpDept" ColumnName="EmpDept" />
+                <ScalarProperty Name="PhoneNo" ColumnName="PhoneNo" />
+                <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+                <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+                <ScalarProperty Name="ModifiedDate" ColumnName="ModifiedDate" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="uspGetVisitorDetails" FunctionName="DBNCSVisitorModel.Store.uspGetVisitorDetails">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="DBNCSVisitorModel.uspGetVisitorDetails_Result">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="EmpId" ColumnName="EmpId" />
+                <ScalarProperty Name="GovIdNo" ColumnName="GovIdNo" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="DOB" ColumnName="DOB" />
+                <ScalarProperty Name="MobileNo" ColumnName="MobileNo" />
+                <ScalarProperty Name="EmailId" ColumnName="EmailId" />
+                <ScalarProperty Name="GovId" ColumnName="GovId" />
+                <ScalarProperty Name="ImagePath" ColumnName="ImagePath" />
+                <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+                <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+                <ScalarProperty Name="ModifiedBy" ColumnName="ModifiedBy" />
+                <ScalarProperty Name="ModifiedDate" ColumnName="ModifiedDate" />
+                <ScalarProperty Name="PId" ColumnName="PId" />
+                <ScalarProperty Name="VisitorId" ColumnName="VisitorId" />
+                <ScalarProperty Name="VGovId" ColumnName="VGovId" />
+                <ScalarProperty Name="AssetId" ColumnName="AssetId" />
+                <ScalarProperty Name="Location" ColumnName="Location" />
+                <ScalarProperty Name="ToMeet" ColumnName="ToMeet" />
+                <ScalarProperty Name="SubLocation" ColumnName="SubLocation" />
+                <ScalarProperty Name="OfficeLocation" ColumnName="OfficeLocation" />
+                <ScalarProperty Name="Gate" ColumnName="Gate" />
+                <ScalarProperty Name="Purpose" ColumnName="Purpose" />
+                <ScalarProperty Name="TimeIn" ColumnName="TimeIn" />
+                <ScalarProperty Name="ValidUpto" ColumnName="ValidUpto" />
+                <ScalarProperty Name="Remark" ColumnName="Remark" />
+                <ScalarProperty Name="VCreatedBy" ColumnName="VCreatedBy" />
+                <ScalarProperty Name="VCreatedDate" ColumnName="VCreatedDate" />
+                <ScalarProperty Name="VModifiedBy" ColumnName="VModifiedBy" />
+                <ScalarProperty Name="VModifiedDate" ColumnName="VModifiedDate" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="uspGetVisitorDetailsByGovId" FunctionName="DBNCSVisitorModel.Store.uspGetVisitorDetailsByGovId">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="DBNCSVisitorModel.uspGetVisitorDetailsByGovId_Result">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="GovIdNo" ColumnName="GovIdNo" />
+                <ScalarProperty Name="EmpId" ColumnName="EmpId" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="DOB" ColumnName="DOB" />
+                <ScalarProperty Name="MobileNo" ColumnName="MobileNo" />
+                <ScalarProperty Name="EmailId" ColumnName="EmailId" />
+                <ScalarProperty Name="GovId" ColumnName="GovId" />
+                <ScalarProperty Name="ImagePath" ColumnName="ImagePath" />
+                <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+                <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+                <ScalarProperty Name="ModifiedBy" ColumnName="ModifiedBy" />
+                <ScalarProperty Name="ModifiedDate" ColumnName="ModifiedDate" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="uspGetVisitorDetailsById" FunctionName="DBNCSVisitorModel.Store.uspGetVisitorDetailsById">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="DBNCSVisitorModel.uspGetVisitorDetailsById_Result">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="EmpId" ColumnName="EmpId" />
+                <ScalarProperty Name="GovIdNo" ColumnName="GovIdNo" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="DOB" ColumnName="DOB" />
+                <ScalarProperty Name="MobileNo" ColumnName="MobileNo" />
+                <ScalarProperty Name="EmailId" ColumnName="EmailId" />
+                <ScalarProperty Name="GovId" ColumnName="GovId" />
+                <ScalarProperty Name="ImagePath" ColumnName="ImagePath" />
+                <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+                <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+                <ScalarProperty Name="ModifiedBy" ColumnName="ModifiedBy" />
+                <ScalarProperty Name="ModifiedDate" ColumnName="ModifiedDate" />
+                <ScalarProperty Name="PId" ColumnName="PId" />
+                <ScalarProperty Name="VisitorId" ColumnName="VisitorId" />
+                <ScalarProperty Name="VGovId" ColumnName="VGovId" />
+                <ScalarProperty Name="AssetId" ColumnName="AssetId" />
+                <ScalarProperty Name="Location" ColumnName="Location" />
+                <ScalarProperty Name="ToMeet" ColumnName="ToMeet" />
+                <ScalarProperty Name="SubLocation" ColumnName="SubLocation" />
+                <ScalarProperty Name="OfficeLocation" ColumnName="OfficeLocation" />
+                <ScalarProperty Name="Gate" ColumnName="Gate" />
+                <ScalarProperty Name="Purpose" ColumnName="Purpose" />
+                <ScalarProperty Name="PurposeText" ColumnName="PurposeText" />
+                <ScalarProperty Name="TimeIn" ColumnName="TimeIn" />
+                <ScalarProperty Name="ValidUpto" ColumnName="ValidUpto" />
+                <ScalarProperty Name="Remark" ColumnName="Remark" />
+                <ScalarProperty Name="IsPassReturned" ColumnName="IsPassReturned" />
+                <ScalarProperty Name="VCreatedBy" ColumnName="VCreatedBy" />
+                <ScalarProperty Name="VCreatedDate" ColumnName="VCreatedDate" />
+                <ScalarProperty Name="VModifiedBy" ColumnName="VModifiedBy" />
+                <ScalarProperty Name="VModifiedDate" ColumnName="VModifiedDate" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="uspGetVisitorDetailsNew" FunctionName="DBNCSVisitorModel.Store.uspGetVisitorDetailsNew">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="DBNCSVisitorModel.uspGetVisitorDetailsNew_Result">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="EmpId" ColumnName="EmpId" />
+                <ScalarProperty Name="GovIdNo" ColumnName="GovIdNo" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="DOB" ColumnName="DOB" />
+                <ScalarProperty Name="MobileNo" ColumnName="MobileNo" />
+                <ScalarProperty Name="EmailId" ColumnName="EmailId" />
+                <ScalarProperty Name="GovId" ColumnName="GovId" />
+                <ScalarProperty Name="ImagePath" ColumnName="ImagePath" />
+                <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+                <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+                <ScalarProperty Name="ModifiedBy" ColumnName="ModifiedBy" />
+                <ScalarProperty Name="ModifiedDate" ColumnName="ModifiedDate" />
+                <ScalarProperty Name="PId" ColumnName="PId" />
+                <ScalarProperty Name="VisitorId" ColumnName="VisitorId" />
+                <ScalarProperty Name="VGovId" ColumnName="VGovId" />
+                <ScalarProperty Name="AssetId" ColumnName="AssetId" />
+                <ScalarProperty Name="Location" ColumnName="Location" />
+                <ScalarProperty Name="ToMeet" ColumnName="ToMeet" />
+                <ScalarProperty Name="SubLocation" ColumnName="SubLocation" />
+                <ScalarProperty Name="OfficeLocation" ColumnName="OfficeLocation" />
+                <ScalarProperty Name="Gate" ColumnName="Gate" />
+                <ScalarProperty Name="Purpose" ColumnName="Purpose" />
+                <ScalarProperty Name="PurposeText" ColumnName="PurposeText" />
+                <ScalarProperty Name="TimeIn" ColumnName="TimeIn" />
+                <ScalarProperty Name="ValidUpto" ColumnName="ValidUpto" />
+                <ScalarProperty Name="Remark" ColumnName="Remark" />
+                <ScalarProperty Name="IsPassReturned" ColumnName="IsPassReturned" />
+                <ScalarProperty Name="VCreatedBy" ColumnName="VCreatedBy" />
+                <ScalarProperty Name="VCreatedDate" ColumnName="VCreatedDate" />
+                <ScalarProperty Name="VModifiedBy" ColumnName="VModifiedBy" />
+                <ScalarProperty Name="VModifiedDate" ColumnName="VModifiedDate" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="uspGetVisitorPerDayCount" FunctionName="DBNCSVisitorModel.Store.uspGetVisitorPerDayCount">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="DBNCSVisitorModel.uspGetVisitorPerDayCount_Result">
+                <ScalarProperty Name="VisDate" ColumnName="VisDate" />
+                <ScalarProperty Name="No_of_Visitor" ColumnName="No_of_Visitor" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="uspInsertVisitorDetails" FunctionName="DBNCSVisitorModel.Store.uspInsertVisitorDetails" />
+          <FunctionImportMapping FunctionImportName="uspUpdatePersonalandVisitorData" FunctionName="DBNCSVisitorModel.Store.uspUpdatePersonalandVisitorData" />
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="true" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

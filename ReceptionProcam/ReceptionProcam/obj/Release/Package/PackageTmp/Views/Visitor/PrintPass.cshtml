@@ -1,0 +1,50 @@
+﻿@model ReceptionProcam.Models.clsVisitor
+<script src="~/Scripts/visitor.js"></script>
+<script type="text/javascript">
+    $(document).ready(function () {
+        if ('@TempData["SuccessAdd"]' == "Visitor added Successfully & Mail Sent to concern person!") {
+            toastr.success('Visitor added Successfully & Mail Sent to concern person!');
+        }
+    });
+</script>
+
+
+
+@using (Html.BeginForm(new { role = "form" }))
+{
+    @Html.AntiForgeryToken()
+
+    		<!--begin::Portlet-->
+    <div class="m-portlet">
+        <div class="m-portlet__head">
+            <div class="m-portlet__head-caption">
+                <div class="m-portlet__head-title">
+                    <span class="m-portlet__head-icon m--hide">
+                        <i class="la la-gear"></i>
+                    </span>
+                    <h3 class="m-portlet__head-text">
+                        Print Pass
+                    </h3>
+                </div>
+
+            </div>
+        </div>
+        <!--begin::Form-->
+
+        <div class="m-portlet__body">
+            <div id="myPartialView">
+                @{Html.RenderPartial("Par_PrintVisitor", Model);}
+            </div>
+            <br />
+            <div style="padding-left: 40%;">
+                <input name="b_print" type="button" class="btn btn-success" onclick="printdiv('myPartialView');" value="Print">
+
+                <input name="b_cancel" type="button" class="btn btn-danger" onclick="@("window.location.href='" + @Url.Action("VisitorDetails", "Visitor") + "'");" value="Cancel">
+            </div>
+        </div>
+    </div>
+
+}
+
+
+

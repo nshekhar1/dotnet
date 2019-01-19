@@ -1,0 +1,99 @@
+﻿@model ReceptionProcam.Models.clsVisitor
+
+<div class="panel panel-primary" style="width:370px;height:270px;margin:0px auto;border:1px solid black;">
+    <div class="panel-body" style="margin-top:1%;margin-left:1%;">
+        <form data-toggle="validator" role="form">
+            <table style="font-size:10px">
+                <tr style="height:3px">
+                    <td>
+                        <img src="~/Content/ncsiLogo.png" alt="Smiley face" style="height:23px; width:125px">
+                    </td>
+                    <td style="background-color:#b5cbce;">
+                        <label style="padding-left:50px; font-size:12px; font-weight:bold;text-align:center;">Visitor Pass</label>
+                    </td>
+                </tr>
+                <tr><td><br /></td></tr>
+                <tr padding-top="5" style="height:10px">
+                    <td rowspan="4">
+                        <img src="@Url.Content(Model.ImagePath)" alt="Visitor Photo" height="100" width="120">
+                    </td>
+                    <td>
+                        <label style="font-weight:bold">Name:</label>
+                        <label style="font-weight:bold">@Model.Name</label>
+                    </td>
+
+                </tr>
+                <tr style="height:10px">
+
+                    <td colspan="2">
+                        <label style="font-weight:bold">Location:</label>
+                        <label style="font-weight:bold">@Model.Location</label>
+
+                    </td>
+                </tr>
+                <tr style="height:10px">
+                    <td>
+                        <label style="font-weight:bold">To Meet:</label>
+                        <label style="font-weight:bold">@Model.ToMeet</label>
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="2" style="height:10px">
+                        <label style="font-weight:bold">Office Location:</label>
+                        <label style="font-weight:bold">@Model.OfficeLocation</label>
+                    </td>
+                </tr>
+
+                <tr style="height:10px">
+                    <td>
+                        <label style="font-weight:bold">In Time:</label>
+                        <label style="font-weight:bold">@Model.TimeIn</label>
+                    </td>
+
+                    <td>
+
+                        <label style="font-weight:bold">Valid Upto:</label>
+                        <label style="font-weight:bold">@Model.ValidUpto</label>
+                    </td>
+
+                </tr>
+                <tr style="height:10px">
+                    <td>
+
+                        <label style="font-weight:bold">Gate:</label>
+                        <label style="font-weight:bold">@Model.Gate</label>
+                    </td>
+                    <td>
+
+                        <label style="font-weight:bold">Asset Id:</label>
+                        <label style="font-weight:bold">@Model.AssetId</label>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+
+                        <label style="font-weight:bold">Purpose: </label>
+                        <label style="font-weight:bold">@Model.PurposeText</label>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+
+                        <label style="font-weight:bold">Remark:</label>
+                        <label style="font-weight:bold">@Model.Remark</label>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td colspan="1" style="font-size:12px; font-weight:bold; padding-top:5px">
+                        Visitor sign &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    </td>
+                    <td style="font-size:12px; font-weight:bold; padding-top:5px">
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Security sign
+                    </td>
+                </tr>
+            </table>
+        </form>
+    </div>
+</div>
+

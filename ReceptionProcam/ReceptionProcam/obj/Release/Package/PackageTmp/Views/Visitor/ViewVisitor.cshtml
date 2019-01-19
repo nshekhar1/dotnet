@@ -1,0 +1,47 @@
+﻿@model ReceptionProcam.Models.clsVisitor
+@section scripts
+{
+
+    @*<script src="~/Scripts/jquery-3.0.0.min.js"></script>*@
+    <script src="~/Scripts/jquery.webcam.js"></script>
+    <script src="~/Scripts/visitor.js"></script>
+    @*<link href="~/Content/Site.css" rel="stylesheet" />*@
+    @*@Scripts.Render("~/bundles/jqueryval")*@
+}
+
+
+
+@using (Html.BeginForm(new { @class = "m-form m-form--fit m-form--label-align-right m-form--group-seperator-dashed", role = "form" }))
+{
+    @Html.AntiForgeryToken()
+
+    		<!--begin::Portlet-->
+    <div class="m-portlet">
+        <div class="m-portlet__head">
+            <div class="m-portlet__head-caption">
+                <div class="m-portlet__head-title">
+                    <span class="m-portlet__head-icon m--hide">
+                        <i class="la la-gear"></i>
+                    </span>
+                    <h3 class="m-portlet__head-text">
+                        All Visitors
+                    </h3>
+                </div>
+
+            </div>
+        </div>
+        <!--begin::Form-->
+
+        <div class="m-portlet__body">
+            
+                <div id="myPartialView">
+                    @{Html.RenderPartial("Edit");}
+                </div>
+            </div>
+        </div>
+    
+
+}
+
+
+

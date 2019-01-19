@@ -1,0 +1,138 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="DBNCSVisitorModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="tblGateMaster">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="GateName" Type="nvarchar" MaxLength="50" />
+    <Property Name="GateCode" Type="nvarchar" MaxLength="50" />
+    <Property Name="CreatedDate" Type="datetime" />
+    <Property Name="ModifiedDate" Type="datetime" />
+  </EntityType>
+  <EntityType Name="tblIdentityMaster">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ProofName" Type="nvarchar" MaxLength="50" />
+    <Property Name="ProofCode" Type="nvarchar" MaxLength="50" />
+    <Property Name="CreatedDate" Type="datetime" />
+    <Property Name="ModifiedDate" Type="datetime" />
+  </EntityType>
+  <EntityType Name="tblPurposeMaster">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="PurposeName" Type="nvarchar" MaxLength="50" />
+    <Property Name="PurposeCode" Type="nvarchar" MaxLength="50" />
+    <Property Name="CreatedDate" Type="datetime" />
+    <Property Name="ModifiedDate" Type="datetime" />
+  </EntityType>
+  <EntityType Name="tblVisitor">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="VisitorId" Type="nvarchar" MaxLength="20" />
+    <Property Name="Name" Type="nvarchar" MaxLength="500" />
+    <Property Name="GovId" Type="nvarchar" MaxLength="50" />
+    <Property Name="MobileNo" Type="nvarchar" MaxLength="15" />
+    <Property Name="EmailId" Type="nvarchar" MaxLength="50" />
+    <Property Name="AssetId" Type="nvarchar" MaxLength="50" />
+    <Property Name="Form" Type="nvarchar" MaxLength="50" />
+    <Property Name="ToMeet" Type="nvarchar" MaxLength="50" />
+    <Property Name="SubLocation" Type="nvarchar" MaxLength="50" />
+    <Property Name="Building" Type="nvarchar" MaxLength="50" />
+    <Property Name="Gate" Type="nvarchar" MaxLength="50" />
+    <Property Name="Purpose" Type="nvarchar" MaxLength="50" />
+    <Property Name="TimeIn" Type="nvarchar" MaxLength="50" />
+    <Property Name="ValidUpto" Type="nvarchar" MaxLength="50" />
+    <Property Name="Remark" Type="nvarchar" MaxLength="50" />
+    <Property Name="ImagePath" Type="nvarchar(max)" />
+    <Property Name="CreatedBy" Type="nvarchar" MaxLength="50" />
+    <Property Name="CreatedDate" Type="date" />
+    <Property Name="ModifiedBy" Type="nvarchar" MaxLength="50" />
+    <Property Name="ModifiedDate" Type="date" />
+    <Property Name="DOB" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="tblVisitorPersonalData">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="EmpId" Type="nvarchar" MaxLength="20" />
+    <Property Name="GovIdNo" Type="nvarchar" MaxLength="20" />
+    <Property Name="Name" Type="nvarchar" MaxLength="100" />
+    <Property Name="DOB" Type="nchar" MaxLength="10" />
+    <Property Name="MobileNo" Type="nvarchar" MaxLength="15" />
+    <Property Name="EmailId" Type="nvarchar" MaxLength="50" />
+    <Property Name="GovId" Type="int" />
+    <Property Name="ImagePath" Type="nvarchar" MaxLength="500" />
+    <Property Name="CreatedBy" Type="nvarchar" MaxLength="20" />
+    <Property Name="CreatedDate" Type="nvarchar" MaxLength="20" />
+    <Property Name="ModifiedBy" Type="nvarchar" MaxLength="20" />
+    <Property Name="ModifiedDate" Type="nvarchar" MaxLength="20" />
+  </EntityType>
+  <EntityType Name="tblVisitorVisitDetails">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="VisitorId" Type="nvarchar" MaxLength="30" />
+    <Property Name="GovIdNo" Type="nvarchar" MaxLength="50" />
+    <Property Name="AssetId" Type="nvarchar" MaxLength="30" />
+    <Property Name="Form" Type="nvarchar" MaxLength="50" />
+    <Property Name="ToMeet" Type="nvarchar" MaxLength="50" />
+    <Property Name="SubLocation" Type="nvarchar" MaxLength="50" />
+    <Property Name="OfficeLocation" Type="nvarchar" MaxLength="50" />
+    <Property Name="Gate" Type="nvarchar" MaxLength="50" />
+    <Property Name="Purpose" Type="nvarchar" MaxLength="50" />
+    <Property Name="TimeIn" Type="nvarchar" MaxLength="50" />
+    <Property Name="ValidUpto" Type="nvarchar" MaxLength="50" />
+    <Property Name="Remark" Type="nvarchar" MaxLength="50" />
+    <Property Name="CreatedBy" Type="nvarchar" MaxLength="50" />
+    <Property Name="CreatedDate" Type="nvarchar" MaxLength="50" />
+    <Property Name="ModifiedBy" Type="nvarchar" MaxLength="50" />
+    <Property Name="ModifiedDate" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <Function Name="uspGetVisitorDetails" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="uspGetVisitorDetailsByGovId" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="VisType" Type="nvarchar" Mode="In" />
+    <Parameter Name="GovId" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="uspGetVisitorDetailsNew" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="uspGetVisitorPerDayCount" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="uspInsertVisitorDetails" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="EmpId" Type="nvarchar" Mode="In" />
+    <Parameter Name="GovIdNo" Type="nvarchar" Mode="In" />
+    <Parameter Name="Name" Type="nvarchar" Mode="In" />
+    <Parameter Name="DOB" Type="nvarchar" Mode="In" />
+    <Parameter Name="MobileNo" Type="nvarchar" Mode="In" />
+    <Parameter Name="EmailId" Type="nvarchar" Mode="In" />
+    <Parameter Name="GovId" Type="nvarchar" Mode="In" />
+    <Parameter Name="ImagePath" Type="nvarchar" Mode="In" />
+    <Parameter Name="VisitorId" Type="nvarchar" Mode="In" />
+    <Parameter Name="AssetId" Type="nvarchar" Mode="In" />
+    <Parameter Name="Form" Type="nvarchar" Mode="In" />
+    <Parameter Name="ToMeet" Type="nvarchar" Mode="In" />
+    <Parameter Name="SubLocation" Type="nvarchar" Mode="In" />
+    <Parameter Name="OfficeLocation" Type="nvarchar" Mode="In" />
+    <Parameter Name="Gate" Type="nvarchar" Mode="In" />
+    <Parameter Name="Purpose" Type="nvarchar" Mode="In" />
+    <Parameter Name="TimeIn" Type="nvarchar" Mode="In" />
+    <Parameter Name="ValidUpto" Type="nvarchar" Mode="In" />
+    <Parameter Name="Remark" Type="nvarchar" Mode="In" />
+    <Parameter Name="CreatedBy" Type="nvarchar" Mode="In" />
+    <Parameter Name="CreatedDate" Type="nvarchar" Mode="In" />
+  </Function>
+  <EntityContainer Name="DBNCSVisitorModelStoreContainer">
+    <EntitySet Name="tblGateMaster" EntityType="Self.tblGateMaster" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tblIdentityMaster" EntityType="Self.tblIdentityMaster" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tblPurposeMaster" EntityType="Self.tblPurposeMaster" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tblVisitor" EntityType="Self.tblVisitor" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tblVisitorPersonalData" EntityType="Self.tblVisitorPersonalData" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tblVisitorVisitDetails" EntityType="Self.tblVisitorVisitDetails" Schema="dbo" store:Type="Tables" />
+  </EntityContainer>
+</Schema>
