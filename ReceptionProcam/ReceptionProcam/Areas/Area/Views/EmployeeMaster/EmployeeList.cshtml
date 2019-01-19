@@ -1,0 +1,63 @@
+﻿@model ReceptionProcam.Areas.Area.Models.EmployeeMasters
+@{
+    ViewBag.Title = "EmployeeList";
+    Layout = "~/Areas/Area/Views/Shared/_Layout.cshtml";
+}
+
+@using (Html.BeginForm(new { @class = "m-form m-form--fit m-form--label-align-right m-form--group-seperator-dashed", role = "form" }))
+{
+    @Html.AntiForgeryToken()
+
+    		<!--begin::Portlet-->
+    <div class="m-portlet m-portlet--mobile">
+        <div class="m-portlet__head">
+            <div class="m-portlet__head-caption">
+                <div class="m-portlet__head-title">
+                    <h3 class="m-portlet__head-text">
+                        Employee Master List
+                    </h3>
+                </div>
+            </div>
+            <div class="m-portlet__head-tools">
+
+            </div>
+        </div>
+        <div class="m-portlet__body" style="height:500px; overflow: auto;">
+            <table class="table table-striped- table-bordered table-hover table-checkable" id="Visitors">
+                <thead>
+                    <tr>
+                        <th>@Html.DisplayName("Name")</th>
+                        <th>@Html.DisplayName("Code")</th>
+                        <th>@Html.DisplayName("Designation")</th>
+                        <th>@Html.DisplayName("Department")</th>
+                        <th>@Html.DisplayName("Mobile No")</th>
+                        <th>@Html.DisplayName("Created Date")</th>
+                        <th>@Html.DisplayName("Modified Date")</th>
+                        <th>
+                            
+                        </th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var item in ViewBag.AllEmployeeDetails)
+                    {
+                        <tr>
+                            <td>@item.EmpName</td>
+                            <td>@item.EmpCode</td>
+                            <td>@item.EmpDesignationID</td>
+                            <td>@item.EmpDept</td>
+                            <td>@item.PhoneNo</td>
+                            <td>@item.CreatedDate</td>
+                            <td>@item.ModifiedDate</td>
+                            <td>@Html.ActionLink("Edit", "EditEmployee", new { id = item.ID })</td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+        <div style="padding-left: 46%; padding-bottom: 10px; padding-top: 10px;">
+            <input name="b_cancel" type="button" class="btn btn-danger" onclick="@("window.location.href='" + @Url.Action("EmployeeMaster", "EmployeeMaster") + "'");" value="Back">
+        </div>
+    </div>
+}
+

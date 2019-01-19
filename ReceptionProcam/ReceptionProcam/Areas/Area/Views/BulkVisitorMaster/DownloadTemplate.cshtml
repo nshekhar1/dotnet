@@ -1,0 +1,48 @@
+﻿@{
+    ViewBag.Title = "DownloadTemplate";
+    Layout = "~/Areas/Area/Views/Shared/_Layout.cshtml";
+}
+
+@using (Html.BeginForm(new { @class = "m-form m-form--fit m-form--label-align-right m-form--group-seperator-dashed", role = "form" }))
+{
+    @Html.AntiForgeryToken()
+
+    <div class="m-portlet">
+        <div class="m-portlet__head">
+            <div class="m-portlet__head-caption">
+                <div class="m-portlet__head-title">
+                    <span class="m-portlet__head-icon m--hide">
+                        <i class="la la-gear"></i>
+                    </span>
+                    <h3 class="m-portlet__head-text">
+                        Bulk Visitor's File Format
+                    </h3>
+                </div>
+
+            </div>
+        </div>
+        <div class="m-portlet__body">
+
+            <div class="form-group m-form__group row">
+
+                <div class="col-lg-6">
+                    <button type="reset" class="btn btn-secondary" onclick="@("window.location.href='" + @Url.Action("DownloadTemplate", "BulkVisitorMaster") + "'");">
+                        Cancel
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div class="m-portlet__foot m-portlet__no-border m-portlet__foot--fit">
+            @*<div class="m-form__actions m-form__actions--solid">
+                    <div class="row">
+                        <div class="col-lg-4"></div>
+                        <div class="col-lg-8">
+
+                        </div>
+                    </div>
+                </div>*@
+        </div>
+        <br />
+    </div>
+}
+

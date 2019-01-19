@@ -1,0 +1,56 @@
+﻿@{
+    ViewBag.Title = "UploadTemplate";
+    Layout = "~/Areas/Area/Views/Shared/_Layout.cshtml";
+}
+
+<script type="text/javascript">
+
+    if ('@TempData["ErrorUpload"]' == "Please select a file") {
+        toastr.success('Please select a file');
+    }
+    if ('@TempData["ErrorUpload"]' == "Check file format") {
+        toastr.success('Check file format');
+    }
+
+    if ('@TempData["SuccessUpload"]' == "File uploaded successfully") {
+        toastr.success('File uploaded successfully');
+    }
+
+</script>
+
+@using (Html.BeginForm(Html.BeginForm("UploadTemplate", "BulkVisitorMaster", FormMethod.Post, new { enctype = "multipart/form-data" })))
+{
+    @Html.AntiForgeryToken()
+
+    <div class="m-portlet">
+        <div class="m-portlet__head">
+            <div class="m-portlet__head-caption">
+                <div class="m-portlet__head-title">
+                    <span class="m-portlet__head-icon m--hide">
+                        <i class="la la-gear"></i>
+                    </span>
+                    <h3 class="m-portlet__head-text">
+                        Upload Bulk Visitor's List
+                    </h3>
+                </div>
+
+            </div>
+        </div>
+        <div class="m-portlet__body">
+
+            <div class="form-group m-form__group row">
+
+                <div class="col-lg-6">
+                    <div class="m-portlet__head-title">
+                        <h6 class="m-portlet__head-text">
+                            Select Excel file to upload multiple visitors list
+                        </h6>
+                    </div>
+                    <input type="file" name="postedFile" />
+                    <input type="submit" value="Upload" name="upload" class="btn btn-primary" />
+                </div>
+            </div>
+        </div>
+
+    </div>
+}

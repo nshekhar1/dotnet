@@ -1,0 +1,173 @@
+﻿@model ReceptionProcam.Areas.Area.Models.AssetModel
+
+<script src="~/Scripts/AssetDetails.js"></script>
+
+@using (Html.BeginForm(new { @class = "m-form m-form--fit m-form--label-align-right m-form--group-seperator-dashed", role = "form" }))
+{
+    @Html.AntiForgeryToken()
+
+    		<!--begin::Portlet-->
+    <div class="m-portlet m-portlet--mobile">
+        <div class="m-portlet__head">
+            <div class="m-portlet__head-caption">
+                <div class="m-portlet__head-title">
+                    <h3 class="m-portlet__head-text">
+                        Asset Details
+                    </h3>
+                </div>
+            </div>
+            <div class="m-portlet__head-tools">
+
+            </div>
+        </div>
+        <div class="m-portlet__body" style="height:500px; overflow: auto;">
+            <table class="table table-striped- table-bordered table-hover table-checkable" id="AssetDetails">
+                <thead>
+                    <tr>
+                      
+                        <th>@Html.DisplayName("Employee Name")</th>
+                        <th>@Html.DisplayName("Asset Assigned")</th>
+                        <th>@Html.DisplayName("Issue date")</th>
+                        <th>@Html.DisplayName("Expiry date")</th>
+                        <th>
+                            Submit Asset 
+                        </th>
+                        <th>@Html.DisplayName("Asset submit date")</th>
+                    </tr>
+                </thead>
+              
+            </table>
+        </div>
+        
+    </div>
+
+
+}
+
+
+<div class="modal fade" id="confirmModal" tabindex="-1" role="dialog">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="myModalLabel">Confirmation</h4>
+            </div>
+            <div class="modal-body">
+                Are you sure you want to submit the asset?
+            </div>
+            <div class="modal-footer">
+                <input type="hidden" id="hidSubmitAsset" />
+                <button type="button" id="submitAssetConfirm" onclick="submitAsset()" class="btn btn-primary">Yes</button>
+                <button type="button" data-dismiss="modal" aria-label="Close" class="btn btn-primary">Cancel</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+@* Load bootstrap datatable css *@
+<link href="//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.1/css/bootstrap.css" />
+<link href="//cdn.datatables.net/1.10.19/css/dataTables.bootstrap4.min.css" />
+
+@* Load normal datatable css *@
+@*<link href="//cdn.datatables.net/1.10.9/css/jquery.dataTables.min.css" rel="stylesheet" />*@
+
+@* Load bootstrap datatable js *@
+@section Scripts{
+
+    <script src="//cdn.datatables.net/1.10.19/js/jquery.dataTables.min.js"></script>
+    <script src="//cdn.datatables.net/1.10.19/js/dataTables.bootstrap4.min.js"></script>
+
+    @* Load normal datatable js *@
+    @*<script src="//cdn.datatables.net/1.10.9/js/jquery.dataTables.min.js"></script>*@
+
+
+
+    <script type="text/javascript">
+
+
+
+
+        $('#AssetDetails').DataTable({
+            "ajax": {
+                "url": "/AssetManagement/LoadData",
+                "type": "GET",
+                "datatype": "json"
+            },
+            "columns": [
+             
+             
+                { "data": "EmployeeName", "autoWidth": true },
+                { "data": "AssetModelName", "autoWidth": true },
+                {
+                    "data": "AssetIssueDateTime",
+                    "render": function (data) {
+                        if (data === undefined || data === null) return "";
+
+                        var pattern = /Date\(([^)]+)\)/;
+                        var results = pattern.exec(data);
+                        var dt = new Date(parseFloat(results[1]));
+
+                        return (dt.getMonth() + 1) + "/" + dt.getDate() + "/" + dt.getFullYear();
+                            }
+                    , "autoWidth": true
+                },
+                {
+                    "data": "ExpiryDate",
+                    "render": function (data) {
+                        if (data === undefined || data === null) return "";
+
+                        var pattern = /Date\(([^)]+)\)/;
+                        var results = pattern.exec(data);
+                        var dt = new Date(parseFloat(results[1]));
+
+                        return (dt.getMonth() + 1) + "/" + dt.getDate() + "/" + dt.getFullYear();
+                    },
+                    "autoWidth": true
+                },
+                {
+                    "data": "IsSubmitted",
+                    "render": function (data, type, row) {
+
+                        if (row.IsSubmited == true) {
+                            return '@Html.CheckBoxFor(x => x.IsSubmitted, new { @checked = "checked", @disabled = "disabled" })'
+
+                        }
+                        else {
+
+                            return '<input class="chkAsset" type="checkbox"  id="' + row.Id + '">'
+
+                        }
+                    }
+                },
+             {
+                 "data": "AssetSubmitDateTime",
+                 "render": function (data) {
+                     if (data === undefined || data === null) return "";
+
+                     var pattern = /Date\(([^)]+)\)/;
+                     var results = pattern.exec(data);
+                     var dt = new Date(parseFloat(results[1]));
+
+                     return (dt.getMonth() + 1) + "/" + dt.getDate() + "/" + dt.getFullYear();
+                 },
+                 "autoWidth": true
+             }
+                 
+            ]
+
+        });
+
+        if ('@TempData["SuccessSubmit"]' == "Asset Submitted successfully") {
+            toastr.success('Asset Submitted successfully');
+        }
+
+       $(document).ready(function () {
+
+            $(".chkAsset").click(function () {
+                $("#hidSubmitAsset").val($(this)[0].id);
+                $('#confirmModal').modal('show')
+            });
+
+        });
+
+    </script>
+}

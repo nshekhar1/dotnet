@@ -1,0 +1,88 @@
+﻿@model ReceptionProcam.Areas.Area.Models.EmployeeMasters
+
+
+@{
+    ViewBag.Title = "EmployeeMaster";
+    Layout = "~/Areas/Area/Views/Shared/_Layout.cshtml";
+}
+@if (TempData["Success"] != null)
+{
+    <p class="alert alert-success" id="successMessage">@TempData["Success"]</p>
+}
+@using (Html.BeginForm(new { @class = "m-form m-form--fit m-form--label-align-right m-form--group-seperator-dashed", role = "form" }))
+{
+    @Html.AntiForgeryToken()
+
+    <div class="m-portlet">
+        <div class="m-portlet__head">
+            <div class="m-portlet__head-caption">
+                <div class="m-portlet__head-title">
+                    <span class="m-portlet__head-icon m--hide">
+                        <i class="la la-gear"></i>
+                    </span>
+                    <h3 class="m-portlet__head-text">
+                        Employee Master
+                    </h3>
+                </div>
+
+            </div>
+        </div>
+        <div class="m-portlet__body">
+
+            <div class="form-group m-form__group row">
+
+                <div class="col-lg-6">
+                    @Html.LabelFor(model => model.EmpCode, htmlAttributes: new { })<span class="text-danger">*</span>
+                    @Html.EditorFor(model => model.EmpCode, new { htmlAttributes = new { autocomplete = "off", @class = "form-control m-input", @placeholder = "Employee Code", @style = "text-transform:uppercase" } })
+                    <p class="help-block">@Html.ValidationMessageFor(m => m.EmpCode, "", new { @class = "text-danger" })</p>
+                </div>
+            </div>
+            <div class="form-group m-form__group row">
+                <div class="col-lg-6">
+                    @Html.LabelFor(model => model.EmpName, htmlAttributes: new { })<span class="text-danger">*</span>
+                    @Html.EditorFor(model => model.EmpName, new { htmlAttributes = new { autocomplete = "off", @class = "form-control m-input", @placeholder = "Employee Name" } })
+                    <p class="help-block">@Html.ValidationMessageFor(m => m.EmpName, "", new { @class = "text-danger" })</p>
+                </div>
+            </div>
+            <div class="form-group m-form__group row">
+                <div class="col-lg-6">
+                    @Html.LabelFor(model => model.EmpDesignationID, htmlAttributes: new { })<span class="text-danger">*</span>
+                    @Html.DropDownListFor(m => m.EmpDesignationID, ViewBag.DesignationList as SelectList, new { Id = "ddlEmpDesignationId", autocomplete = "off", @class = "form-control m-input" })
+                    <p class="help-block">@Html.ValidationMessageFor(m => m.EmpDesignationID, "", new { @class = "text-danger" })</p>
+                </div>
+            </div>
+            <div class="form-group m-form__group row">
+                <div class="col-lg-6">
+                    @Html.LabelFor(model => model.EmpDept, htmlAttributes: new { })<span class="text-danger">*</span>
+                    @Html.EditorFor(model => model.EmpDept, new { htmlAttributes = new { autocomplete = "off", @class = "form-control m-input", @placeholder = "Employee Dept." } })
+                    <p class="help-block">@Html.ValidationMessageFor(m => m.EmpDept, "", new { @class = "text-danger" })</p>
+                </div>
+            </div>
+            <div class="form-group m-form__group row">
+                <div class="col-lg-6">
+                    @Html.LabelFor(model => model.PhoneNo, htmlAttributes: new { })<span class="text-danger">*</span>
+                    @Html.EditorFor(model => model.PhoneNo, new { htmlAttributes = new { autocomplete = "off", maxlength = 12, Id = "txtMobile", @class = "form-control m-input", @placeholder = "Mobile No" } })
+                    <p class="help-block">@Html.ValidationMessageFor(m => m.PhoneNo, "", new { @class = "text-danger" })</p>
+                </div>
+            </div>
+            </div>
+        <div class="m-portlet__foot m-portlet__no-border m-portlet__foot--fit">
+            <div class="m-form__actions m-form__actions--solid">
+                <div class="row">
+                    <div class="col-lg-4"></div>
+                    <div class="col-lg-8">
+                        <button type="submit" class="btn btn-primary" id="SubmitBtn">
+                            Submit
+                        </button>
+                        <button type="reset" class="btn btn-secondary" onclick="@("window.location.href='" + @Url.Action("EmployeeList", "EmployeeMaster") + "'");">
+                            Cancel
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <br />
+    </div>
+}
+
+
